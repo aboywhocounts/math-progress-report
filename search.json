@@ -1,0 +1,59 @@
+[
+  {
+    "objectID": "rep-theory/rep-theory/schurs-lemma.html",
+    "href": "rep-theory/rep-theory/schurs-lemma.html",
+    "title": "Schur’s Lemma",
+    "section": "",
+    "text": "We begin with a fundamental result in representation theory.\n\nTheorem 1 (Schur’s Lemma) Let \\(V\\) and \\(W\\) be irreducible representations of a group \\(G\\). If \\(\\phi: V \\to W\\) is a \\(G\\)-module homomorphism, then:\n\nEither \\(\\phi\\) is an isomorphism, or \\(\\phi = 0\\).\nIf \\(V = W\\), then \\(\\phi = \\lambda I\\) for some \\(\\lambda \\in \\C\\).",
+    "crumbs": [
+      "Home",
+      "Representation Theory",
+      "Schur's Lemma"
+    ]
+  },
+  {
+    "objectID": "rep-theory/rep-theory/schurs-lemma.html#the-statement",
+    "href": "rep-theory/rep-theory/schurs-lemma.html#the-statement",
+    "title": "Schur’s Lemma",
+    "section": "",
+    "text": "We begin with a fundamental result in representation theory.\n\nTheorem 1 (Schur’s Lemma) Let \\(V\\) and \\(W\\) be irreducible representations of a group \\(G\\). If \\(\\phi: V \\to W\\) is a \\(G\\)-module homomorphism, then:\n\nEither \\(\\phi\\) is an isomorphism, or \\(\\phi = 0\\).\nIf \\(V = W\\), then \\(\\phi = \\lambda I\\) for some \\(\\lambda \\in \\C\\).",
+    "crumbs": [
+      "Home",
+      "Representation Theory",
+      "Schur's Lemma"
+    ]
+  },
+  {
+    "objectID": "rep-theory/rep-theory/schurs-lemma.html#the-proof",
+    "href": "rep-theory/rep-theory/schurs-lemma.html#the-proof",
+    "title": "Schur’s Lemma",
+    "section": "The Proof",
+    "text": "The Proof\nSince \\(\\phi\\) is a homomorphism, its kernel is a subrepresentation of \\(V\\)…",
+    "crumbs": [
+      "Home",
+      "Representation Theory",
+      "Schur's Lemma"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "cd math-progress-report",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "feed.html",
+    "href": "feed.html",
+    "title": "Latest Updates",
+    "section": "",
+    "text": "Here is a chronological log of my study notes and updates.\n\n\n\n\n\n\n\n\n\nSchur’s Lemma\n\n\n\n\n\n\n\n1 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
