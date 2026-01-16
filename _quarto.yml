@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "a young man's mathematical journey"
+  
+  # NEW: Add a top navigation bar
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: feed.qmd
+        text: Feed / Blog
+
+  # EXISTING: Your topic sidebar
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Representation Theory"
+        contents:
+          - rep-theory/rep-theory/schurs-lemma.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    html-math-method: mathjax
+    include-in-header: math-macros.html  #This is for custom math macros (i.e. LaTeX shortcuts)
+
+
+
+

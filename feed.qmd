@@ -1,0 +1,14 @@
+---
+title: "Latest Updates"
+listing:
+  contents: 
+    - "rep-theory/*.qmd"
+    - "field-theory/*.qmd"
+    - "posts/*.qmd"       # Optional: if you have a separate folder for casual blog posts
+  sort: "date desc"       # Sort by newest date first
+  type: default           # Options: default, table, grid
+  categories: true        # Allows filtering by tags
+  fields: [date, title, description, reading-time]
+---
+
+Here is a chronological log of my study notes and updates.

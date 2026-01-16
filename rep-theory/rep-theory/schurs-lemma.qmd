@@ -1,0 +1,19 @@
+---
+title: "Schur's Lemma"
+---
+
+## The Statement
+
+We begin with a fundamental result in representation theory.
+
+::: {#thm-schur}
+## Schur's Lemma
+Let $V$ and $W$ be irreducible representations of a group $G$. 
+If $\phi: V \to W$ is a $G$-module homomorphism, then:
+
+1. Either $\phi$ is an isomorphism, or $\phi = 0$.
+2. If $V = W$, then $\phi = \lambda I$ for some $\lambda \in \C$.
+:::
+
+## The Proof
+Since $\phi$ is a homomorphism, its kernel is a subrepresentation of $V$...
