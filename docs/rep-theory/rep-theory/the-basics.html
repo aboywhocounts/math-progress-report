@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Schur’s Lemma – a young man's mathematical journey</title>
+<title>Basic definitions and concepts – a young man’s mathematical journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,11 +75,11 @@ $$
   \newcommand{\Z}{\mathbb{Z}}
   \newcommand{\Q}{\mathbb{Q}}
   \newcommand&gt;{\F}{\mathbb{F}} 
-  \<newcommand>lrarrow</newcommand>{\longrightarrow}
+  \<renewcommand>lrarrow</renewcommand>{\longrightarrow}
 
   % Shorthand
-  \<newcommand>b</newcommand>{\beta}
-  \<newcommand>r</newcommand>{\rho}
+  \<renewcommand>b</renewcommand>{\beta}
+  \<renewcommand>r</renewcommand>{\rho}
 
   % Environments
   \theoremstyle{definition}
@@ -178,7 +178,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../rep-theory/rep-theory/schurs-lemma.html">Representation Theory</a></li><li class="breadcrumb-item"><a href="../../rep-theory/rep-theory/schurs-lemma.html">Schur’s Lemma</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Basic definitions and concepts</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -209,7 +209,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../rep-theory/rep-theory/schurs-lemma.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../rep-theory/rep-theory/schurs-lemma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schur’s Lemma</span></a>
   </div>
 </li>
@@ -220,22 +220,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-statement" id="toc-the-statement" class="nav-link active" data-scroll-target="#the-statement">The Statement</a></li>
-  <li><a href="#the-proof" id="toc-the-proof" class="nav-link" data-scroll-target="#the-proof">The Proof</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../rep-theory/rep-theory/schurs-lemma.html">Representation Theory</a></li><li class="breadcrumb-item"><a href="../../rep-theory/rep-theory/schurs-lemma.html">Schur’s Lemma</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Schur’s Lemma</h1>
+<h1 class="title">Basic definitions and concepts</h1>
 </div>
 
 
@@ -252,23 +245,29 @@ window.Quarto = {
 </header>
 
 
-<section id="the-statement" class="level2">
-<h2 class="anchored" data-anchor-id="the-statement">The Statement</h2>
-<p>We begin with a fundamental result in representation theory.</p>
-<div id="thm-schur" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Schur’s Lemma)</strong></span> Let <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> be irreducible representations of a group <span class="math inline">\(G\)</span>. If <span class="math inline">\(\phi: V \to W\)</span> is a <span class="math inline">\(G\)</span>-module homomorphism, then:</p>
-<ol type="1">
-<li>Either <span class="math inline">\(\phi\)</span> is an isomorphism, or <span class="math inline">\(\phi = 0\)</span>.</li>
-<li>If <span class="math inline">\(V = W\)</span>, then <span class="math inline">\(\phi = \lambda I\)</span> for some <span class="math inline">\(\lambda \in \C\)</span>.</li>
-</ol>
+<p>I would like this section to contain the fundamentals of representation theory of finite groups. As an undergraduate at UVA, I made the mistake of not taking Algebra 2, the second course in the graduate algebra sequence that dealt with representation theory and field theory. These posts are meant to provide a somewhat detailed account of my self-study process to make up for that.</p>
+<p>In each of these entries I plan to state key theorems and propositions and their proofs (most of the time), as well as some examples and exposition to illustrate those statements. So, without further ado, let’s get into what representation theory is.</p>
+<p>In abstract algebra, one of the core objects we study are groups. They can be studied in the abstract of course, but one of the most fundamental ways that we study these objects is through their actions. We can examine actions just simply on sets, but we can glean more information if we study how they act on other algebraic objects, such as vector spaces. This is the general philosophy of finite group representation theory: we study how groups act as symmetries of a vector space. Sometimes these vector spaces have additional structure, like an inner product, and in these cases even more can be said. We will revisit this richer situation later, but for now let’s understand some basic definitions.</p>
+<p>Recall that by <span class="math inline">\(GL(V)\)</span> we mean the group of linear automorphisms of <span class="math inline">\(V\)</span>. Fixing a basis <span class="math inline">\(\beta=\{e_1,...,e_n\}\)</span>, we can identify <span class="math inline">\(V\)</span> with <span class="math inline">\(k^n\)</span> and thus <span class="math inline">\(GL(V)\)</span> with <span class="math inline">\(GL_n(k)\)</span>, sending <span class="math inline">\(f \in GL(V)\)</span> to <span class="math inline">\([f]_{\beta}\)</span>, its matrix representation.</p>
+<div id="def-rep" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Representation of a group <span class="math inline">\(G\)</span>)</strong></span> Let <span class="math inline">\(G\)</span> be a group and <span class="math inline">\(V\)</span> a vector space over a field <span class="math inline">\(k\)</span>. A <strong>representation</strong> of <span class="math inline">\(G\)</span> on <span class="math inline">\(V\)</span> is a group homomorphism <span class="math display">\[
+    \rho: G \lrarrow GL(V)
+\]</span></p>
+<p>If we have a basis <span class="math inline">\(\beta\)</span> as above, we obtain an <strong>n-dimensional represenation</strong> of <span class="math inline">\(G\)</span>: <span class="math display">\[
+    \rho: G\lrarrow GL_n(k)
+\]</span></p>
 </div>
-</section>
-<section id="the-proof" class="level2">
-<h2 class="anchored" data-anchor-id="the-proof">The Proof</h2>
-<p>Since <span class="math inline">\(\phi\)</span> is a homomorphism, its kernel is a subrepresentation of <span class="math inline">\(V\)</span>…</p>
+<p>While these definition look similar, they are not the same, as a representation <span class="math inline">\(\rho: G \lrarrow GL_n(k)\)</span> can be identified with <span class="math inline">\(\rho: G \lrarrow GL(V)\)</span> where <span class="math inline">\(V=k^n\)</span>, but the converse is not true. This basically boils down to the fact that the inverse map isn’t well-defined due to the fact that we have to choose a basis. This means that two representations for the same vector space can differ by conjugation of a change of basis matrix:</p>
+<p><span class="math display">\[
+    \rho_{\beta'}=T^{-1}\rho_{\beta} T
+\]</span> where <span class="math inline">\(T\)</span> is the change of basis matrix from the basis <span class="math inline">\(\b\)</span> to <span class="math inline">\(\b'\)</span>. Therefore, we should consider representations up to a different notion of equivalence rather than strictly equal. This is formalized in the following definition:</p>
+<div id="def-rep-equiv" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2</strong></span> Two matrix representaitons <span class="math inline">\(\r_1,\r_2:G\lrarrow GL_n(k)\)</span> are equivalent if there exists a <span class="math inline">\(T \in GL_n(k)\)</span> such that <span class="math inline">\(\r_2= T^{-1} \r_1 T\)</span></p>
+<p>Similarly, two representations <span class="math inline">\(\r_1,r_2:G \lrarrow GL(V)\)</span> are equivalent if there exists a <span class="math inline">\(T\in GL(V)\)</span> such that <span class="math inline">\(\r_2= T^{-1} \r_1 T\)</span></p>
+<p>It’s clear that these notions are equivalence relations, and we now have a bijection on the level of equivalence classes of matrix and linear representations.</p>
 
 
-</section>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

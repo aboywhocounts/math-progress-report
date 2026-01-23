@@ -68,11 +68,32 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+</head><body class="nav-sidebar docked nav-fixed quarto-light"><div style="display: none;">
+$$
+  % General Sets
+  \newcommand{\R}{\mathbb{R}}
+  \newcommand{\C}{\mathbb{C}}
+  \newcommand{\Z}{\mathbb{Z}}
+  \newcommand{\Q}{\mathbb{Q}}
+  \newcommand{\F}{\mathbb{F}} 
+
+  % Linear Algebra / Rep Theory
+  \newcommand{\Hom}{\mathrm{Hom}}
+  \newcommand{\End}{\mathrm{End}}
+  \newcommand{\GL}{\mathrm{GL}}
+  \newcommand{\tr}{\mathrm{tr}}
+  \newcommand{\id}{\mathrm{id}}
+
+  % Field Theory
+  \newcommand{\Gal}{\mathrm{Gal}}
+  \newcommand{\Char}{\mathrm{char}}
+$$
+</div>
 
 
-</head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -138,22 +159,11 @@ ul.task-list li input[type="checkbox"] {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">rep-theory/schurs-lemma.qmd</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Field Theory</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
- <span class="menu-text">field-theory/galois.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./rep-theory/rep-theory/schurs-lemma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schur’s Lemma</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -264,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/aboywhocounts\.github\.io\/math-progress-report\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
