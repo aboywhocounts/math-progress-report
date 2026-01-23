@@ -70,16 +70,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 </head><body class="nav-sidebar docked nav-fixed quarto-light"><div style="display: none;">
 $$
-  \newcommand{\R}{\mathbb{R}}
-  \newcommand{\C}{\mathbb{C}}
+  \renewcommand{\R}{\mathbb{R}}
+  \renewcommand{\C}{\mathbb{C}}
   \newcommand{\Z}{\mathbb{Z}}
   \newcommand{\Q}{\mathbb{Q}}
-  \newcommand&gt;{\F}{\mathbb{F}} 
-  \<renewcommand>lrarrow</renewcommand>{\longrightarrow}
+  \newcommand{\F}{\mathbb{F}} 
+  \newcommand{\lrarrow}{\longrightarrow}
 
   % Shorthand
-  \<renewcommand>b</renewcommand>{\beta}
-  \<renewcommand>r</renewcommand>{\rho}
+  \newcommand{\b}{\beta}
+  \newcommand{\r}{\rho}
 
   % Environments
   \theoremstyle{definition}
@@ -248,21 +248,21 @@ window.Quarto = {
 <p>I would like this section to contain the fundamentals of representation theory of finite groups. As an undergraduate at UVA, I made the mistake of not taking Algebra 2, the second course in the graduate algebra sequence that dealt with representation theory and field theory. These posts are meant to provide a somewhat detailed account of my self-study process to make up for that.</p>
 <p>In each of these entries I plan to state key theorems and propositions and their proofs (most of the time), as well as some examples and exposition to illustrate those statements. So, without further ado, let’s get into what representation theory is.</p>
 <p>In abstract algebra, one of the core objects we study are groups. They can be studied in the abstract of course, but one of the most fundamental ways that we study these objects is through their actions. We can examine actions just simply on sets, but we can glean more information if we study how they act on other algebraic objects, such as vector spaces. This is the general philosophy of finite group representation theory: we study how groups act as symmetries of a vector space. Sometimes these vector spaces have additional structure, like an inner product, and in these cases even more can be said. We will revisit this richer situation later, but for now let’s understand some basic definitions.</p>
-<p>Recall that by <span class="math inline">\(GL(V)\)</span> we mean the group of linear automorphisms of <span class="math inline">\(V\)</span>. Fixing a basis <span class="math inline">\(\beta=\{e_1,...,e_n\}\)</span>, we can identify <span class="math inline">\(V\)</span> with <span class="math inline">\(k^n\)</span> and thus <span class="math inline">\(GL(V)\)</span> with <span class="math inline">\(GL_n(k)\)</span>, sending <span class="math inline">\(f \in GL(V)\)</span> to <span class="math inline">\([f]_{\beta}\)</span>, its matrix representation.</p>
+<p>Recall that by <span class="math inline">\(GL(V)\)</span> we mean the group of linear automorphisms of <span class="math inline">\(V\)</span>. Fixing a basis <span class="math inline">\(\beta=\{e_1,...,e_n\}\)</span>, we can identify <span class="math inline">\(V\)</span> with <span class="math inline">\(K^n\)</span> and thus <span class="math inline">\(GL(V)\)</span> with <span class="math inline">\(GL_n(K)\)</span>, sending <span class="math inline">\(f \in GL(V)\)</span> to <span class="math inline">\([f]_{\beta}\)</span>, its matrix representation.</p>
 <div id="def-rep" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Representation of a group <span class="math inline">\(G\)</span>)</strong></span> Let <span class="math inline">\(G\)</span> be a group and <span class="math inline">\(V\)</span> a vector space over a field <span class="math inline">\(k\)</span>. A <strong>representation</strong> of <span class="math inline">\(G\)</span> on <span class="math inline">\(V\)</span> is a group homomorphism <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 1 (Representation of a group <span class="math inline">\(G\)</span>)</strong></span> Let <span class="math inline">\(G\)</span> be a group and <span class="math inline">\(V\)</span> a vector space over a field <span class="math inline">\(K\)</span>. A <strong>representation</strong> of <span class="math inline">\(G\)</span> on <span class="math inline">\(V\)</span> is a group homomorphism <span class="math display">\[
     \rho: G \lrarrow GL(V)
 \]</span></p>
 <p>If we have a basis <span class="math inline">\(\beta\)</span> as above, we obtain an <strong>n-dimensional represenation</strong> of <span class="math inline">\(G\)</span>: <span class="math display">\[
-    \rho: G\lrarrow GL_n(k)
+    \rho: G\lrarrow GL_n(K)
 \]</span></p>
 </div>
-<p>While these definition look similar, they are not the same, as a representation <span class="math inline">\(\rho: G \lrarrow GL_n(k)\)</span> can be identified with <span class="math inline">\(\rho: G \lrarrow GL(V)\)</span> where <span class="math inline">\(V=k^n\)</span>, but the converse is not true. This basically boils down to the fact that the inverse map isn’t well-defined due to the fact that we have to choose a basis. This means that two representations for the same vector space can differ by conjugation of a change of basis matrix:</p>
+<p>While these definition look similar, they are not the same, as a representation <span class="math inline">\(\rho: G \lrarrow GL_n(K)\)</span> can be identified with <span class="math inline">\(\rho: G \lrarrow GL(V)\)</span> where <span class="math inline">\(V=K^n\)</span>, but the converse is not true. This basically boils down to the fact that the inverse map isn’t well-defined due to the fact that we have to choose a basis. This means that two representations for the same vector space can differ by conjugation of a change of basis matrix:</p>
 <p><span class="math display">\[
     \rho_{\beta'}=T^{-1}\rho_{\beta} T
 \]</span> where <span class="math inline">\(T\)</span> is the change of basis matrix from the basis <span class="math inline">\(\b\)</span> to <span class="math inline">\(\b'\)</span>. Therefore, we should consider representations up to a different notion of equivalence rather than strictly equal. This is formalized in the following definition:</p>
 <div id="def-rep-equiv" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2</strong></span> Two matrix representaitons <span class="math inline">\(\r_1,\r_2:G\lrarrow GL_n(k)\)</span> are equivalent if there exists a <span class="math inline">\(T \in GL_n(k)\)</span> such that <span class="math inline">\(\r_2= T^{-1} \r_1 T\)</span></p>
+<p><span class="theorem-title"><strong>Definition 2</strong></span> Two matrix representaitons <span class="math inline">\(\r_1,\r_2:G\lrarrow GL_n(K)\)</span> are equivalent if there exists a <span class="math inline">\(T \in GL_n(K)\)</span> such that <span class="math inline">\(\r_2= T^{-1} \r_1 T\)</span></p>
 <p>Similarly, two representations <span class="math inline">\(\r_1,r_2:G \lrarrow GL(V)\)</span> are equivalent if there exists a <span class="math inline">\(T\in GL(V)\)</span> such that <span class="math inline">\(\r_2= T^{-1} \r_1 T\)</span></p>
 <p>It’s clear that these notions are equivalence relations, and we now have a bijection on the level of equivalence classes of matrix and linear representations.</p>
 
