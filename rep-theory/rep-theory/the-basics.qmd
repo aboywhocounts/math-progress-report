@@ -2,6 +2,7 @@
 title: Basic definitions and concepts
 ---
 
+
 I would like this section to contain the fundamentals of representation theory of finite groups. As an undergraduate at UVA, I made the mistake of not taking Algebra 2, the second course in the graduate algebra sequence that dealt with representation theory and field theory. These posts are meant to provide a somewhat detailed account of my self-study process to make up for that.
 
 In each of these entries I plan to state key theorems and propositions and their proofs (most of the time), as well as some examples and exposition to illustrate those statements. So, without further ado, let's get into what representation theory is. 
