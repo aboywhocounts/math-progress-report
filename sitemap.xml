@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aboywhocounts.github.io/math-progress-report/feed.html</loc>
+    <lastmod>2026-01-23T15:46:40.347Z</lastmod>
+  </url>
+  <url>
     <loc>https://aboywhocounts.github.io/math-progress-report/rep-theory/rep-theory/schurs-lemma.html</loc>
-    <lastmod>2026-01-16T16:01:15.494Z</lastmod>
+    <lastmod>2026-01-23T15:46:40.347Z</lastmod>
   </url>
   <url>
     <loc>https://aboywhocounts.github.io/math-progress-report/index.html</loc>
-    <lastmod>2026-01-16T16:01:15.494Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aboywhocounts.github.io/math-progress-report/feed.html</loc>
-    <lastmod>2026-01-16T16:01:15.494Z</lastmod>
+    <lastmod>2026-01-23T15:46:40.347Z</lastmod>
   </url>
   <url>
     <loc>https://aboywhocounts.github.io/math-progress-report/about.html</loc>
-    <lastmod>2026-01-16T16:01:15.485Z</lastmod>
+    <lastmod>2026-01-23T15:46:40.340Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aboywhocounts.github.io/math-progress-report/rep-theory/rep-theory/the-basics.html</loc>
+    <lastmod>2026-01-23T15:46:40.347Z</lastmod>
   </url>
 </urlset>
