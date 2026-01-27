@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aboywhocounts.github.io/math-progress-report/feed.html</loc>
-    <lastmod>2026-01-25T17:30:20.375Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aboywhocounts.github.io/math-progress-report/rep-theory/rep-theory/schurs-lemma.html</loc>
-    <lastmod>2026-01-25T17:30:20.376Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aboywhocounts.github.io/math-progress-report/index.html</loc>
-    <lastmod>2026-01-25T17:30:20.376Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aboywhocounts.github.io/math-progress-report/about.html</loc>
-    <lastmod>2026-01-25T17:30:20.369Z</lastmod>
+    <loc>https://aboywhocounts.github.io/math-progress-report/misc-math/mosher-tangora-prblm1.html</loc>
+    <lastmod>2026-01-27T19:16:38.673Z</lastmod>
   </url>
   <url>
     <loc>https://aboywhocounts.github.io/math-progress-report/rep-theory/rep-theory/the-basics.html</loc>
-    <lastmod>2026-01-25T17:30:20.376Z</lastmod>
+    <lastmod>2026-01-27T19:16:38.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aboywhocounts.github.io/math-progress-report/about.html</loc>
+    <lastmod>2026-01-27T19:16:38.666Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aboywhocounts.github.io/math-progress-report/index.html</loc>
+    <lastmod>2026-01-27T19:16:38.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aboywhocounts.github.io/math-progress-report/rep-theory/rep-theory/schurs-lemma.html</loc>
+    <lastmod>2026-01-27T19:16:38.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aboywhocounts.github.io/math-progress-report/feed.html</loc>
+    <lastmod>2026-01-27T19:16:38.673Z</lastmod>
   </url>
 </urlset>
