@@ -8,22 +8,22 @@ In each of these entries I plan to state key theorems and propositions and their
 
 In abstract algebra, one of the core objects we study are groups. They can be studied in the abstract of course, but one of the most fundamental ways that we study these objects is through their actions. We can examine actions just simply on sets, but we can glean more information if we study how they act on other algebraic objects, such as vector spaces. This is the general philosophy of finite group representation theory: we study how groups act as symmetries of a vector space. Sometimes these vector spaces have additional structure, like an inner product, and in these cases even more can be said. We will revisit this richer situation later, but for now let's understand some basic definitions. 
 
-Recall that by $GL(V)$ we mean the group of linear automorphisms of $V$. Fixing a basis $\beta=\{e_1,...,e_n\}$, we can identify $V$ with $K^n$ and thus $GL(V)$ with $GL_n(K)$, sending $f \in GL(V)$ to $[f]_{\beta}$, its matrix representation.
+Recall that by $GL(V)$ we mean the group of linear automorphisms of $V$. Fixing a basis $\beta=\{e_1,...,e_n\}$, we can identify $V$ with $\k^n$ and thus $GL(V)$ with $GL_n(\k)$, sending $f \in GL(V)$ to $[f]_{\beta}$, its matrix representation.
 
 ::: {#def-rep}
 ## Representation of a group $G$
-Let $G$ be a group and $V$ a vector space over a field $K$. A **representation** of $G$ on $V$ is a group homomorphism
+Let $G$ be a group and $V$ a vector space over a field $\k$. A **representation** of $G$ on $V$ is a group homomorphism
 $$ 
     \rho: G \lrarrow GL(V) 
 $$
 
 If we have a basis $\beta$ as above, we obtain an **n-dimensional represenation** of $G$:
 $$
-    \rho: G\lrarrow GL_n(K)
+    \rho: G\lrarrow GL_n(\k)
 $$
 :::
 
-While these definition look similar, they are not the same, as a representation $\rho: G \lrarrow GL_n(K)$ can be identified with $\rho: G \lrarrow GL(V)$ where $V=K^n$, but the converse is not true. This basically boils down to the fact that the inverse map isn't well-defined due to the fact that we have to choose a basis. This means that two representations for the same vector space can differ by conjugation of a change of basis matrix:
+While these definition look similar, they are not the same, as a representation $\rho: G \lrarrow GL_n(\k)$ can be identified with $\rho: G \lrarrow GL(V)$ where $V=\k^n$, but the converse is not true. This basically boils down to the fact that the inverse map isn't well-defined due to the fact that we have to choose a basis. This means that two representations for the same vector space can differ by conjugation of a change of basis matrix:
 
 $$
     \rho_{\beta'}=T^{-1}\rho_{\beta} T
@@ -31,8 +31,14 @@ $$
 where $T$ is the change of basis matrix from the basis $\b$ to $\b'$. Therefore, we should consider representations up to a different notion of equivalence rather than strictly equal. This is formalized in the following definition:
 
 ::: {#def-rep-equiv}
-Two matrix representaitons $\r_1,\r_2:G\lrarrow GL_n(K)$ are equivalent if there exists a $T \in GL_n(K)$ such that $\r_2= T^{-1} \r_1 T$
+Two matrix representaitons $\r_1,\r_2:G\lrarrow GL_n(\k)$ are **equivalent** if there exists a $T \in GL_n(\k)$ such that $\r_2= T^{-1} \r_1 T$
 
 Similarly, two representations $\r_1,r_2:G \lrarrow GL(V)$ are equivalent if there exists a $T\in GL(V)$ such that $\r_2= T^{-1} \r_1 T$
 
 It's clear that these notions are equivalence relations, and we now have a bijection on the level of equivalence classes of matrix and linear representations. 
+
+There are countless examples of representations that can be found anywhere really, but here I will focus on one important one. Let $G=SL_2(\k)$, the group of $2\times 2$ invertible matrices over $\k$ with determinant $1$. Now there is an obvious representation 
+$$
+\r:G \lrarrow GL_2(\k)
+$$
+acting as the inclusion homomorphism, but we will soon show that $G$ has a representation in every dimension $n$. 

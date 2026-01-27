@@ -22,13 +22,19 @@ website:
         contents:
           - rep-theory/rep-theory/the-basics.qmd
           - rep-theory/rep-theory/schurs-lemma.qmd
+      - section: "Field Theory"
+
+      - section: "Miscellaneous Math"
+        contents:
+          - misc-math/exercises.qmd`
 
 format:
   html:
     theme: cosmo
     toc: true
     html-math-method: mathjax
-    include-in-header: math-macros.html  #This is for custom math macros (i.e. LaTeX shortcuts)
+    include-in-title: math-macros.html  
+    include-in-header: math-macros.html  
 
 
 

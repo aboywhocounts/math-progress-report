@@ -1,0 +1,21 @@
+---
+title-includes:
+    \usepackage{amsfonts}
+title: 'Some Stable Homotopy Groups of $\mathbb{RP}^2$'
+header-includes:
+- \usepackage{amsfonts}
+---
+
+In this post I'd like to post a solution to exerices 12.1 from Mosher and Tangora's *Cohomology Operations and Applications in Homotopy Theory*. This problem took me a lot of time, but I think it's important to know how to do, so I've decided to make a post about it.
+
+The problem:
+
+:::{#prob-mt1}
+Let $M_n=S^n \cup_{2\iota} e^{n+1}$. We can also think of this as $\S^{n-1}\RP^2$,  the $(n-1)$-suspension of the real projective plane. Compute the homotopy groups $\pi_{n+k}(M_n)$ for large $n$ and small $k$. 
+:::
+
+So there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence 
+$$ 
+S^n\lrarrow S^n \lrarrow M_n 
+$$
+where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora's book. 
