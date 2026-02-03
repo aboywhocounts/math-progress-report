@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Some Stable Homotopy Groups of \mathbb{RP}^2 – a young man's mathematical journey</title>
+<title>Some Stable Homotopy Groups of \mathbb{RP}^2 – A Young Man's Mathematical Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,51 +68,50 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-</head><body class="nav-sidebar docked nav-fixed quarto-light"><div style="display: none;">
-$$
-  \renewcommand{\R}{\mathbb{R}}
-  \renewcommand{\C}{\mathbb{C}}
-  \newcommand{\Z}{\mathbb{Z}}
-  \newcommand{\Q}{\mathbb{Q}}
-  \newcommand{\F}{\mathbb{F}} 
-  \newcommand{\lrarrow}{\longrightarrow}
-  \newcommand{\k}{\mathbb{k}}
-  \newcommand{\RP}{\mathbb{RP}}
-  \newcommand{\S}{\Sigma}
+<script>
+// Global MathJax configuration for site-wide macros
+// Note: keep this BEFORE the MathJax script include (as Quarto does)
+window.MathJax = window.MathJax || {};
+window.MathJax = Object.assign(window.MathJax, {
+  tex: {
+    // simple macro replacements: name -> replacement (backslashes doubled for JS strings)
+    macros: {
+      R: "\\mathbb{R}",
+      C: "\\mathbb{C}",
+      Z: "\\mathbb{Z}",
+      Q: "\\mathbb{Q}",
+      F: "\\mathbb{F}",
+      lrarrow: "\\longrightarrow",
+      k: "\\mathbb{k}",
+      RP: "\\mathbb{RP}",
+      S: "\\Sigma",
 
-  % Shorthand
-  \newcommand{\b}{\beta}
-  \newcommand{\r}{\rho}
+      // shorthand
+      b: "\\beta",
+      r: "\\rho",
 
-  % Environments
-  \theoremstyle{definition}
-  \newtheorem{definition}{Definition}[section]
-  \theoremstyle{example}
-  \newtheorem{example}{Example}[section]
-  \theoremstyle{remark}
-  \newtheorem*{remark}{Remark}
-  \theoremstyle{corollary}
-  \newtheorem{corollary}{Corollary}[section]
-  \theoremstyle{proposition}
-  \newtheorem{proposition}{Proposition}[section]
-  \theoremstyle{lemma}
-  \newtheorem{lemma}{Lemma}[section]
-  \theoremstyle{theorem}
-  \newtheorem{theorem}{Theorem}[section]
+      // linear algebra / rep theory
+      Hom: "\\mathrm{Hom}",
+      End: "\\mathrm{End}",
+      GL: "\\mathrm{GL}",
+      tr: "\\mathrm{tr}",
+      id: "\\mathrm{id}",
 
-  % Linear Algebra / Rep Theory
-  \newcommand{\Hom}{\mathrm{Hom}}
-  \newcommand{\End}{\mathrm{End}}
-  \newcommand{\GL}{\mathrm{GL}}
-  \newcommand{\tr}{\mathrm{tr}}
-  \newcommand{\id}{\mathrm{id}}
+      // field theory
+      Gal: "\\mathrm{Gal}",
+      Char: "\\mathrm{char}"
+    },
+    // ensure AMS macros are available (if needed)
+    packages: {'[+]': ['ams']}
+  }
+});
 
-  % Field Theory
-  \newcommand{\Gal}{\mathrm{Gal}}
-  \newcommand{\Char}{\mathrm{char}}
-$$
-</div>
-\usepackage{amsfonts}
+// NOTE: LaTeX-only things like \newtheorem / \theoremstyle are not generally available
+// in MathJax the same way as in LaTeX documents. If you need styled theorem blocks,
+// consider using HTML/CSS or define specific macros for labels/environments.
+</script>
+</head><body class="nav-sidebar docked nav-fixed quarto-light">\usepackage{amsfonts}
+\usepackage{amsthm}
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -154,7 +153,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">a young man’s mathematical journey</span>
+    <span class="navbar-title">A Young Man’s Mathematical Journey</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -182,7 +181,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Topology</a></li><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,12 +204,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Representation Theory</span></a>
+ <span class="menu-text">Topology</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Representation Theory</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rep-theory/rep-theory/the-basics.html" class="sidebar-item-text sidebar-link">
@@ -229,20 +245,6 @@ window.Quarto = {
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Field Theory</span></span>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Miscellaneous Math</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
- <span class="menu-text">misc-math/exercises.qmd`</span>
-  </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -254,7 +256,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Topology</a></li><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></h1>
 </div>
@@ -273,14 +275,27 @@ window.Quarto = {
 </header>
 
 
-<p>In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s <em>Cohomology Operations and Applications in Homotopy Theory</em>. This problem took me a lot of time, but I think it’s important to know how to do, so I’ve decided to make a post about it.</p>
+<p>In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s <em>Cohomology Operations and Applications in Homotopy Theory</em>. This problem took me a lot of time to work out, but I think it’s important to know how to do, so I’ve decided to make a post about it.</p>
+<p>I should mention before starting that whenever <span class="math inline">\(\pi_i^S(-)\)</span> appears, I mean the <strong>2-component</strong> of the stable homotopy group. Additionally, much of the notation and terminology used here is from Mosher and Tangora’s book, but I’ll try and indicate when I’m using something specific from there. Also, I will denote the stable homotopy groups of spheres by <span class="math inline">\(\pi_*^S\)</span> for brevity.</p>
 <p>The problem:</p>
 <div id="prob-mt1">
-<p>Let <span class="math inline">\(M_n=S^n \cup_{2\iota} e^{n+1}\)</span>. We can also think of this as <span class="math inline">\(\S^{n-1}\RP^2\)</span>, the <span class="math inline">\((n-1)\)</span>-suspension of the real projective plane. Compute the homotopy groups <span class="math inline">\(\pi_{n+k}(M_n)\)</span> for large <span class="math inline">\(n\)</span> and small <span class="math inline">\(k\)</span>.</p>
+<p>Let <span class="math inline">\(M_n=S^n \cup_{2} e^{n+1}\)</span>. We can also think of this as <span class="math inline">\(\S^{n-1}\RP^2\)</span>, the <span class="math inline">\((n-1)\)</span>-suspension of the real projective plane. Compute the homotopy groups <span class="math inline">\(\pi_{n+k}(M_n)\)</span> for large <span class="math inline">\(n\)</span> and small <span class="math inline">\(k\)</span>.</p>
 </div>
 <p>So there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence <span class="math display">\[
 S^n\lrarrow S^n \lrarrow M_n
 \]</span> where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book.</p>
+<p>Let’s begin with the cofiber sequence. Now, since <span class="math inline">\(\pi_*^S\)</span> is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups: <span class="math display">\[
+\cdots \lrarrow \pi_n^S \xrightarrow{2} \pi_n^S \to \pi_n^S(M_n) \to \pi_{n-1}^S \xrightarrow{2} \pi_{n-1}^S\lrarrow \cdots
+\]</span></p>
+<p>examining the bottom portion of this long exact sequence, we have <span class="math display">\[
+\pi_2^S \xrightarrow{2} \pi_2^S \to \pi_2^S(M_n) \to \pi_1^S \xrightarrow{2} \pi_1^S
+\]</span></p>
+<p>As we can see, <span class="math inline">\(\pi^S_0(M_n)\)</span> is the cokernel of the degree 2 map on <span class="math inline">\(\pi_0^S(S^n) \cong \Z\)</span>, which is <span class="math inline">\(\Z/2\Z\)</span>, and so <span class="math inline">\(\pi^S_0(M_n) \cong \Z/2\Z\)</span>. Now, since multiplication by 2 is injective on <span class="math inline">\(\pi_1^S\cong \Z\)</span>, we know that the map <span class="math inline">\(\pi_1^S(M_n) \to \pi_0^S\)</span> is the zero map, and thus <span class="math inline">\(\pi_1^S(M_n)\)</span> is isomorphic to the cokernel of the degree 2 map on <span class="math inline">\(\pi_1^S\)</span>. However, since <span class="math inline">\(\pi_1^S \cong \Z/2\Z\)</span>, this map is the zero map, and thus <span class="math inline">\(\pi_1^S(M_n) \cong \Z/2\Z\)</span> as well.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/mt1d1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
 
 
 

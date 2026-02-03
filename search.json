@@ -1,10 +1,15 @@
 [
   {
-    "objectID": "misc-math/mosher-tangora-prblm1.html",
-    "href": "misc-math/mosher-tangora-prblm1.html",
+    "objectID": "htpy-theory/mosher-tangora-prblm1.html",
+    "href": "htpy-theory/mosher-tangora-prblm1.html",
     "title": "Some Stable Homotopy Groups of \\(\\mathbb{RP}^2\\)",
     "section": "",
-    "text": "In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. This problem took me a lot of time, but I think it’s important to know how to do, so I’ve decided to make a post about it.\nThe problem:\n\nLet \\(M_n=S^n \\cup_{2\\iota} e^{n+1}\\). We can also think of this as \\(\\S^{n-1}\\RP^2\\), the \\((n-1)\\)-suspension of the real projective plane. Compute the homotopy groups \\(\\pi_{n+k}(M_n)\\) for large \\(n\\) and small \\(k\\).\n\nSo there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence \\[\nS^n\\lrarrow S^n \\lrarrow M_n\n\\] where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book."
+    "text": "In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. This problem took me a lot of time to work out, but I think it’s important to know how to do, so I’ve decided to make a post about it.\nI should mention before starting that whenever \\(\\pi_i^S(-)\\) appears, I mean the 2-component of the stable homotopy group. Additionally, much of the notation and terminology used here is from Mosher and Tangora’s book, but I’ll try and indicate when I’m using something specific from there. Also, I will denote the stable homotopy groups of spheres by \\(\\pi_*^S\\) for brevity.\nThe problem:\n\nLet \\(M_n=S^n \\cup_{2} e^{n+1}\\). We can also think of this as \\(\\S^{n-1}\\RP^2\\), the \\((n-1)\\)-suspension of the real projective plane. Compute the homotopy groups \\(\\pi_{n+k}(M_n)\\) for large \\(n\\) and small \\(k\\).\n\nSo there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence \\[\nS^n\\lrarrow S^n \\lrarrow M_n\n\\] where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book.\nLet’s begin with the cofiber sequence. Now, since \\(\\pi_*^S\\) is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups: \\[\n\\cdots \\lrarrow \\pi_n^S \\xrightarrow{2} \\pi_n^S \\to \\pi_n^S(M_n) \\to \\pi_{n-1}^S \\xrightarrow{2} \\pi_{n-1}^S\\lrarrow \\cdots\n\\]\nexamining the bottom portion of this long exact sequence, we have \\[\n\\pi_2^S \\xrightarrow{2} \\pi_2^S \\to \\pi_2^S(M_n) \\to \\pi_1^S \\xrightarrow{2} \\pi_1^S\n\\]\nAs we can see, \\(\\pi^S_0(M_n)\\) is the cokernel of the degree 2 map on \\(\\pi_0^S(S^n) \\cong \\Z\\), which is \\(\\Z/2\\Z\\), and so \\(\\pi^S_0(M_n) \\cong \\Z/2\\Z\\). Now, since multiplication by 2 is injective on \\(\\pi_1^S\\cong \\Z\\), we know that the map \\(\\pi_1^S(M_n) \\to \\pi_0^S\\) is the zero map, and thus \\(\\pi_1^S(M_n)\\) is isomorphic to the cokernel of the degree 2 map on \\(\\pi_1^S\\). However, since \\(\\pi_1^S \\cong \\Z/2\\Z\\), this map is the zero map, and thus \\(\\pi_1^S(M_n) \\cong \\Z/2\\Z\\) as well.",
+    "crumbs": [
+      "Home",
+      "Topology",
+      "Some Stable Homotopy Groups of $\\mathbb{RP}^2$"
+    ]
   },
   {
     "objectID": "rep-theory/rep-theory/the-basics.html",
@@ -23,14 +28,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "cd math-progress-report",
+    "title": "A Young Man’s Mathematical Journey",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Welcome to my mathematical progress report. Here I plan to document my journey through different areas of math that I find interesting enough to study on my own. The goal for this “blog” is to have a place to document what I learn and other thoughts that I have about the material, beyond just copying down lecture notes or textbook excerpts. I already enjoy learning about and doing math in my free time, so I figured why not have a place to share it with others too?\nThe current focus of my studies is representation theory of finite groups, and some algebraic topology on the side. I’m currently writing my undergraduate thesis on cohomology operations and stable homotopy groups of spheres, so there will most likely be random problems and expositions related to that, in contrast to the more structured representation theory posts.\nI hope you enjoy!"
   },
   {
     "objectID": "rep-theory/rep-theory/schurs-lemma.html",
