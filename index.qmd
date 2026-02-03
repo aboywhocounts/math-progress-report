@@ -1,7 +1,9 @@
 ---
-title: "cd math-progress-report"
+title: "A Young Man's Mathematical Journey"
 ---
 
-This is a Quarto website.
+Welcome to my mathematical progress report. Here I plan to document my journey through different areas of math that I find interesting enough to study on my own. The goal for this "blog" is to have a place to document what I learn and other thoughts that I have about the material, beyond just copying down lecture notes or textbook excerpts. I already enjoy learning about and doing math in my free time, so I figured why not have a place to share it with others too?
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+The current focus of my studies is representation theory of finite groups, and some algebraic topology on the side. I'm currently writing my undergraduate thesis on cohomology operations and stable homotopy groups of spheres, so there will most likely be random problems and expositions related to that, in contrast to the more structured representation theory posts. 
+
+I hope you enjoy!

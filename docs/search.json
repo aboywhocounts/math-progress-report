@@ -1,5 +1,43 @@
 [
   {
+    "objectID": "htpy-theory/mosher-tangora-prblm1.html",
+    "href": "htpy-theory/mosher-tangora-prblm1.html",
+    "title": "Some Stable Homotopy Groups of \\(\\mathbb{RP}^2\\)",
+    "section": "",
+    "text": "In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. This problem took me a lot of time to work out, but I think it’s important to know how to do, so I’ve decided to make a post about it.\nI should mention before starting that whenever \\(\\pi_i^S(-)\\) appears, I mean the 2-component of the stable homotopy group. Additionally, much of the notation and terminology used here is from Mosher and Tangora’s book, but I’ll try and indicate when I’m using something specific from there. Also, I will denote the stable homotopy groups of spheres by \\(\\pi_*^S\\) for brevity.\nThe problem:\n\nLet \\(M_n=S^n \\cup_{2} e^{n+1}\\). We can also think of this as \\(\\S^{n-1}\\RP^2\\), the \\((n-1)\\)-suspension of the real projective plane. Compute the homotopy groups \\(\\pi_{n+k}(M_n)\\) for large \\(n\\) and small \\(k\\).\n\nSo there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence \\[\nS^n\\lrarrow S^n \\lrarrow M_n\n\\] where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book.\nLet’s begin with the cofiber sequence. Now, since \\(\\pi_*^S\\) is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups: \\[\n\\cdots \\lrarrow \\pi_n^S \\xrightarrow{2} \\pi_n^S \\to \\pi_n^S(M_n) \\to \\pi_{n-1}^S \\xrightarrow{2} \\pi_{n-1}^S\\lrarrow \\cdots\n\\]\nexamining the bottom portion of this long exact sequence, we have \\[\n\\pi_2^S \\xrightarrow{2} \\pi_2^S \\to \\pi_2^S(M_n) \\to \\pi_1^S \\xrightarrow{2} \\pi_1^S\n\\]\nAs we can see, \\(\\pi^S_0(M_n)\\) is the cokernel of the degree 2 map on \\(\\pi_0^S(S^n) \\cong \\Z\\), which is \\(\\Z/2\\Z\\), and so \\(\\pi^S_0(M_n) \\cong \\Z/2\\Z\\). Now, since multiplication by 2 is injective on \\(\\pi_1^S\\cong \\Z\\), we know that the map \\(\\pi_1^S(M_n) \\to \\pi_0^S\\) is the zero map, and thus \\(\\pi_1^S(M_n)\\) is isomorphic to the cokernel of the degree 2 map on \\(\\pi_1^S\\). However, since \\(\\pi_1^S \\cong \\Z/2\\Z\\), this map is the zero map, and thus \\(\\pi_1^S(M_n) \\cong \\Z/2\\Z\\) as well.",
+    "crumbs": [
+      "Home",
+      "Topology",
+      "Some Stable Homotopy Groups of $\\mathbb{RP}^2$"
+    ]
+  },
+  {
+    "objectID": "rep-theory/rep-theory/the-basics.html",
+    "href": "rep-theory/rep-theory/the-basics.html",
+    "title": "Basic definitions and concepts",
+    "section": "",
+    "text": "I would like this section to contain the fundamentals of representation theory of finite groups. As an undergraduate at UVA, I made the mistake of not taking Algebra 2, the second course in the graduate algebra sequence that dealt with representation theory and field theory. These posts are meant to provide a somewhat detailed account of my self-study process to make up for that.\nIn each of these entries I plan to state key theorems and propositions and their proofs (most of the time), as well as some examples and exposition to illustrate those statements. So, without further ado, let’s get into what representation theory is.\nIn abstract algebra, one of the core objects we study are groups. They can be studied in the abstract of course, but one of the most fundamental ways that we study these objects is through their actions. We can examine actions just simply on sets, but we can glean more information if we study how they act on other algebraic objects, such as vector spaces. This is the general philosophy of finite group representation theory: we study how groups act as symmetries of a vector space. Sometimes these vector spaces have additional structure, like an inner product, and in these cases even more can be said. We will revisit this richer situation later, but for now let’s understand some basic definitions.\nRecall that by \\(GL(V)\\) we mean the group of linear automorphisms of \\(V\\). Fixing a basis \\(\\beta=\\{e_1,...,e_n\\}\\), we can identify \\(V\\) with \\(\\k^n\\) and thus \\(GL(V)\\) with \\(GL_n(\\k)\\), sending \\(f \\in GL(V)\\) to \\([f]_{\\beta}\\), its matrix representation.\n\nDefinition 1 (Representation of a group \\(G\\)) Let \\(G\\) be a group and \\(V\\) a vector space over a field \\(\\k\\). A representation of \\(G\\) on \\(V\\) is a group homomorphism \\[\n    \\rho: G \\lrarrow GL(V)\n\\]\nIf we have a basis \\(\\beta\\) as above, we obtain an n-dimensional represenation of \\(G\\): \\[\n    \\rho: G\\lrarrow GL_n(\\k)\n\\]\n\nWhile these definition look similar, they are not the same, as a representation \\(\\rho: G \\lrarrow GL_n(\\k)\\) can be identified with \\(\\rho: G \\lrarrow GL(V)\\) where \\(V=\\k^n\\), but the converse is not true. This basically boils down to the fact that the inverse map isn’t well-defined due to the fact that we have to choose a basis. This means that two representations for the same vector space can differ by conjugation of a change of basis matrix:\n\\[\n    \\rho_{\\beta'}=T^{-1}\\rho_{\\beta} T\n\\] where \\(T\\) is the change of basis matrix from the basis \\(\\b\\) to \\(\\b'\\). Therefore, we should consider representations up to a different notion of equivalence rather than strictly equal. This is formalized in the following definition:\n\nDefinition 2 Two matrix representaitons \\(\\r_1,\\r_2:G\\lrarrow GL_n(\\k)\\) are equivalent if there exists a \\(T \\in GL_n(\\k)\\) such that \\(\\r_2= T^{-1} \\r_1 T\\)\nSimilarly, two representations \\(\\r_1,r_2:G \\lrarrow GL(V)\\) are equivalent if there exists a \\(T\\in GL(V)\\) such that \\(\\r_2= T^{-1} \\r_1 T\\)\nIt’s clear that these notions are equivalence relations, and we now have a bijection on the level of equivalence classes of matrix and linear representations.\nThere are countless examples of representations that can be found anywhere really, but here I will focus on one important one. Let \\(G=SL_2(\\k)\\), the group of \\(2\\times 2\\) invertible matrices over \\(\\k\\) with determinant \\(1\\). Now there is an obvious representation \\[\n\\r:G \\lrarrow GL_2(\\k)\n\\] acting as the inclusion homomorphism, but we will soon show that \\(G\\) has a representation in every dimension \\(n\\).",
+    "crumbs": [
+      "Home",
+      "Representation Theory",
+      "Basic definitions and concepts"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!"
+  },
+  {
+    "objectID": "feed.html",
+    "href": "feed.html",
+    "title": "Latest Updates",
+    "section": "",
+    "text": "Here is a chronological log of my study notes and updates.\n\n\n\n\n\n\n\n\n\nSchur’s Lemma\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nBasic definitions and concepts\n\n\n\n\n\n\n\n3 min\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "rep-theory/rep-theory/schurs-lemma.html",
     "href": "rep-theory/rep-theory/schurs-lemma.html",
     "title": "Schur’s Lemma",
@@ -34,59 +72,5 @@
       "Representation Theory",
       "Schur's Lemma"
     ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "cd math-progress-report",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "feed.html",
-    "href": "feed.html",
-    "title": "Latest Updates",
-    "section": "",
-    "text": "Here is a chronological log of my study notes and updates.\n\n\n\n\n\n\n\n\n\nSchur’s Lemma\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nBasic definitions and concepts\n\n\n\n\n\n\n\n3 min\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "rep-theory/rep-theory/the-basics.html",
-    "href": "rep-theory/rep-theory/the-basics.html",
-    "title": "Basic definitions and concepts",
-    "section": "",
-    "text": "I would like this section to contain the fundamentals of representation theory of finite groups. As an undergraduate at UVA, I made the mistake of not taking Algebra 2, the second course in the graduate algebra sequence that dealt with representation theory and field theory. These posts are meant to provide a somewhat detailed account of my self-study process to make up for that.\nIn each of these entries I plan to state key theorems and propositions and their proofs (most of the time), as well as some examples and exposition to illustrate those statements. So, without further ado, let’s get into what representation theory is.\nIn abstract algebra, one of the core objects we study are groups. They can be studied in the abstract of course, but one of the most fundamental ways that we study these objects is through their actions. We can examine actions just simply on sets, but we can glean more information if we study how they act on other algebraic objects, such as vector spaces. This is the general philosophy of finite group representation theory: we study how groups act as symmetries of a vector space. Sometimes these vector spaces have additional structure, like an inner product, and in these cases even more can be said. We will revisit this richer situation later, but for now let’s understand some basic definitions.\nRecall that by \\(GL(V)\\) we mean the group of linear automorphisms of \\(V\\). Fixing a basis \\(\\beta=\\{e_1,...,e_n\\}\\), we can identify \\(V\\) with \\(\\k^n\\) and thus \\(GL(V)\\) with \\(GL_n(\\k)\\), sending \\(f \\in GL(V)\\) to \\([f]_{\\beta}\\), its matrix representation.\n\nDefinition 1 (Representation of a group \\(G\\)) Let \\(G\\) be a group and \\(V\\) a vector space over a field \\(\\k\\). A representation of \\(G\\) on \\(V\\) is a group homomorphism \\[\n    \\rho: G \\lrarrow GL(V)\n\\]\nIf we have a basis \\(\\beta\\) as above, we obtain an n-dimensional represenation of \\(G\\): \\[\n    \\rho: G\\lrarrow GL_n(\\k)\n\\]\n\nWhile these definition look similar, they are not the same, as a representation \\(\\rho: G \\lrarrow GL_n(\\k)\\) can be identified with \\(\\rho: G \\lrarrow GL(V)\\) where \\(V=\\k^n\\), but the converse is not true. This basically boils down to the fact that the inverse map isn’t well-defined due to the fact that we have to choose a basis. This means that two representations for the same vector space can differ by conjugation of a change of basis matrix:\n\\[\n    \\rho_{\\beta'}=T^{-1}\\rho_{\\beta} T\n\\] where \\(T\\) is the change of basis matrix from the basis \\(\\b\\) to \\(\\b'\\). Therefore, we should consider representations up to a different notion of equivalence rather than strictly equal. This is formalized in the following definition:\n\nDefinition 2 Two matrix representaitons \\(\\r_1,\\r_2:G\\lrarrow GL_n(\\k)\\) are equivalent if there exists a \\(T \\in GL_n(\\k)\\) such that \\(\\r_2= T^{-1} \\r_1 T\\)\nSimilarly, two representations \\(\\r_1,r_2:G \\lrarrow GL(V)\\) are equivalent if there exists a \\(T\\in GL(V)\\) such that \\(\\r_2= T^{-1} \\r_1 T\\)\nIt’s clear that these notions are equivalence relations, and we now have a bijection on the level of equivalence classes of matrix and linear representations.\nThere are countless examples of representations that can be found anywhere really, but here I will focus on one important one. Let \\(G=SL_2(\\k)\\), the group of \\(2\\times 2\\) invertible matrices over \\(\\k\\) with determinant \\(1\\). Now there is an obvious representation \\[\n\\r:G \\lrarrow GL_2(\\k)\n\\] acting as the inclusion homomorphism, but we will soon show that \\(G\\) has a representation in every dimension \\(n\\).",
-    "crumbs": [
-      "Home",
-      "Representation Theory",
-      "Basic definitions and concepts"
-    ]
-  },
-  {
-    "objectID": "misc-math/mosher-tangora-prblm1.html",
-    "href": "misc-math/mosher-tangora-prblm1.html",
-    "title": "Some Stable Homotopy Groups of \\(\\mathbb{RP}^2\\)",
-    "section": "",
-    "text": "In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. This problem took me a lot of time, but I think it’s important to know how to do, so I’ve decided to make a post about it.\nThe problem:\n\nLet \\(M_n=S^n \\cup_{2\\iota} e^{n+1}\\). We can also think of this as \\(\\S^{n-1}\\RP^2\\), the \\((n-1)\\)-suspension of the real projective plane. Compute the homotopy groups \\(\\pi_{n+k}(M_n)\\) for large \\(n\\) and small \\(k\\).\n\nSo there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence \\[\nS^n\\lrarrow S^n \\lrarrow M_n\n\\] where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book."
-  },
-  {
-    "objectID": "misc-math/mosher-tangora-prblm1.html#cat-misc-mathmosher-tangora-prblm1.qmd-eof",
-    "href": "misc-math/mosher-tangora-prblm1.html#cat-misc-mathmosher-tangora-prblm1.qmd-eof",
-    "title": "Some Stable Homotopy Groups of (^2)",
-    "section": "",
-    "text": "title: ‘Some Stable Homotopy Groups of RP^2’ header-includes: -"
-  },
-  {
-    "objectID": "misc-math/mosher-tangora-prblm1.html#eof",
-    "href": "misc-math/mosher-tangora-prblm1.html#eof",
-    "title": "Some Stable Homotopy Groups of (^2)",
-    "section": "EOF",
-    "text": "EOF\ntitle: ‘Some Stable Homotopy Groups of (^2)’ header-includes: -\n\nIn this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. This problem took me a lot of time, but I think it’s important to know how to do, so I’ve decided to make a post about it.\nThe problem:"
   }
 ]

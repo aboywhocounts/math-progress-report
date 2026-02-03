@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – a young man’s mathematical journey</title>
+<title>About – A Young Man’s Mathematical Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,32 +68,84 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-</head><body class="nav-sidebar docked nav-fixed quarto-light"><div style="display: none;">
+<script type="math/tex; mode=display">
 $$
-  % General Sets
-  \newcommand{\R}{\mathbb{R}}
-  \newcommand{\C}{\mathbb{C}}
-  \newcommand{\Z}{\mathbb{Z}}
-  \newcommand{\Q}{\mathbb{Q}}
-  \newcommand{\F}{\mathbb{F}} 
+    \renewcommand{\R}{\mathbb{R}}
+    \renewcommand{\C}{\mathbb{C}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\Q}{\mathbb{Q}}
+    \newcommand{\F}{\mathbb{F}} 
+    \newcommand{\lrarrow}{\longrightarrow}
+    \newcommand{\k}{\mathbb{k}}
+    \newcommand{\RP}{\mathbb{RP}}
+    \newcommand{\S}{\Sigma}
 
-  % Linear Algebra / Rep Theory
-  \newcommand{\Hom}{\mathrm{Hom}}
-  \newcommand{\End}{\mathrm{End}}
-  \newcommand{\GL}{\mathrm{GL}}
-  \newcommand{\tr}{\mathrm{tr}}
-  \newcommand{\id}{\mathrm{id}}
+    % Shorthand
+    \newcommand{\b}{\beta}
+    \newcommand{\r}{\rho}
 
-  % Field Theory
-  \newcommand{\Gal}{\mathrm{Gal}}
-  \newcommand{\Char}{\mathrm{char}}
+    % Environments
+    \theoremstyle{definition}
+    \newtheorem{definition}{Definition}[section]
+    \theoremstyle{example}
+    \newtheorem{example}{Example}[section]
+    \theoremstyle{remark}
+    \newtheorem*{remark}{Remark}
+    \theoremstyle{corollary}
+    \newtheorem{corollary}{Corollary}[section]
+    \theoremstyle{proposition}
+    \newtheorem{proposition}{Proposition}[section]
+    \theoremstyle{lemma}
+    \newtheorem{lemma}{Lemma}[section]
+    \theoremstyle{theorem}
+    \newtheorem{theorem}{Theorem}[section]
+
+    % Linear Algebra / Rep Theory
+    \newcommand{\Hom}{\mathrm{Hom}}
+    \newcommand{\End}{\mathrm{End}}
+    \newcommand{\GL}{\mathrm{GL}}
+    \newcommand{\tr}{\mathrm{tr}}
+    \newcommand{\id}{\mathrm{id}}
+
+    % Field Theory
+    \newcommand{\Gal}{\mathrm{Gal}}
+    \newcommand{\Char}{\mathrm{char}}
 $$
-</div>
+</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
+</head>
 
-
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,7 +153,7 @@ $$
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">a young man’s mathematical journey</span>
+    <span class="navbar-title">A Young Man’s Mathematical Journey</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -160,8 +212,35 @@ $$
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./rep-theory/rep-theory/the-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic definitions and concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./rep-theory/rep-theory/schurs-lemma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schur’s Lemma</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Field Theory</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Topology</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></span></a>
   </div>
 </li>
       </ul>
@@ -196,7 +275,7 @@ $$
 </header>
 
 
-<p>About this site</p>
+<p>My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!</p>
 
 
 
@@ -274,7 +353,7 @@ $$
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/aboywhocounts\.github\.io\/math-progress-report\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

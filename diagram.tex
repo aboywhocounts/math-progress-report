@@ -1,0 +1,22 @@
+\documentclass[tikz,border=1pt]{standalone}
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}[row sep=large, column sep=small]
+% Row 1
+\pi_3^s \arrow[r, "\\cdot 2"] 
+  & \pi_3^s \arrow[r] 
+  & \pi_3^s(M_n) \arrow[dll, rounded corners, to path={ -- ([xshift=2ex]\\tikztostart.east) |- ([yshift=-2.5ex]\\tikztostart.south) -| ([xshift=-2ex]\\tikztotarget.west) -- (\\tikztotarget)}] \\\\ 
+% Row 2
+\pi_2^s \arrow[r, "\\cdot 2"] 
+  & \pi_2^s \arrow[r] 
+  & \pi_2^s(M_n) \arrow[dll, rounded corners, to path={ -- ([xshift=2ex]\\tikztostart.east) |- ([yshift=-2.5ex]\\tikztostart.south) -| ([xshift=-2ex]\\tikztotarget.west) -- (\\tikztotarget)}] \\\\ 
+% Row 3
+\pi_1^s(S^n) \arrow[r, "\\cdot 2"] 
+  & \pi_1^s(S^n) \arrow[r, "\\cong"] 
+  & \pi_1^s(M_n) \arrow[dll, rounded corners, to path={ -- ([xshift=2ex]\\tikztostart.east) |- ([yshift=-2.5ex]\\tikztostart.south) -| ([xshift=-2ex]\\tikztotarget.west) -- (\\tikztotarget)}] \\\\ 
+% Row 4
+\pi_0^s(S^n) \arrow[r, "\\cdot 2"] 
+  & \pi_0^s \arrow[r] 
+  & \pi_0^s(M_n) \arrow[r] & 0
+\end{tikzcd}
+\end{document}

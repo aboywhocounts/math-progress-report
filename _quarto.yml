@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "a young man's mathematical journey"
+  title: "A Young Man's Mathematical Journey"
   
   # NEW: Add a top navigation bar
   navbar:
@@ -18,23 +18,24 @@ website:
     style: "docked"
     search: true
     contents:
+      - section: "Topology"
+        contents:
+          - htpy-theory/mosher-tangora-prblm1.qmd
+
       - section: "Representation Theory"
         contents:
           - rep-theory/rep-theory/the-basics.qmd
           - rep-theory/rep-theory/schurs-lemma.qmd
       - section: "Field Theory"
 
-      - section: "Miscellaneous Math"
-        contents:
-          - misc-math/exercises.qmd`
-
+     
 format:
   html:
     theme: cosmo
     toc: true
     html-math-method: mathjax
-    include-in-title: math-macros.html  
-    include-in-header: math-macros.html  
+    include-in-title: math-macros.html
+    include-in-header: math-macros.html
 
 
 
