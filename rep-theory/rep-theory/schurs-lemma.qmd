@@ -1,7 +1,5 @@
 ---
 title: "Schur's Lemma"
-header-includes:
-- \usepackage{amsfonts}
 ---
 
 ## The Statement

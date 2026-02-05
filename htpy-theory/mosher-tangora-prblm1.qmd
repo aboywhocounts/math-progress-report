@@ -2,9 +2,6 @@
 title-includes:
     \usepackage{amsfonts}
 title: 'Some Stable Homotopy Groups of $\mathbb{RP}^2$'
-header-includes:
-- \usepackage{amsfonts}
-- \usepackage{amsthm}
 ---
 
 In this post I'd like to post a solution to exerices 12.1 from Mosher and Tangora's *Cohomology Operations and Applications in Homotopy Theory*. This problem took me a lot of time to work out, but I think it's important to know how to do, so I've decided to make a post about it.
@@ -24,15 +21,23 @@ $$
 where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora's book. 
 
 Let's begin with the cofiber sequence. Now, since $\pi_*^S$ is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups:
-$$
-\cdots \lrarrow \pi_n^S \xrightarrow{2} \pi_n^S \to \pi_n^S(M_n) \to \pi_{n-1}^S \xrightarrow{2} \pi_{n-1}^S\lrarrow \cdots 
-$$
+
+![](../images/mt1d1.svg){width="80%" fig-align="center"}
 
 examining the bottom portion of this long exact sequence, we have 
 $$
-\pi_2^S \xrightarrow{2} \pi_2^S \to \pi_2^S(M_n) \to \pi_1^S \xrightarrow{2} \pi_1^S
+\pi_2^S \xrightarrow{\cdot 2} \pi_2^S \to \pi_2^S(M_n) \to \pi_1^S \xrightarrow{\cdot 2} \pi_1^S
 $$
 
-As we can see, $\pi^S_0(M_n)$ is the cokernel of the degree 2 map on $\pi_0^S(S^n) \cong \Z$, which is $\Z/2\Z$, and so $\pi^S_0(M_n) \cong \Z/2\Z$. Now, since multiplication by 2 is injective on $\pi_1^S\cong \Z$, we know that the map $\pi_1^S(M_n) \to \pi_0^S$ is the zero map, and thus $\pi_1^S(M_n)$ is isomorphic to the cokernel of the degree 2 map on $\pi_1^S$. However, since $\pi_1^S \cong \Z/2\Z$, this map is the zero map, and thus $\pi_1^S(M_n) \cong \Z/2\Z$ as well.
+As we can see, $\pi^S_0(M_n)$ is the cokernel of the degree 2 map on $\pi_0^S(S^n) \cong \Z$, which is $\Z/2$, and so $\pi^S_0(M_n) \cong \Z/2$. Now, since multiplication by 2 is injective on $\pi_1^S\cong \Z$, we know that the map $\pi_1^S(M_n) \to \pi_0^S$ is the zero map, and thus $\pi_1^S(M_n)$ is isomorphic to the cokernel of the degree 2 map on $\pi_1^S$. However, since $\pi_1^S \cong \Z/2$, this map is the zero map, and thus $\pi_1^S(M_n) \cong \Z/2$ as well.
 
-![](../images/mt1d1.svg){width="80%" fig-align="center"}
+Moving to the 2nd stable stem, this is where things start to get interesting. Examining the relevant portion of the long exact sequence and substituting known values, we have
+$$
+\Z/2 \xrightarrow{\cdot 2} \Z/2 \to \pi_2^S(M_n) \to \Z/2 \xrightarrow{\cdot 2} \Z/2
+$$
+
+Since multiplication by 2 is the zero map on $\Z/2$, this exact sequence reduces to a short exact sequence
+$$
+0 \to \Z/2 \to \pi_2^S(M_n) \to \Z/2 \to 0
+$$  
+meaning that up to an extension problem, $\pi_2^S(M_n)$ is isomorphic to $\Z/2 \oplus \Z/2$. To figure out if the extension is trivial or not, we will use the Serre spectral sequence, which is the second method I mentioned at the beginning.
