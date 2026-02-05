@@ -12,6 +12,8 @@ website:
         text: Home
       - href: feed.qmd
         text: Feed / Blog
+      - href: about.qmd
+        text: About Me
 
   # EXISTING: Your topic sidebar
   sidebar:

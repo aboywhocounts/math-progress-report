@@ -68,49 +68,47 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script type="math/tex; mode=display">
-$$
-    \renewcommand{\R}{\mathbb{R}}
-    \renewcommand{\C}{\mathbb{C}}
-    \newcommand{\Z}{\mathbb{Z}}
-    \newcommand{\Q}{\mathbb{Q}}
-    \newcommand{\F}{\mathbb{F}} 
-    \newcommand{\lrarrow}{\longrightarrow}
-    \newcommand{\k}{\mathbb{k}}
-    \newcommand{\RP}{\mathbb{RP}}
-    \newcommand{\S}{\Sigma}
+<script>
+// Global MathJax configuration for site-wide macros
+// Note: keep this BEFORE the MathJax script include (as Quarto does)
+window.MathJax = window.MathJax || {};
+window.MathJax = Object.assign(window.MathJax, {
+  tex: {
+    // simple macro replacements: name -> replacement (backslashes doubled for JS strings)
+    macros: {
+      R: "\\mathbb{R}",
+      C: "\\mathbb{C}",
+      Z: "\\mathbb{Z}",
+      Q: "\\mathbb{Q}",
+      F: "\\mathbb{F}",
+      lrarrow: "\\longrightarrow",
+      k: "\\mathbb{k}",
+      RP: "\\mathbb{RP}",
+      S: "\\Sigma",
 
-    % Shorthand
-    \newcommand{\b}{\beta}
-    \newcommand{\r}{\rho}
+      // shorthand
+      b: "\\beta",
+      r: "\\rho",
 
-    % Environments
-    \theoremstyle{definition}
-    \newtheorem{definition}{Definition}[section]
-    \theoremstyle{example}
-    \newtheorem{example}{Example}[section]
-    \theoremstyle{remark}
-    \newtheorem*{remark}{Remark}
-    \theoremstyle{corollary}
-    \newtheorem{corollary}{Corollary}[section]
-    \theoremstyle{proposition}
-    \newtheorem{proposition}{Proposition}[section]
-    \theoremstyle{lemma}
-    \newtheorem{lemma}{Lemma}[section]
-    \theoremstyle{theorem}
-    \newtheorem{theorem}{Theorem}[section]
+      // linear algebra / rep theory
+      Hom: "\\mathrm{Hom}",
+      End: "\\mathrm{End}",
+      GL: "\\mathrm{GL}",
+      tr: "\\mathrm{tr}",
+      id: "\\mathrm{id}",
 
-    % Linear Algebra / Rep Theory
-    \newcommand{\Hom}{\mathrm{Hom}}
-    \newcommand{\End}{\mathrm{End}}
-    \newcommand{\GL}{\mathrm{GL}}
-    \newcommand{\tr}{\mathrm{tr}}
-    \newcommand{\id}{\mathrm{id}}
+      // field theory
+      Gal: "\\mathrm{Gal}",
+      Char: "\\mathrm{char}"
+    },
+    // ensure AMS macros are available (if needed)
+    packages: {'[+]': ['ams']}
+  }
+});
 
-    % Field Theory
-    \newcommand{\Gal}{\mathrm{Gal}}
-    \newcommand{\Char}{\mathrm{char}}
-$$
+// NOTE: LaTeX-only things like \newtheorem / \theoremstyle are not generally available
+// in MathJax the same way as in LaTeX documents. If you need styled theorem blocks,
+// consider using HTML/CSS or define specific macros for labels/environments.
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -170,6 +168,10 @@ window.Quarto = {
     <a class="nav-link" href="./feed.html"> 
 <span class="menu-text">Feed / Blog</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
+<span class="menu-text">About Me</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -204,12 +206,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Representation Theory</span></a>
+ <span class="menu-text">Topology</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Representation Theory</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rep-theory/rep-theory/the-basics.html" class="sidebar-item-text sidebar-link">
@@ -227,23 +246,6 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Field Theory</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Topology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></span></a>
-  </div>
-</li>
-      </ul>
   </li>
     </ul>
     </div>
@@ -276,6 +278,20 @@ window.Quarto = {
 
 
 <p>My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!</p>
+<p>Here is a copy of my CV:</p>
+<iframe src="files/Anthony_Doll_CV.pdf" width="100%" height="800" style="border:none;">
+<p>
+Your browser does not support PDFs. <a href="files/Anthony_Doll_CV.pdf">Download the CV</a>.
+</p>
+</iframe>
+<p><a href="files/Anthony_Doll_CV.pdf" class="btn">Download my CV</a></p>
+<p>A paper from my REU in the summer of 2024:</p>
+<iframe src="files/REU_Paper_Anthony_Doll.pdf" width="100%" height="800" style="border:none;">
+<p>
+Your browser does not support PDFs. <a href="files/REU_Paper_Anthony_Doll.pdf">Download the REU paper</a>.
+</p>
+</iframe>
+<p><a href="files/REU_Paper_Anthony_Doll.pdf" class="btn">Download the REU paper</a></p>
 
 
 
