@@ -8,11 +8,11 @@ website:
   # NEW: Add a top navigation bar
   navbar:
     left:
-      - href: index.qmd
+      - href: website-deets/index.qmd
         text: Home
-      - href: feed.qmd
+      - href: website-deets/feed.qmd
         text: Feed / Blog
-      - href: about.qmd
+      - href: website-deets/about.qmd
         text: About Me
 
   # EXISTING: Your topic sidebar
@@ -23,6 +23,7 @@ website:
       - section: "Topology"
         contents:
           - htpy-theory/mosher-tangora-prblm1.qmd
+          - htpy-theory/mosher-tangora-prblm2.qmd
 
       - section: "Representation Theory"
         contents:

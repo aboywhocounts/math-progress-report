@@ -1,0 +1,24 @@
+---
+title-includes:
+    \usepackage{amsfonts}
+title: 'A Note on Torsion Elements in the Stable Homotopy Groups of Spheres'
+---
+In this post, I will post a solution to another exercise from Mosher and Tangora's *Cohomology Operations and Applications in Homotopy Theory*. The solution of this problem will lend itself to a cool result (at least to me) about the stable homotopy groups of spheres. 
+
+Here's the problem:
+
+:::{#prob-mt2}
+Show that the smallest integer $n$ such that $\pi_n(S^3)$ contains an element of order $p$, where $p$ is an odd prime, is $n=2p$.
+:::
+
+As the book indicates, we will take an element $f:S^3 \lrarrow K(\Z,3)$ representating a generator of $H^3(S^3)$ and take the homotopy fiber $X$ of this map, and use the Serre spectral sequence to compute the cohomology of $X$, which will yield the result.
+
+Recall that taking the homotopy fiber of $f$ means taking the following pullback square:
+
+![**small note**: the Z's in the diagram should be $\Z$'s, but I couldn't get them to render properly in the diagram. I'll fix this later. This will be a recurring issue in diagrams in this post, so please keep that in mind. I'll clarify when necessary.](../images/mosher-tangora-prblm2//mt2d1.svg){width="80%" fig-align="center"}
+
+Here, the right vertical map is the path space fibraition of $K(\Z,3)$. This gives us a fibration sequence
+$$
+X \lrarrow S^3 \xlrarrow{f} K(\Z,3)
+$$
+which induces a Serre spectral sequence in cohomology with $E_2$ page given

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Some Stable Homotopy Groups of \mathbb{RP}^2 – A Young Man's Mathematical Journey</title>
+<title>A Young Man’s Mathematical Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,6 @@ window.MathJax = Object.assign(window.MathJax, {
       Q: "\\mathbb{Q}",
       F: "\\mathbb{F}",
       lrarrow: "\\longrightarrow",
-      xlrarrow: "\\xlongrightarrow",
       k: "\\mathbb{k}",
       RP: "\\mathbb{RP}",
       S: "\\Sigma",
@@ -162,7 +161,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../website-deets/index.html"> 
+    <a class="nav-link active" href="../website-deets/index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -184,7 +183,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Topology</a></li><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">A Young Man’s Mathematical Journey</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -215,14 +214,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../htpy-theory/mosher-tangora-prblm2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A Note on Torsion Elements in the Stable Homotopy Groups of Spheres</span></a>
   </div>
 </li>
       </ul>
@@ -265,9 +258,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Topology</a></li><li class="breadcrumb-item"><a href="../htpy-theory/mosher-tangora-prblm1.html">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></h1>
+<h1 class="title">A Young Man’s Mathematical Journey</h1>
 </div>
 
 
@@ -284,32 +277,9 @@ window.Quarto = {
 </header>
 
 
-<p>In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s <em>Cohomology Operations and Applications in Homotopy Theory</em>. This problem took me a lot of time to work out, but I think it’s important to know how to do, so I’ve decided to make a post about it.</p>
-<p>I should mention before starting that whenever <span class="math inline">\(\pi_i^S(-)\)</span> appears, I mean the <strong>2-component</strong> of the stable homotopy group. Additionally, much of the notation and terminology used here is from Mosher and Tangora’s book, but I’ll try and indicate when I’m using something specific from there. Also, I will denote the stable homotopy groups of spheres by <span class="math inline">\(\pi_*^S\)</span> for brevity.</p>
-<p>The problem:</p>
-<div id="prob-mt1">
-<p>Let <span class="math inline">\(M_n=S^n \cup_{2} e^{n+1}\)</span>. We can also think of this as <span class="math inline">\(\S^{n-1}\RP^2\)</span>, the <span class="math inline">\((n-1)\)</span>-suspension of the real projective plane. Compute the homotopy groups <span class="math inline">\(\pi_{n+k}(M_n)\)</span> for large <span class="math inline">\(n\)</span> and small <span class="math inline">\(k\)</span>.</p>
-</div>
-<p>So there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence <span class="math display">\[
-S^n\lrarrow S^n \lrarrow M_n
-\]</span> where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book.</p>
-<p>Let’s begin with the cofiber sequence. Now, since <span class="math inline">\(\pi_*^S\)</span> is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/mosher-tangora-prblm1//mt1d1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-<p>examining the bottom portion of this long exact sequence, we have <span class="math display">\[
-\pi_2^S \xrightarrow{\cdot 2} \pi_2^S \to \pi_2^S(M_n) \to \pi_1^S \xrightarrow{\cdot 2} \pi_1^S
-\]</span></p>
-<p>As we can see, <span class="math inline">\(\pi^S_0(M_n)\)</span> is the cokernel of the degree 2 map on <span class="math inline">\(\pi_0^S(S^n) \cong \Z\)</span>, which is <span class="math inline">\(\Z/2\)</span>, and so <span class="math inline">\(\pi^S_0(M_n) \cong \Z/2\)</span>. Now, since multiplication by 2 is injective on <span class="math inline">\(\pi_1^S\cong \Z\)</span>, we know that the map <span class="math inline">\(\pi_1^S(M_n) \to \pi_0^S\)</span> is the zero map, and thus <span class="math inline">\(\pi_1^S(M_n)\)</span> is isomorphic to the cokernel of the degree 2 map on <span class="math inline">\(\pi_1^S\)</span>. However, since <span class="math inline">\(\pi_1^S \cong \Z/2\)</span>, this map is the zero map, and thus <span class="math inline">\(\pi_1^S(M_n) \cong \Z/2\)</span> as well.</p>
-<p>Moving to the 2nd stable stem, this is where things start to get interesting. Examining the relevant portion of the long exact sequence and substituting known values, we have <span class="math display">\[
-\Z/2 \xrightarrow{\cdot 2} \Z/2 \to \pi_2^S(M_n) \to \Z/2 \xrightarrow{\cdot 2} \Z/2
-\]</span></p>
-<p>Since multiplication by 2 is the zero map on <span class="math inline">\(\Z/2\)</span>, this exact sequence reduces to a short exact sequence <span class="math display">\[
-0 \to \Z/2 \to \pi_2^S(M_n) \to \Z/2 \to 0
-\]</span><br>
-meaning that up to an extension problem, <span class="math inline">\(\pi_2^S(M_n)\)</span> is isomorphic to <span class="math inline">\(\Z/2 \oplus \Z/2\)</span>. To figure out if the extension is trivial or not, we will use the Serre spectral sequence, which is the second method I mentioned at the beginning.</p>
+<p>Welcome to my mathematical progress report. Here I plan to document my journey through different areas of math that I find interesting enough to study on my own. The goal for this “blog” is to have a place to document what I learn and other thoughts that I have about the material, beyond just copying down lecture notes or textbook excerpts. I already enjoy learning about and doing math in my free time, so I figured why not have a place to share it with others too?</p>
+<p>The current focus of my studies is representation theory of finite groups, and some algebraic topology on the side. I’m currently writing my undergraduate thesis on cohomology operations and stable homotopy groups of spheres, so there will most likely be random problems and expositions related to that, in contrast to the more structured representation theory posts.</p>
+<p>I hope you enjoy!</p>
 
 
 

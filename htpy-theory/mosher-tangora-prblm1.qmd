@@ -22,7 +22,8 @@ where the first arrow is the degree 2 map, and the second will be using the Serr
 
 Let's begin with the cofiber sequence. Now, since $\pi_*^S$ is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups:
 
-![](../images/mt1d1.svg){width="80%" fig-align="center"}
+![](../images/mosher-tangora-prblm1//mt1d1.svg){width="80%" fig-align="center"}
+
 
 examining the bottom portion of this long exact sequence, we have 
 $$

@@ -20,5 +20,17 @@
   "htpy-theory/mosher-tangora-prblm1.qmd": {
     "mosher-tangora-prblm1.html": "95d0175d",
     "mosher-tangora-prblm1.tex": "21227aa3"
+  },
+  "website-deets/feed.qmd": {
+    "feed.html": "80211a1a"
+  },
+  "website-deets/index.qmd": {
+    "index.html": "9183d1d6"
+  },
+  "website-deets/about.qmd": {
+    "about.html": "c56bdd61"
+  },
+  "htpy-theory/mosher-tangora-prblm2.qmd": {
+    "mosher-tangora-prblm2.html": "2e3d4268"
   }
 }

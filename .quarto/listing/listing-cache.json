@@ -4,6 +4,11 @@
       "rep-theory/*.qmd",
       "field-theory/*.qmd",
       "posts/*.qmd"
+    ],
+    "website-deets/feed.qmd": [
+      "rep-theory/*.qmd",
+      "field-theory/*.qmd",
+      "posts/*.qmd"
     ]
   }
 }
