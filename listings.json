@@ -1,9 +1,6 @@
 [
   {
-    "listing": "/feed.html",
-    "items": [
-      "/rep-theory/rep-theory/schurs-lemma.html",
-      "/rep-theory/rep-theory/the-basics.html"
-    ]
+    "listing": "/website-deets/feed.html",
+    "items": []
   }
 ]

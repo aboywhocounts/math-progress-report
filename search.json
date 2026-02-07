@@ -1,14 +1,14 @@
 [
   {
-    "objectID": "htpy-theory/mosher-tangora-prblm1.html",
-    "href": "htpy-theory/mosher-tangora-prblm1.html",
-    "title": "Some Stable Homotopy Groups of \\(\\mathbb{RP}^2\\)",
+    "objectID": "htpy-theory/mosher-tangora-prblm2.html",
+    "href": "htpy-theory/mosher-tangora-prblm2.html",
+    "title": "A Note on Torsion Elements in the Stable Homotopy Groups of Spheres",
     "section": "",
-    "text": "In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. This problem took me a lot of time to work out, but I think it’s important to know how to do, so I’ve decided to make a post about it.\nI should mention before starting that whenever \\(\\pi_i^S(-)\\) appears, I mean the 2-component of the stable homotopy group. Additionally, much of the notation and terminology used here is from Mosher and Tangora’s book, but I’ll try and indicate when I’m using something specific from there. Also, I will denote the stable homotopy groups of spheres by \\(\\pi_*^S\\) for brevity.\nThe problem:\n\nLet \\(M_n=S^n \\cup_{2} e^{n+1}\\). We can also think of this as \\(\\S^{n-1}\\RP^2\\), the \\((n-1)\\)-suspension of the real projective plane. Compute the homotopy groups \\(\\pi_{n+k}(M_n)\\) for large \\(n\\) and small \\(k\\).\n\nSo there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence \\[\nS^n\\lrarrow S^n \\lrarrow M_n\n\\] where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book.\nLet’s begin with the cofiber sequence. Now, since \\(\\pi_*^S\\) is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups:\n\n\n\n\n\nexamining the bottom portion of this long exact sequence, we have \\[\n\\pi_2^S \\xrightarrow{\\cdot 2} \\pi_2^S \\to \\pi_2^S(M_n) \\to \\pi_1^S \\xrightarrow{\\cdot 2} \\pi_1^S\n\\]\nAs we can see, \\(\\pi^S_0(M_n)\\) is the cokernel of the degree 2 map on \\(\\pi_0^S(S^n) \\cong \\Z\\), which is \\(\\Z/2\\), and so \\(\\pi^S_0(M_n) \\cong \\Z/2\\). Now, since multiplication by 2 is injective on \\(\\pi_1^S\\cong \\Z\\), we know that the map \\(\\pi_1^S(M_n) \\to \\pi_0^S\\) is the zero map, and thus \\(\\pi_1^S(M_n)\\) is isomorphic to the cokernel of the degree 2 map on \\(\\pi_1^S\\). However, since \\(\\pi_1^S \\cong \\Z/2\\), this map is the zero map, and thus \\(\\pi_1^S(M_n) \\cong \\Z/2\\) as well.\nMoving to the 2nd stable stem, this is where things start to get interesting. Examining the relevant portion of the long exact sequence and substituting known values, we have \\[\n\\Z/2 \\xrightarrow{\\cdot 2} \\Z/2 \\to \\pi_2^S(M_n) \\to \\Z/2 \\xrightarrow{\\cdot 2} \\Z/2\n\\]\nSince multiplication by 2 is the zero map on \\(\\Z/2\\), this exact sequence reduces to a short exact sequence \\[\n0 \\to \\Z/2 \\to \\pi_2^S(M_n) \\to \\Z/2 \\to 0\n\\]\nmeaning that up to an extension problem, \\(\\pi_2^S(M_n)\\) is isomorphic to \\(\\Z/2 \\oplus \\Z/2\\). To figure out if the extension is trivial or not, we will use the Serre spectral sequence, which is the second method I mentioned at the beginning.",
+    "text": "In this post, I will post a solution to another exercise from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. The solution of this problem will lend itself to a cool result (at least to me) about the stable homotopy groups of spheres.\nHere’s the problem:\n\nShow that the smallest integer \\(n\\) such that \\(\\pi_n(S^3)\\) contains an element of order \\(p\\), where \\(p\\) is an odd prime, is \\(n=2p\\).\n\nAs the book indicates, we will take an element \\(f:S^3 \\lrarrow K(\\Z,3)\\) representating a generator of \\(H^3(S^3)\\) and take the homotopy fiber \\(X\\) of this map, and use the Serre spectral sequence to compute the cohomology of \\(X\\), which will yield the result.\nRecall that taking the homotopy fiber of \\(f\\) means taking the following pullback square:\n\n\n\nsmall note: the Z’s in the diagram should be \\(\\Z\\)’s, but I couldn’t get them to render properly in the diagram. I’ll fix this later. This will be a recurring issue in diagrams in this post, so please keep that in mind. I’ll clarify when necessary.\n\n\nHere, the right vertical map is the path space fibraition of \\(K(\\Z,3)\\). This gives us a fibration sequence \\[\nX \\lrarrow S^3 \\xlrarrow{f} K(\\Z,3)\n\\] which induces a Serre spectral sequence in cohomology with \\(E_2\\) page given",
     "crumbs": [
       "Home",
       "Topology",
-      "Some Stable Homotopy Groups of $\\mathbb{RP}^2$"
+      "A Note on Torsion Elements in the Stable Homotopy Groups of Spheres"
     ]
   },
   {
@@ -24,18 +24,25 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "website-deets/feed.html",
+    "href": "website-deets/feed.html",
+    "title": "Latest Updates",
     "section": "",
-    "text": "My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, specifically homotopy theory, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!\nHere is a copy of my CV:\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"files/Anthony_Doll_CV.pdf\"&gt;Download the CV&lt;/a&gt;.\n&lt;/p&gt;\n\nDownload my CV\nA paper from my REU in the summer of 2024:\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"files/REU_Paper_Anthony_Doll.pdf\"&gt;Download the REU paper&lt;/a&gt;.\n&lt;/p&gt;\n\nDownload the REU paper"
+    "text": "Here is a chronological log of my study notes and updates.\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "website-deets/index.html",
+    "href": "website-deets/index.html",
     "title": "A Young Man’s Mathematical Journey",
     "section": "",
     "text": "Welcome to my mathematical progress report. Here I plan to document my journey through different areas of math that I find interesting enough to study on my own. The goal for this “blog” is to have a place to document what I learn and other thoughts that I have about the material, beyond just copying down lecture notes or textbook excerpts. I already enjoy learning about and doing math in my free time, so I figured why not have a place to share it with others too?\nThe current focus of my studies is representation theory of finite groups, and some algebraic topology on the side. I’m currently writing my undergraduate thesis on cohomology operations and stable homotopy groups of spheres, so there will most likely be random problems and expositions related to that, in contrast to the more structured representation theory posts.\nI hope you enjoy!"
+  },
+  {
+    "objectID": "website-deets/about.html",
+    "href": "website-deets/about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, specifically homotopy theory, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!\nHere is a copy of my CV:\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"files/Anthony_Doll_CV.pdf\"&gt;Download the CV&lt;/a&gt;.\n&lt;/p&gt;\n\nDownload my CV\nA paper from my REU in the summer of 2024:\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"files/REU_Paper_Anthony_Doll.pdf\"&gt;Download the REU paper&lt;/a&gt;.\n&lt;/p&gt;\n\nDownload the REU paper"
   },
   {
     "objectID": "rep-theory/rep-theory/schurs-lemma.html",
@@ -74,10 +81,15 @@
     ]
   },
   {
-    "objectID": "feed.html",
-    "href": "feed.html",
-    "title": "Latest Updates",
+    "objectID": "htpy-theory/mosher-tangora-prblm1.html",
+    "href": "htpy-theory/mosher-tangora-prblm1.html",
+    "title": "Some Stable Homotopy Groups of \\(\\mathbb{RP}^2\\)",
     "section": "",
-    "text": "Here is a chronological log of my study notes and updates.\n\n\n\n\n\n\n\n\n\nSchur’s Lemma\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nBasic definitions and concepts\n\n\n\n\n\n\n\n3 min\n\n\n\n\nNo matching items"
+    "text": "In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s Cohomology Operations and Applications in Homotopy Theory. This problem took me a lot of time to work out, but I think it’s important to know how to do, so I’ve decided to make a post about it.\nI should mention before starting that whenever \\(\\pi_i^S(-)\\) appears, I mean the 2-component of the stable homotopy group. Additionally, much of the notation and terminology used here is from Mosher and Tangora’s book, but I’ll try and indicate when I’m using something specific from there. Also, I will denote the stable homotopy groups of spheres by \\(\\pi_*^S\\) for brevity.\nThe problem:\n\nLet \\(M_n=S^n \\cup_{2} e^{n+1}\\). We can also think of this as \\(\\S^{n-1}\\RP^2\\), the \\((n-1)\\)-suspension of the real projective plane. Compute the homotopy groups \\(\\pi_{n+k}(M_n)\\) for large \\(n\\) and small \\(k\\).\n\nSo there are two methods that I will pursue here: one is using the induced homotopy long exact sequence coming from the cofiber sequence \\[\nS^n\\lrarrow S^n \\lrarrow M_n\n\\] where the first arrow is the degree 2 map, and the second will be using the Serre spectral sequence in the style of chapter 12 of Mosher and Tangora’s book.\nLet’s begin with the cofiber sequence. Now, since \\(\\pi_*^S\\) is a generalized homology theory, the cofiber sequence above induces a long exact sequence in stable homotopy groups:\n\n\n\n\n\nexamining the bottom portion of this long exact sequence, we have \\[\n\\pi_2^S \\xrightarrow{\\cdot 2} \\pi_2^S \\to \\pi_2^S(M_n) \\to \\pi_1^S \\xrightarrow{\\cdot 2} \\pi_1^S\n\\]\nAs we can see, \\(\\pi^S_0(M_n)\\) is the cokernel of the degree 2 map on \\(\\pi_0^S(S^n) \\cong \\Z\\), which is \\(\\Z/2\\), and so \\(\\pi^S_0(M_n) \\cong \\Z/2\\). Now, since multiplication by 2 is injective on \\(\\pi_1^S\\cong \\Z\\), we know that the map \\(\\pi_1^S(M_n) \\to \\pi_0^S\\) is the zero map, and thus \\(\\pi_1^S(M_n)\\) is isomorphic to the cokernel of the degree 2 map on \\(\\pi_1^S\\). However, since \\(\\pi_1^S \\cong \\Z/2\\), this map is the zero map, and thus \\(\\pi_1^S(M_n) \\cong \\Z/2\\) as well.\nMoving to the 2nd stable stem, this is where things start to get interesting. Examining the relevant portion of the long exact sequence and substituting known values, we have \\[\n\\Z/2 \\xrightarrow{\\cdot 2} \\Z/2 \\to \\pi_2^S(M_n) \\to \\Z/2 \\xrightarrow{\\cdot 2} \\Z/2\n\\]\nSince multiplication by 2 is the zero map on \\(\\Z/2\\), this exact sequence reduces to a short exact sequence \\[\n0 \\to \\Z/2 \\to \\pi_2^S(M_n) \\to \\Z/2 \\to 0\n\\]\nmeaning that up to an extension problem, \\(\\pi_2^S(M_n)\\) is isomorphic to \\(\\Z/2 \\oplus \\Z/2\\). To figure out if the extension is trivial or not, we will use the Serre spectral sequence, which is the second method I mentioned at the beginning.",
+    "crumbs": [
+      "Home",
+      "Topology",
+      "Some Stable Homotopy Groups of $\\mathbb{RP}^2$"
+    ]
   }
 ]
