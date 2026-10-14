@@ -32,5 +32,14 @@
   },
   "htpy-theory/mosher-tangora-prblm2.qmd": {
     "mosher-tangora-prblm2.html": "2e3d4268"
+  },
+  "gap-year/intro.qmd": {
+    "intro.html": "049c934d"
+  },
+  "gap-year/orange-book/ob1.qmd": {
+    "ob1.html": "e9424ea5"
+  },
+  "gap-year/mosher-tangora/mt1.qmd": {
+    "mt1.html": "8d10bfe7"
   }
 }

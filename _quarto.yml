@@ -20,6 +20,9 @@ website:
     style: "docked"
     search: true
     contents:
+      - section: "Gap Year Reading"
+        contents:
+          - gap-year-reading/orange-book/intro.qmd
       - section: "Topology"
         contents:
           - htpy-theory/mosher-tangora-prblm1.qmd
