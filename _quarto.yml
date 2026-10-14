@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - files/**
 
 website:
   title: "A Young Man's Mathematical Journey"
@@ -22,7 +24,7 @@ website:
     contents:
       - section: "Gap Year Reading"
         contents:
-          - gap-year-reading/orange-book/intro.qmd
+          - gap-year/intro.qmd
       - section: "Topology"
         contents:
           - htpy-theory/mosher-tangora-prblm1.qmd
