@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ob1 – A Young Man's Mathematical Journey</title>
+<title>Chapter 1 – A Young Man’s Mathematical Journey</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,42 +79,53 @@ ul.task-list li input[type="checkbox"] {
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
-    // simple macro replacements: name -> replacement (backslashes doubled for JS strings)
+    packages: { '[+]': ['ams', 'mathtools'] },
     macros: {
-      R: "\\mathbb{R}",
-      C: "\\mathbb{C}",
-      Z: "\\mathbb{Z}",
-      Q: "\\mathbb{Q}",
-      F: "\\mathbb{F}",
-      lrarrow: "\\longrightarrow",
-      xlrarrow: "\\xlongrightarrow",
-      k: "\\mathbb{k}",
+      RR: "\\mathbb{R}",
+      CC: "\\mathbb{C}",
+      ZZ: "\\mathbb{Z}",
+      QQ: "\\mathbb{Q}",
+      FF: "\\mathbb{F}",
+      kk: "\\mathbb{k}",
       RP: "\\mathbb{RP}",
-      S: "\\Sigma",
+      Sig: "\\Sigma",
+      ZZp: "\\mathbb{Z}_{(p)}",
+      Zp: "\\mathbb{Z}_{(p)}",
+      pt: "\\text{pt}",
 
-      // shorthand
+      arr: ["\\xrightarrow{#1}", 1],
+      xarr: ["\\xrightarrow{#1}", 1],
+      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      larr: ["\\xleftarrow{#1}", 1],
+      xlarr: ["\\xleftarrow{#1}", 1],
+      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+
+      lrarr: "\\longrightarrow",
+      xlrarr: ["\\xlongrightarrow{#1}", 1],
+      xllarr: ["\\xlongleftarrow{#1}", 1],
+      xleftarr: ["\\xleftarrow{#1}", 1],
+      to: "\\to",
+      rightarrow: "\\rightarrow",
+      leftarrow: "\\leftarrow",
+
+      E: "\\mathcal{E}",
+      EE: "\\mathcal{E}",
+      Kn: ["\\mathrm{K}(#1)", 1],
+      Kpn: ["\\mathrm{K}(#1)", 1],
+      K: "\\mathrm{K}",
+
       b: "\\beta",
       r: "\\rho",
-
-      // linear algebra / rep theory
-      Hom: "\\mathrm{Hom}",
-      End: "\\mathrm{End}",
-      GL: "\\mathrm{GL}",
-      tr: "\\mathrm{tr}",
-      id: "\\mathrm{id}",
-
-      // field theory
-      Gal: "\\mathrm{Gal}",
-      Char: "\\mathrm{char}"
-    },
-    // ensure AMS macros are available (if needed)
-    packages: {'[+]': ['ams']}
+      Hom: "\\operatorname{Hom}",
+      End: "\\operatorname{End}",
+      GL: "\\operatorname{GL}",
+      tr: "\\operatorname{tr}",
+      id: "\\operatorname{id}",
+      Gal: "\\operatorname{Gal}",
+      Char: "\\operatorname{char}"
+    }
   }
 });
-
-// NOTE: LaTeX-only things like \newtheorem / \theoremstyle are not generally available
-// in MathJax the same way as in LaTeX documents. If you need styled theorem blocks,
-// consider using HTML/CSS or define specific macros for labels/environments.
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -189,7 +200,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapter 1</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -281,17 +292,114 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#nilpotence-theorem" id="toc-nilpotence-theorem" class="nav-link active" data-scroll-target="#nilpotence-theorem">Nilpotence theorem</a></li>
+  <li><a href="#periodicity-theorem" id="toc-periodicity-theorem" class="nav-link" data-scroll-target="#periodicity-theorem">Periodicity Theorem</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Chapter 1</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<p>From what I can tell, the motivating problem for the development of the tools discussed in the Orange Book is trying to understand the structure of <span class="math inline">\(\pi_*^S\)</span>, the stable homotopy groups of spheres. If we look at it like a ring, we can’t describe it in terms of generators and relations, particularly because all elements in degree <span class="math inline">\(\geq 1\)</span> are nilpotent due to a theorem of Nishida. Thus, we have to view <span class="math inline">\(\pi_*^S\)</span> from a different perspective. Despite each element having finite order, we can identify certain infinite families of elements in the stable stems, which we will touch on later. These infinite families are called <em>periodic</em>, and with this new point of view, we’d like to know whether all elements of the stable stems are a part of some periodic family, which would indeed give us a great deal of information about the global structure of stable homotopy groups.</p>
+<p>There are two main theorems in this book: the nilpotence theorem and the periodicity theorem. The latter is more geared toward this global structure of homotopy groups as just discussed, and the former theorem implicates a certain (co)homology theory <span class="math inline">\(MU\)</span>, complex bordism theory, which will become central to studying the homotopy category of CW complexes/spectra. In this post I will document the necessary terms and definitions to be able to state these two results, while trying to weave in some sort of narrative to clarify things for myself. For now I will keep things (as the book does for the first few chapters) in terms of spaces, then transition to spectra. Perhaps I will revise this to make everything consistent, but we’ll see.</p>
+<section id="nilpotence-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="nilpotence-theorem">Nilpotence theorem</h2>
+<p>We begin with a definition.</p>
+<div id="def-selfmap" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1</strong></span> Suppose we have a map <span class="math inline">\(f:\Sigma^d X \xrightarrow{f} X\)</span>, where <span class="math inline">\(d\geq 0\)</span>. We may iterate it (appropriately suspending) by considering the composites <span class="math display">\[
+\cdots \Sigma^{3d} X \xrightarrow{\Sigma^{2d}f} \Sigma^{2d} X \xrightarrow{\Sigma^d f} \Sigma^d X \xrightarrow{f} X
+\]</span> We denote these composites by <span class="math inline">\(f,f^2,f^3\)</span>, etc. For such a self-map <span class="math inline">\(f\)</span>, we say that it is <strong>nilpotent</strong> if some suspension of <span class="math inline">\(f^t\)</span> for some <span class="math inline">\(t&gt;0\)</span> is nullhomotopic. Otherwise, <span class="math inline">\(f\)</span> is <strong>periodic</strong>.</p>
+</div>
+<p>Recall that a homology theory <span class="math inline">\(E\)</span> is a functor from the homotopy category of based spaces to the category of graded abelian groups. By functoriality, we always have the unique homomorphism <span class="math display">\[
+E_*(X)\xrightarrow{\epsilon} E_*(\text{pt})
+\]</span> Taking the kernel of this map gives us the <em>reduced</em> homology of <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(\overline{E}_*(X)\)</span>. For ordinary homology, this is simply removing a <span class="math inline">\(G\)</span> summand of <span class="math inline">\(H_0(X;G)\)</span>.</p>
+<p>Coming back to the above definition, by functoriality of homology theories and the suspension isomorphism, if we have a reduced homology theory <span class="math inline">\(\overline{E}_*\)</span> and apply it to the map <span class="math inline">\(f\)</span>, we will obtain an endomorphism of <span class="math inline">\(\overline{E}_*(X)\)</span> raising the grading by <span class="math inline">\(d\)</span>. We may now state the nilpotence theorem.</p>
+<div id="thm-nilpotence" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1</strong></span> There is a homology theory <span class="math inline">\(MU_*\)</span> such that a self-map <span class="math inline">\(f\)</span> of a finite CW complex is stably nilpotent if and only if some iterate of <span class="math inline">\(\overline{MU}_*(f)\)</span> is trivial.</p>
+</div>
+<p>Essentially, nilpotence is detected by the homology theory <span class="math inline">\(MU_*\)</span>. Compared to ordinary homology, <span class="math inline">\(MU_*\)</span> is quite interesting. For one, it takes values in the category of modules over a certain graded ring <span class="math inline">\(L\)</span>, called the Lazard ring, which is isomorphic to <span class="math inline">\(MU_*(\text{pt})\)</span>. Additionally, these modules also have an interesting action by a certain group <span class="math inline">\(\Gamma\)</span>, adding even more algebraic structure to the picture. We will discuss this homology theory and these other algebraic gadgets in more depth later.</p>
+</section>
+<section id="periodicity-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="periodicity-theorem">Periodicity Theorem</h2>
+<p>We now pivot to the periodicity theorem and its setup. We will employ the use of another extraordinary homology theory called Morava K-theory, but first we need to discuss localization at the prime <span class="math inline">\(p\)</span>.</p>
+<p>Let’s take the ring <span class="math inline">\(\ZZ\)</span> and consider the set <span class="math inline">\(S\coloneqq \ZZ/(p)\)</span>, the elements of <span class="math inline">\(\ZZ\)</span> that lie outside of the prime ideal <span class="math inline">\((p)\)</span> (i.e.&nbsp;<span class="math inline">\(S\)</span> consists of all integers not divisible by <span class="math inline">\(p\)</span>). Now, consider the set <span class="math display">\[
+\ZZ_{(p)}\coloneqq \{\frac{a}{b} : a\in\ZZ, b\in S \}
+\]</span> This is in fact a ring, with the property that it has a unique maximal ideal <span class="math inline">\(\mathfrak{m}=p\ZZ_{(p)}\)</span>. Such a ring is called a <em>local</em> ring. Now, if we want to apply this to a <span class="math inline">\(\ZZ\)</span>-module <span class="math inline">\(M\)</span>, we keep <span class="math inline">\(S\)</span> the same, and we again let <span class="math inline">\(M_{(p)}\)</span> consist of formal fractions in <span class="math inline">\(M\)</span> with denominators in <span class="math inline">\(S\)</span>. However, we declare two fractions <span class="math inline">\(\frac{m_1}{s_1},\frac{m_2}{s_2}\)</span> to be equal if there exists an element <span class="math inline">\(t\in M\)</span> such that <span class="math inline">\(t(s_2m_1-s_1m_2)=0\)</span> in <span class="math inline">\(M\)</span>. The reason for this equivalence relation is to account for the torsion of <span class="math inline">\(M\)</span>. Another, much more straightforward of constructing <span class="math inline">\(M_{(p)}\)</span> is to simply tensor it with <span class="math inline">\(\ZZ_{(p)}\)</span>. In practice this is what we will mean when we discuss localization in the future, just tensor everything with <span class="math inline">\(\ZZ_{(p)}\)</span> and proceed.</p>
+<p>We now return to homotopy. One can perform an analogous procedure for spaces, but it is a little technical so I won’t go through the construction here. The point is, for any CW complex <span class="math inline">\(X\)</span>, there is a unique <span class="math inline">\(X_{(p)}\)</span> such that for any homology theory <span class="math inline">\(E_*\)</span>, we have <span class="math inline">\(\overline{E}_*(X_{(p)})\cong \overline{E}_*(X)\otimes \ZZ_{(p)}\)</span>. As one would expect, <span class="math inline">\(X_{(p)}\)</span> is called the <em><span class="math inline">\(p\)</span>-localization of <span class="math inline">\(X\)</span></em>, and if <span class="math inline">\(X\)</span> is finite, we say <span class="math inline">\(X_{(p)}\)</span> is a <span class="math inline">\(p\)</span>-local finite complex. Some key properties of this construction are listed below.</p>
+<div id="prop-plocal" class="proposition">
+<p>Suppose <span class="math inline">\(X\)</span> is a simply-connected CW complex such that <span class="math inline">\(\overline{H}_*(X)\)</span> consists entirely of torsion.</p>
+<ol type="1">
+<li>If this torsion is prime to <span class="math inline">\(p\)</span>, then <span class="math inline">\(X_{(p)}\)</span> is contractible.</li>
+<li>If it is all <span class="math inline">\(p\)</span>-torsion, then <span class="math inline">\(X\)</span> is <span class="math inline">\(p\)</span>-local, i.e., <span class="math inline">\(X_{(p)}\)</span> is equivalent to <span class="math inline">\(X\)</span>.</li>
+<li>In general <span class="math inline">\(X\)</span> is homotopy equivalent to the wedge sum of its <span class="math inline">\(p\)</span>-localizations for all the primes <span class="math inline">\(p\)</span> in this torsion.</li>
+</ol>
+</div>
+<p>From the definition of <span class="math inline">\(p\)</span>-localization, we have the following chain of equalities/isomorphisms for a finite simply-connected CW complex <span class="math inline">\(X\)</span>: <span class="math display">\[
+\overline{H}_*(X)\cong \bigoplus_p(\overline{H}_*(X)\otimes \ZZp) = \bigoplus_p \overline{H}_*(X_{(p)})=\overline{H}_* \bigl( \bigvee_p X_{(p)}\bigr)
+\]</span> For Whitehead’s theorem to apply, we need a map that carries this isomorphism of reduced homology to obtain a homotopy equivalence, and fortunately we do have such a map coming from the natural map that arises out of localization from <span class="math inline">\(X\)</span> to <span class="math inline">\(X_{(p)}\)</span>.</p>
+<p>Now, if we consider the smash product <span class="math inline">\(\overline{H}_*(X \wedge Y)\)</span> the Künneth formula tells us this is isomorphic to <span class="math inline">\(\overline{H}_*(X)\otimes \overline{H}_*(Y)\)</span>. If <span class="math inline">\(X=X_{(p)}\)</span> and <span class="math inline">\(Y=X_{(q)}\)</span> for distinct primes <span class="math inline">\(p,q\)</span>, then this tensor product will clearly be trivial and thus so will <span class="math inline">\(X_{(p)}\wedge X_{(q)}\)</span>. Furthermore, this implies that the cartesian product of two coprime localizations is the same as their wedge sum.</p>
+<p>The reason we introduced the concept of <span class="math inline">\(p\)</span>-localizations and <span class="math inline">\(p\)</span>-local spaces is due to the fact that we can form many interesting self-maps using these spaces. However, in this case <span class="math inline">\(MU_*\)</span> is not the homology theory that we will utilize. Instead, we will use Morava K-theory. Its basic properties are as follows:</p>
+<div id="prop-mktheory_def">
+<p>For each prime <span class="math inline">\(p\)</span> there is a sequence of homology theories <span class="math inline">\(K(n)_*\)</span> for <span class="math inline">\(n\geq 0\)</span> with the following properties:</p>
+<ol type="1">
+<li><span class="math inline">\(K(0)_*(X)=H_*(X;\QQ)\)</span> and <span class="math inline">\(\overline{K(0)}_*(X)=0\)</span> when <span class="math inline">\(\overline{H}_*(X)\)</span> is all torsion.</li>
+<li><span class="math inline">\(K(1)_*(X)\)</span> is one of <span class="math inline">\(p-1\)</span> isomorphic summands of mod <span class="math inline">\(p\)</span> complex K-theory.</li>
+<li><span class="math inline">\(K(0)_*(\text{pt})=\QQ\)</span> and for <span class="math inline">\(n&gt;0\)</span>, <span class="math inline">\(K(n)_*(\pt)=\ZZ/p [v_n,v_n^{-1}]\)</span>, where <span class="math inline">\(|v_n|=2(p^n-1)\)</span>. It turns out that this ring is a graded field in the sense that every module over it is free. Furthermore, <span class="math inline">\(K(n)_*(X)\)</span> is a <span class="math inline">\(K(n)_*(\pt)\)</span>-module.</li>
+<li>There is a Künneth isomorphism <span class="math display">\[
+K(n)_*(X\times Y)\cong K(n)_*(X)\otimes_{K(n)_*(\pt)} K(n)_*(Y)
+\]</span></li>
+<li>Let <span class="math inline">\(X\)</span> be a <span class="math inline">\(p\)</span>-local finite CW complex. If <span class="math inline">\(\overline{K(n)}_*(X)\)</span> vanishes, then so does <span class="math inline">\(\overline{K(n-1)}_*(X)\)</span>.</li>
+<li>If <span class="math inline">\(X\)</span> is as above, then <span class="math display">\[
+\overline{K(n)}_*(X)=K(n)_*(\pt)\otimes \overline{H}_*(X;\ZZ/p)
+\]</span> for <span class="math inline">\(n\)</span> sufficiently large. In other words, <span class="math inline">\(\overline{K(n)}_*(X)\)</span> is nontrivial if <span class="math inline">\(X\)</span> is simply connected and not contractible.</li>
+</ol>
+</div>
+<p>We need one last definition to state the periodicity theorem.</p>
+<div id="def-type_n" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2</strong></span> A <span class="math inline">\(p\)</span>-local finite complex <span class="math inline">\(X\)</span> has <strong>type</strong> <span class="math inline">\(n\)</span> if <span class="math inline">\(n\)</span> is the smallest integer such that <span class="math inline">\(K(n)_*(X)\)</span> is nontrivial. If <span class="math inline">\(X\)</span> is contractible, then <span class="math inline">\(X\)</span> has type <span class="math inline">\(\infty\)</span>.</p>
+</div>
+<div id="thm-periodicity" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2</strong></span> Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be <span class="math inline">\(p\)</span>-local finite CW complexes of type <span class="math inline">\(n\)</span> where <span class="math inline">\(n&lt;\infty\)</span>.</p>
+<ol type="1">
+<li>There is a self map <span class="math inline">\(f:\Sig^{d+i}\longrightarrow \Sig^i X\)</span> for some <span class="math inline">\(i\geq 0\)</span> such that <span class="math inline">\(K(n)_*(f)\)</span> is an isomorphism and <span class="math inline">\(K(m)_*(f)\)</span> is trivial for <span class="math inline">\(m&gt;n\)</span>. We will call such a map <span class="math inline">\(f\)</span> a <em><span class="math inline">\(v_n\)</span>-map</em>. When <span class="math inline">\(n=0\)</span> then <span class="math inline">\(d=0\)</span>. When <span class="math inline">\(n&gt;0\)</span>, <span class="math inline">\(d\)</span> is a multiple of <span class="math inline">\(2(p^n-1)\)</span>.</li>
+<li>Suppose <span class="math inline">\(h:X\longrightarrow\)</span> is a continuous map and assume both spaces have been suspended sufficiently to be the target of a <span class="math inline">\(v_n\)</span>-map. Let <span class="math inline">\(g:\Sig^e Y \longrightarrow Y\)</span> be a self-map as above. Then there are positive integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> with <span class="math inline">\(di=ej\)</span> such that the following diagram commutes up to homotopy.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/pdcty-diag.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>Moreover, <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> can be chosen independently of <span class="math inline">\(h\)</span>.</p>
+</div>
+<p>As we can see, if we want to understand periodic self-maps, we better understand Morava K-theories. We note that it isn’t logically necessary for <span class="math inline">\(X\)</span> to have type <span class="math inline">\(n\)</span>, but it just happens to be the only interesting case. (If the type of <span class="math inline">\(X\)</span> is larger than <span class="math inline">\(n\)</span>, then the trivial map satisfies the theorem. If the type is smaller than <span class="math inline">\(n\)</span>, then for <span class="math inline">\(d=0\)</span> the degree <span class="math inline">\(p\)</span> map satisfies the theorem, and if <span class="math inline">\(d&gt;0\)</span>, the theorem follows as <span class="math inline">\(K(m)_*(f)=K(m)_*(\pt)\otimes H_*(f)\)</span> and some iterate of <span class="math inline">\(H_*(f)\)</span> must be trivial reasons due to the finiteness of <span class="math inline">\(X\)</span>). From 2. we see that <span class="math inline">\(f\)</span> is actually unique in the sense that if we have some other periodic self-map <span class="math inline">\(g\)</span> and take <span class="math inline">\(Y=X\)</span> and <span class="math inline">\(h\)</span> the identity, it shows that <span class="math inline">\(f^i\simeq g^j\)</span> for some <span class="math inline">\(i,j\)</span>.</p>
+<p>Thus we have stated the two main theorems of this book. Already, things are getting complicated as we are dealing with extraordinary homology theories, and there is a lot of math that we have glossed over. In the next few posts I’ll be discussing <span class="math inline">\(MU_*\)</span> and <span class="math inline">\(K(n)_*\)</span> in more depth. There are some very cool connections with algebra and number theory that will drive the discussion and are necessary to develop the theory.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
