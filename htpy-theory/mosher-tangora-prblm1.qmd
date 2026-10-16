@@ -2,6 +2,7 @@
 title-includes:
     \usepackage{amsfonts}
 title: 'Some Stable Homotopy Groups of $\mathbb{RP}^2$'
+date: 2026-02-10
 ---
 
 In this post I'd like to post a solution to exerices 12.1 from Mosher and Tangora's *Cohomology Operations and Applications in Homotopy Theory*. This problem took me a lot of time to work out, but I think it's important to know how to do, so I've decided to make a post about it.

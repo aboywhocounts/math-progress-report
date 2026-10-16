@@ -2,6 +2,7 @@
 title-includes:
     \usepackage{amsfonts}
 title: 'A Note on Torsion Elements in the Stable Homotopy Groups of Spheres'
+date: 2026-02-12
 ---
 This post will pertain to a solution to another exercise from Mosher and Tangora's *Cohomology Operations and Applications in Homotopy Theory*. The solution of this problem will lend itself to a cool result about the stable homotopy groups of spheres. 
 

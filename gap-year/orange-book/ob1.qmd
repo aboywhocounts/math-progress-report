@@ -1,5 +1,6 @@
 ---
 title: Chapter 1
+date: 2026-10-16
 ---
 
 From what I can tell, the motivating problem for the development of the tools discussed in the Orange Book is trying to understand the structure of $\pi_*^S$, the stable homotopy groups of spheres. If we look at it like a ring, we can't describe it in terms of generators and relations, particularly because all elements in degree $\geq 1$ are nilpotent due to a theorem of Nishida. Thus, we have to view $\pi_*^S$ from a different perspective. Despite each element having finite order, we can identify certain infinite families of elements in the stable stems, which we will touch on later. These infinite families are called *periodic*, and with this new point of view, we'd like to know whether all elements of the stable stems are a part of some periodic family, which would indeed give us a great deal of information about the global structure of stable homotopy groups.

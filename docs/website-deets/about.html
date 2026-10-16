@@ -69,10 +69,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+// Global MathJax configuration for site-wide macros
+// Note: keep this BEFORE the MathJax script include (as Quarto does)
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
-    packages: { '[+]': ['ams'] },
+    packages: { '[+]': ['ams', 'mathtools'] },
     macros: {
       RR: "\\mathbb{R}",
       CC: "\\mathbb{C}",
@@ -82,14 +84,30 @@ window.MathJax = Object.assign(window.MathJax, {
       kk: "\\mathbb{k}",
       RP: "\\mathbb{RP}",
       Sig: "\\Sigma",
+      ZZp: "\\mathbb{Z}_{(p)}",
+      Zp: "\\mathbb{Z}_{(p)}",
+      pt: "\\text{pt}",
 
-      lrarrow: "\\longrightarrow",
-      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      arr: ["\\xrightarrow{#1}", 1],
       xarr: ["\\xrightarrow{#1}", 1],
-      xlrarr: ["\\xlongrightarrow{#1}", 1],
-      xlarrow: ["\\xrightarrow{#1}", 1],
-      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      larr: ["\\xleftarrow{#1}", 1],
       xlarr: ["\\xleftarrow{#1}", 1],
+      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+
+      lrarr: "\\longrightarrow",
+      xlrarr: ["\\xlongrightarrow{#1}", 1],
+      xllarr: ["\\xlongleftarrow{#1}", 1],
+      xleftarr: ["\\xleftarrow{#1}", 1],
+      to: "\\to",
+      rightarrow: "\\rightarrow",
+      leftarrow: "\\leftarrow",
+
+      E: "\\mathcal{E}",
+      EE: "\\mathcal{E}",
+      Kn: ["\\mathrm{K}(#1)", 1],
+      Kpn: ["\\mathrm{K}(#1)", 1],
+      K: "\\mathrm{K}",
 
       b: "\\beta",
       r: "\\rho",
@@ -294,21 +312,11 @@ window.Quarto = {
 </header>
 
 
-<p>My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, specifically homotopy theory, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!</p>
+<p>My name is Anthony Doll and I recently graduated from the University of Virgina with a degree in mathematics. I am currently taking a gap year before pursuing a PhD in math at Case Western Reserve University in Cleveland, Ohio. My main interests are in stable homotopy theory, and I prefer the computational side over the categorical side. I also really enjoy algebra and hope to deepen my understanding of algebraic geometry, representation theory, and algebraic number theory as I move forward. In my senior year of college, I completed aa Distinguished Majors Thesis on cohomology operations with applications towards computations of the stable homotopy groups of spheres under the guidance of Professor J.D. Quigley. If you’re interested, you can find my thesis <a href="https://doi.org/10.18130/xz15-sw63" target="_blank">here</a>.</p>
 <p>Here is a copy of my CV:</p>
-<iframe src="files/Anthony_Doll_CV.pdf" width="100%" height="800" style="border:none;">
-<p>
-Your browser does not support PDFs. <a href="files/Anthony_Doll_CV.pdf">Download the CV</a>.
-</p>
-</iframe>
-<p><a href="files/Anthony_Doll_CV.pdf" class="btn">Download my CV</a></p>
+<p><a href="../files/Anthony_Doll_CV.pdf" target="_blank">Download CV</a></p>
 <p>A paper from my REU in the summer of 2024:</p>
-<iframe src="files/REU_Paper_Anthony_Doll.pdf" width="100%" height="800" style="border:none;">
-<p>
-Your browser does not support PDFs. <a href="files/REU_Paper_Anthony_Doll.pdf">Download the REU paper</a>.
-</p>
-</iframe>
-<p><a href="files/REU_Paper_Anthony_Doll.pdf" class="btn">Download the REU paper</a></p>
+<p><a href="../files/REU_Paper_Anthony_Doll.pdf" target="_blank">Download the REU paper</a></p>
 
 
 
