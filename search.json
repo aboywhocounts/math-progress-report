@@ -16,7 +16,7 @@
     "href": "website-deets/feed.html",
     "title": "Latest Updates",
     "section": "",
-    "text": "Here is a chronological log of my study notes and updates.\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Here is a chronological log of my study notes and updates.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChapter 1\n\n\n\n\n\n\n\n\nOct 16, 2026\n\n\n\n\n\n\n\nA Note on Torsion Elements in the Stable Homotopy Groups of Spheres\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\n\n\n\n\n\nSome Stable Homotopy Groups of \\(\\mathbb{RP}^2\\)\n\n\n\n\n\n\n\n\nFeb 10, 2026\n\n\n\n\n\n\n\nBasic definitions and concepts\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "htpy-theory/mosher-tangora-prblm2.html",
@@ -43,42 +43,6 @@
     ]
   },
   {
-    "objectID": "rep-theory/rep-theory/schurs-lemma.html",
-    "href": "rep-theory/rep-theory/schurs-lemma.html",
-    "title": "Schur’s Lemma",
-    "section": "",
-    "text": "We begin with a fundamental result in representation theory.\n\nTheorem 1 (Schur’s Lemma) Let \\(V\\) and \\(W\\) be irreducible representations of a group \\(G\\). If \\(\\phi: V \\to W\\) is a \\(G\\)-module homomorphism, then:\n\nEither \\(\\phi\\) is an isomorphism, or \\(\\phi = 0\\).\nIf \\(V = W\\), then \\(\\phi = \\lambda I\\) for some \\(\\lambda \\in \\C\\).",
-    "crumbs": [
-      "Home",
-      "Representation Theory",
-      "Schur's Lemma"
-    ]
-  },
-  {
-    "objectID": "rep-theory/rep-theory/schurs-lemma.html#the-statement",
-    "href": "rep-theory/rep-theory/schurs-lemma.html#the-statement",
-    "title": "Schur’s Lemma",
-    "section": "",
-    "text": "We begin with a fundamental result in representation theory.\n\nTheorem 1 (Schur’s Lemma) Let \\(V\\) and \\(W\\) be irreducible representations of a group \\(G\\). If \\(\\phi: V \\to W\\) is a \\(G\\)-module homomorphism, then:\n\nEither \\(\\phi\\) is an isomorphism, or \\(\\phi = 0\\).\nIf \\(V = W\\), then \\(\\phi = \\lambda I\\) for some \\(\\lambda \\in \\C\\).",
-    "crumbs": [
-      "Home",
-      "Representation Theory",
-      "Schur's Lemma"
-    ]
-  },
-  {
-    "objectID": "rep-theory/rep-theory/schurs-lemma.html#the-proof",
-    "href": "rep-theory/rep-theory/schurs-lemma.html#the-proof",
-    "title": "Schur’s Lemma",
-    "section": "The Proof",
-    "text": "The Proof\nSince \\(\\phi\\) is a homomorphism, its kernel is a subrepresentation of \\(V\\)…",
-    "crumbs": [
-      "Home",
-      "Representation Theory",
-      "Schur's Lemma"
-    ]
-  },
-  {
     "objectID": "htpy-theory/mosher-tangora-prblm1.html",
     "href": "htpy-theory/mosher-tangora-prblm1.html",
     "title": "Some Stable Homotopy Groups of \\(\\mathbb{RP}^2\\)",
@@ -95,14 +59,14 @@
     "href": "website-deets/index.html",
     "title": "A Young Man’s Mathematical Journey",
     "section": "",
-    "text": "Welcome to my mathematical progress report. Here I plan to document my journey through different areas of math that I find interesting enough to study on my own. The goal for this “blog” is to have a place to document what I learn and other thoughts that I have about the material, beyond just copying down lecture notes or textbook excerpts. I already enjoy learning about and doing math in my free time, so I figured why not have a place to share it with others too?\nThe current focus of my studies is representation theory of finite groups, and some algebraic topology on the side. I’m currently writing my undergraduate thesis on cohomology operations and stable homotopy groups of spheres, so there will most likely be random problems and expositions related to that, in contrast to the more structured representation theory posts.\nI hope you enjoy!"
+    "text": "Welcome to my mathematical progress report. The goal of this “blog” is for me to have an organized place to type up notes and my thoughts about the math I’m doing. In the past I’ve just used notebooks, and while that’s fun, it takes a lot of time and I honestly don’t know where a lot of those notebooks have gone. Plus, this is better for the trees.\nThese notes are not meant to be taken too seriously, and it may happen that there are statements that are incorrect. I’ll try to make sure everything is as logically sound as possible, but I’m only human. I hope you enjoy!\nFor a little about me you can find the about page here."
   },
   {
     "objectID": "website-deets/about.html",
     "href": "website-deets/about.html",
     "title": "About",
     "section": "",
-    "text": "My name is Anthony Doll and I am currently a 4th year undergraduate student at UVA studying math. My main interests lie in algebraic topology, specifically homotopy theory, but I also have a soft spot for representation theory and anything that blends algebra, topology, and geometry together. I’m currently going through the grad school admissions cycle for PhD programs in math, so wish me luck!\nHere is a copy of my CV:\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"files/Anthony_Doll_CV.pdf\"&gt;Download the CV&lt;/a&gt;.\n&lt;/p&gt;\n\nDownload my CV\nA paper from my REU in the summer of 2024:\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"files/REU_Paper_Anthony_Doll.pdf\"&gt;Download the REU paper&lt;/a&gt;.\n&lt;/p&gt;\n\nDownload the REU paper"
+    "text": "My name is Anthony Doll and I recently graduated from the University of Virgina with a degree in mathematics. I am currently taking a gap year before pursuing a PhD in math at Case Western Reserve University in Cleveland, Ohio. My main interests are in stable homotopy theory, and I prefer the computational side over the categorical side. I also really enjoy algebra and hope to deepen my understanding of algebraic geometry, representation theory, and algebraic number theory as I move forward. In my senior year of college, I completed aa Distinguished Majors Thesis on cohomology operations with applications towards computations of the stable homotopy groups of spheres under the guidance of Professor J.D. Quigley. If you’re interested, you can find my thesis here.\nHere is a copy of my CV:\nDownload CV\nA paper from my REU in the summer of 2024:\nDownload the REU paper"
   },
   {
     "objectID": "gap-year/orange-book/ob1.html",
