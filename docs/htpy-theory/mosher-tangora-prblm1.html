@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-02-10">
 
 <title>Some Stable Homotopy Groups of \mathbb{RP}^2 – A Young Man's Mathematical Journey</title>
 <style>
@@ -69,10 +70,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+// Global MathJax configuration for site-wide macros
+// Note: keep this BEFORE the MathJax script include (as Quarto does)
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
-    packages: { '[+]': ['ams'] },
+    packages: { '[+]': ['ams', 'mathtools'] },
     macros: {
       RR: "\\mathbb{R}",
       CC: "\\mathbb{C}",
@@ -82,14 +85,30 @@ window.MathJax = Object.assign(window.MathJax, {
       kk: "\\mathbb{k}",
       RP: "\\mathbb{RP}",
       Sig: "\\Sigma",
+      ZZp: "\\mathbb{Z}_{(p)}",
+      Zp: "\\mathbb{Z}_{(p)}",
+      pt: "\\text{pt}",
 
-      lrarrow: "\\longrightarrow",
-      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      arr: ["\\xrightarrow{#1}", 1],
       xarr: ["\\xrightarrow{#1}", 1],
-      xlrarr: ["\\xlongrightarrow{#1}", 1],
-      xlarrow: ["\\xrightarrow{#1}", 1],
-      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      larr: ["\\xleftarrow{#1}", 1],
       xlarr: ["\\xleftarrow{#1}", 1],
+      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+
+      lrarr: "\\longrightarrow",
+      xlrarr: ["\\xlongrightarrow{#1}", 1],
+      xllarr: ["\\xlongleftarrow{#1}", 1],
+      xleftarr: ["\\xleftarrow{#1}", 1],
+      to: "\\to",
+      rightarrow: "\\rightarrow",
+      leftarrow: "\\leftarrow",
+
+      E: "\\mathcal{E}",
+      EE: "\\mathcal{E}",
+      Kn: ["\\mathrm{K}(#1)", 1],
+      Kpn: ["\\mathrm{K}(#1)", 1],
+      K: "\\mathrm{K}",
 
       b: "\\beta",
       r: "\\rho",
@@ -212,6 +231,12 @@ window.Quarto = {
  <span class="menu-text">intro.html</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gap-year/orange-book/ob1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -252,12 +277,6 @@ window.Quarto = {
  <span class="menu-text">Basic definitions and concepts</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../rep-theory/rep-theory/schurs-lemma.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schur’s Lemma</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -285,6 +304,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 10, 2026</p>
+    </div>
+  </div>
   
     
   </div>

@@ -1,9 +1,10 @@
 {
   "listingMap": {
     "website-deets/feed.qmd": [
-      "rep-theory/*.qmd",
-      "field-theory/*.qmd",
-      "posts/*.qmd"
+      "../gap-year/**/*.qmd",
+      "../htpy-theory/**/*.qmd",
+      "../rep-theory/**/*.qmd",
+      "../field-theory/**/*.qmd"
     ]
   }
 }

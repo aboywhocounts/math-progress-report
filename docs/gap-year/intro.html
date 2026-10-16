@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-10-10">
 
-<title>intro – A Young Man's Mathematical Journey</title>
+<title>Introduction – A Young Man’s Mathematical Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,10 +70,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+// Global MathJax configuration for site-wide macros
+// Note: keep this BEFORE the MathJax script include (as Quarto does)
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
-    packages: { '[+]': ['ams'] },
+    packages: { '[+]': ['ams', 'mathtools'] },
     macros: {
       RR: "\\mathbb{R}",
       CC: "\\mathbb{C}",
@@ -82,14 +85,30 @@ window.MathJax = Object.assign(window.MathJax, {
       kk: "\\mathbb{k}",
       RP: "\\mathbb{RP}",
       Sig: "\\Sigma",
+      ZZp: "\\mathbb{Z}_{(p)}",
+      Zp: "\\mathbb{Z}_{(p)}",
+      pt: "\\text{pt}",
 
-      lrarrow: "\\longrightarrow",
-      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      arr: ["\\xrightarrow{#1}", 1],
       xarr: ["\\xrightarrow{#1}", 1],
-      xlrarr: ["\\xlongrightarrow{#1}", 1],
-      xlarrow: ["\\xrightarrow{#1}", 1],
-      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      larr: ["\\xleftarrow{#1}", 1],
       xlarr: ["\\xleftarrow{#1}", 1],
+      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+
+      lrarr: "\\longrightarrow",
+      xlrarr: ["\\xlongrightarrow{#1}", 1],
+      xllarr: ["\\xlongleftarrow{#1}", 1],
+      xleftarr: ["\\xleftarrow{#1}", 1],
+      to: "\\to",
+      rightarrow: "\\rightarrow",
+      leftarrow: "\\leftarrow",
+
+      E: "\\mathcal{E}",
+      EE: "\\mathcal{E}",
+      Kn: ["\\mathrm{K}(#1)", 1],
+      Kpn: ["\\mathrm{K}(#1)", 1],
+      K: "\\mathrm{K}",
 
       b: "\\beta",
       r: "\\rho",
@@ -177,7 +196,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../gap-year/intro.html">intro.html</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../gap-year/intro.html">Introduction</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -209,7 +228,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../gap-year/intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">intro.html</span></a>
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gap-year/orange-book/ob1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1</span></a>
   </div>
 </li>
       </ul>
@@ -252,12 +277,6 @@ window.Quarto = {
  <span class="menu-text">Basic definitions and concepts</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../rep-theory/rep-theory/schurs-lemma.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schur’s Lemma</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -273,9 +292,31 @@ window.Quarto = {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../gap-year/intro.html">intro.html</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../gap-year/intro.html">Introduction</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Introduction</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p>In my gap year, I plan to read through as much material as I can in homotopy theory to better prepare myself for graduate school. I began by finishing up Mosher and Tangora’s <em>Cohomology Operations and Applications in Homotopy Theory</em>, which I had started reading last year for my undergraduate thesis. I have since started reading Douglas Ravenel’s <em>Nilpotence and Periodicity in Stable Homotopy Theory</em>, also known as “The Orange Book”. The spirit of all this reading isn’t necessarily to rigorously learn every detail of the material, but rather get a solid conceptual understanding of the main ideas and results in the field. Thus, my notes will not necessarily follow the text exactly, as I will leave room for my own thoughts and ideas. I hope to add more texts/papers to my reading list as the year goes on.</p>

@@ -69,10 +69,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+// Global MathJax configuration for site-wide macros
+// Note: keep this BEFORE the MathJax script include (as Quarto does)
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
-    packages: { '[+]': ['ams'] },
+    packages: { '[+]': ['ams', 'mathtools'] },
     macros: {
       RR: "\\mathbb{R}",
       CC: "\\mathbb{C}",
@@ -82,14 +84,30 @@ window.MathJax = Object.assign(window.MathJax, {
       kk: "\\mathbb{k}",
       RP: "\\mathbb{RP}",
       Sig: "\\Sigma",
+      ZZp: "\\mathbb{Z}_{(p)}",
+      Zp: "\\mathbb{Z}_{(p)}",
+      pt: "\\text{pt}",
 
-      lrarrow: "\\longrightarrow",
-      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      arr: ["\\xrightarrow{#1}", 1],
       xarr: ["\\xrightarrow{#1}", 1],
-      xlrarr: ["\\xlongrightarrow{#1}", 1],
-      xlarrow: ["\\xrightarrow{#1}", 1],
-      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+      xlongarr: ["\\xlongrightarrow{#1}", 1],
+      larr: ["\\xleftarrow{#1}", 1],
       xlarr: ["\\xleftarrow{#1}", 1],
+      xlonglarr: ["\\xlongleftarrow{#1}", 1],
+
+      lrarr: "\\longrightarrow",
+      xlrarr: ["\\xlongrightarrow{#1}", 1],
+      xllarr: ["\\xlongleftarrow{#1}", 1],
+      xleftarr: ["\\xleftarrow{#1}", 1],
+      to: "\\to",
+      rightarrow: "\\rightarrow",
+      leftarrow: "\\leftarrow",
+
+      E: "\\mathcal{E}",
+      EE: "\\mathcal{E}",
+      Kn: ["\\mathrm{K}(#1)", 1],
+      Kpn: ["\\mathrm{K}(#1)", 1],
+      K: "\\mathrm{K}",
 
       b: "\\beta",
       r: "\\rho",
@@ -212,6 +230,12 @@ window.Quarto = {
  <span class="menu-text">intro.html</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gap-year/orange-book/ob1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -252,12 +276,6 @@ window.Quarto = {
  <span class="menu-text">Basic definitions and concepts</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../rep-theory/rep-theory/schurs-lemma.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schur’s Lemma</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -294,9 +312,9 @@ window.Quarto = {
 </header>
 
 
-<p>Welcome to my mathematical progress report. Here I plan to document my journey through different areas of math that I find interesting enough to study on my own. The goal for this “blog” is to have a place to document what I learn and other thoughts that I have about the material, beyond just copying down lecture notes or textbook excerpts. I already enjoy learning about and doing math in my free time, so I figured why not have a place to share it with others too?</p>
-<p>The current focus of my studies is representation theory of finite groups, and some algebraic topology on the side. I’m currently writing my undergraduate thesis on cohomology operations and stable homotopy groups of spheres, so there will most likely be random problems and expositions related to that, in contrast to the more structured representation theory posts.</p>
-<p>I hope you enjoy!</p>
+<p>Welcome to my mathematical progress report. The goal of this “blog” is for me to have an organized place to type up notes and my thoughts about the math I’m doing. In the past I’ve just used notebooks, and while that’s fun, it takes a lot of time and I honestly don’t know where a lot of those notebooks have gone. Plus, this is better for the trees.</p>
+<p>These notes are not meant to be taken too seriously, and it may happen that there are statements that are incorrect. I’ll try to make sure everything is as logically sound as possible, but I’m only human. I hope you enjoy!</p>
+<p>For a little about me you can find the about page <a href="../website-deets/about.html">here</a>.</p>
 
 
 
