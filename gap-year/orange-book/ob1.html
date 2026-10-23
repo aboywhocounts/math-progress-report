@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-10-16">
 
-<title>Chapter 1 – A Young Man’s Mathematical Journey</title>
+<title>Chapter 1: Basic definitions and two big theorems – A Young Man’s Mathematical Journey</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -201,7 +201,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob1.html">Chapter 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob1.html">Chapter 1: Basic definitions and two big theorems</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -239,7 +239,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../gap-year/orange-book/ob1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chapter 1</span></a>
+ <span class="menu-text">Chapter 1: Basic definitions and two big theorems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: Homotopy groups and the chromatic filtration</span></a>
   </div>
 </li>
       </ul>
@@ -306,9 +312,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob1.html">Chapter 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob1.html">Chapter 1: Basic definitions and two big theorems</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Chapter 1</h1>
+<h1 class="title">Chapter 1: Basic definitions and two big theorems</h1>
 </div>
 
 
@@ -357,8 +363,8 @@ E_*(X)\xrightarrow{\epsilon} E_*(\text{pt})
 \ZZ_{(p)}\coloneqq \{\frac{a}{b} : a\in\ZZ, b\in S \}
 \]</span> This is in fact a ring, with the property that it has a unique maximal ideal <span class="math inline">\(\mathfrak{m}=p\ZZ_{(p)}\)</span>. Such a ring is called a <em>local</em> ring. Now, if we want to apply this to a <span class="math inline">\(\ZZ\)</span>-module <span class="math inline">\(M\)</span>, we keep <span class="math inline">\(S\)</span> the same, and we again let <span class="math inline">\(M_{(p)}\)</span> consist of formal fractions in <span class="math inline">\(M\)</span> with denominators in <span class="math inline">\(S\)</span>. However, we declare two fractions <span class="math inline">\(\frac{m_1}{s_1},\frac{m_2}{s_2}\)</span> to be equal if there exists an element <span class="math inline">\(t\in M\)</span> such that <span class="math inline">\(t(s_2m_1-s_1m_2)=0\)</span> in <span class="math inline">\(M\)</span>. The reason for this equivalence relation is to account for the torsion of <span class="math inline">\(M\)</span>. Another, much more straightforward of constructing <span class="math inline">\(M_{(p)}\)</span> is to simply tensor it with <span class="math inline">\(\ZZ_{(p)}\)</span>. In practice this is what we will mean when we discuss localization in the future, just tensor everything with <span class="math inline">\(\ZZ_{(p)}\)</span> and proceed.</p>
 <p>We now return to homotopy. One can perform an analogous procedure for spaces, but it is a little technical so I won’t go through the construction here. The point is, for any CW complex <span class="math inline">\(X\)</span>, there is a unique <span class="math inline">\(X_{(p)}\)</span> such that for any homology theory <span class="math inline">\(E_*\)</span>, we have <span class="math inline">\(\overline{E}_*(X_{(p)})\cong \overline{E}_*(X)\otimes \ZZ_{(p)}\)</span>. As one would expect, <span class="math inline">\(X_{(p)}\)</span> is called the <em><span class="math inline">\(p\)</span>-localization of <span class="math inline">\(X\)</span></em>, and if <span class="math inline">\(X\)</span> is finite, we say <span class="math inline">\(X_{(p)}\)</span> is a <span class="math inline">\(p\)</span>-local finite complex. Some key properties of this construction are listed below.</p>
-<div id="prop-plocal" class="proposition">
-<p>Suppose <span class="math inline">\(X\)</span> is a simply-connected CW complex such that <span class="math inline">\(\overline{H}_*(X)\)</span> consists entirely of torsion.</p>
+<div id="prp-plocal" class="proposition theorem">
+<p><span class="theorem-title"><strong>Proposition 1</strong></span> Suppose <span class="math inline">\(X\)</span> is a simply-connected CW complex such that <span class="math inline">\(\overline{H}_*(X)\)</span> consists entirely of torsion.</p>
 <ol type="1">
 <li>If this torsion is prime to <span class="math inline">\(p\)</span>, then <span class="math inline">\(X_{(p)}\)</span> is contractible.</li>
 <li>If it is all <span class="math inline">\(p\)</span>-torsion, then <span class="math inline">\(X\)</span> is <span class="math inline">\(p\)</span>-local, i.e., <span class="math inline">\(X_{(p)}\)</span> is equivalent to <span class="math inline">\(X\)</span>.</li>
@@ -370,8 +376,8 @@ E_*(X)\xrightarrow{\epsilon} E_*(\text{pt})
 \]</span> For Whitehead’s theorem to apply, we need a map that carries this isomorphism of reduced homology to obtain a homotopy equivalence, and fortunately we do have such a map coming from the natural map that arises out of localization from <span class="math inline">\(X\)</span> to <span class="math inline">\(X_{(p)}\)</span>.</p>
 <p>Now, if we consider the smash product <span class="math inline">\(\overline{H}_*(X \wedge Y)\)</span> the Künneth formula tells us this is isomorphic to <span class="math inline">\(\overline{H}_*(X)\otimes \overline{H}_*(Y)\)</span>. If <span class="math inline">\(X=X_{(p)}\)</span> and <span class="math inline">\(Y=X_{(q)}\)</span> for distinct primes <span class="math inline">\(p,q\)</span>, then this tensor product will clearly be trivial and thus so will <span class="math inline">\(X_{(p)}\wedge X_{(q)}\)</span>. Furthermore, this implies that the cartesian product of two coprime localizations is the same as their wedge sum.</p>
 <p>The reason we introduced the concept of <span class="math inline">\(p\)</span>-localizations and <span class="math inline">\(p\)</span>-local spaces is due to the fact that we can form many interesting self-maps using these spaces. However, in this case <span class="math inline">\(MU_*\)</span> is not the homology theory that we will utilize. Instead, we will use Morava K-theory. Its basic properties are as follows:</p>
-<div id="prop-mktheory_def">
-<p>For each prime <span class="math inline">\(p\)</span> there is a sequence of homology theories <span class="math inline">\(K(n)_*\)</span> for <span class="math inline">\(n\geq 0\)</span> with the following properties:</p>
+<div id="prp-mktheory-def" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposition 2</strong></span> For each prime <span class="math inline">\(p\)</span> there is a sequence of homology theories <span class="math inline">\(K(n)_*\)</span> for <span class="math inline">\(n\geq 0\)</span> with the following properties:</p>
 <ol type="1">
 <li><span class="math inline">\(K(0)_*(X)=H_*(X;\QQ)\)</span> and <span class="math inline">\(\overline{K(0)}_*(X)=0\)</span> when <span class="math inline">\(\overline{H}_*(X)\)</span> is all torsion.</li>
 <li><span class="math inline">\(K(1)_*(X)\)</span> is one of <span class="math inline">\(p-1\)</span> isomorphic summands of mod <span class="math inline">\(p\)</span> complex K-theory.</li>
