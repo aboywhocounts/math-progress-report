@@ -1,5 +1,5 @@
 ---
-title: Chapter 1
+title: "Chapter 1: Basic definitions and two big theorems"
 date: 2026-10-16
 ---
 
@@ -46,7 +46,7 @@ This is in fact a ring, with the property that it has a unique maximal ideal $\m
 
 We now return to homotopy. One can perform an analogous procedure for spaces, but it is a little technical so I won't go through the construction here. The point is, for any CW complex $X$, there is a unique $X_{(p)}$ such that for any homology theory $E_*$, we have $\overline{E}_*(X_{(p)})\cong \overline{E}_*(X)\otimes \ZZ_{(p)}$. As one would expect, $X_{(p)}$ is called the *$p$-localization of $X$*, and if $X$ is finite, we say $X_{(p)}$ is a $p$-local finite complex. Some key properties of this construction are listed below.
 
-::: {.proposition #prop-plocal}
+::: {.proposition #prp-plocal}
 Suppose $X$ is a simply-connected CW complex such that $\overline{H}_*(X)$ consists entirely of torsion. 
 
 1. If this torsion is prime to $p$, then $X_{(p)}$ is contractible.
@@ -64,7 +64,7 @@ Now, if we consider the smash product $\overline{H}_*(X \wedge Y)$ the Künneth 
 
 The reason we introduced the concept of $p$-localizations and $p$-local spaces is due to the fact that we can form many interesting self-maps using these spaces. However, in this case $MU_*$ is not the homology theory that we will utilize. Instead, we will use Morava K-theory. Its basic properties are as follows:
 
-::: {#prop-mktheory_def}
+::: {#prp-mktheory-def}
 For each prime $p$ there is a sequence of homology theories $K(n)_*$ for $n\geq 0$ with the following properties:
 
 1. $K(0)_*(X)=H_*(X;\QQ)$ and $\overline{K(0)}_*(X)=0$ when $\overline{H}_*(X)$ is all torsion.
@@ -88,7 +88,7 @@ We need one last definition to state the periodicity theorem.
 A $p$-local finite complex $X$ has **type** $n$ if $n$ is the smallest integer such that $K(n)_*(X)$ is nontrivial. If $X$ is contractible, then $X$ has type $\infty$.
 :::
 
-::: {#thm-periodicity}
+::: {#thm-periodicity .theorem}
 Let $X$ and $Y$ be $p$-local finite CW complexes of type $n$ where $n<\infty$.
 
 1. There is a self map $f:\Sig^{d+i}\longrightarrow \Sig^i X$ for some $i\geq 0$ such that $K(n)_*(f)$ is an isomorphism and $K(m)_*(f)$ is trivial for $m>n$. We will call such a map $f$ a *$v_n$-map*. When $n=0$ then $d=0$. When $n>0$, $d$ is a multiple of $2(p^n-1)$. 

@@ -1,1 +1,8 @@
 /* css styles */
+
+.proof::after {
+	content: "□";
+	display: block;
+	text-align: right;
+	margin-top: 0.25rem;
+}
