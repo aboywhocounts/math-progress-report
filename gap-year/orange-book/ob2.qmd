@@ -70,7 +70,7 @@ Therefore, $W$ has type $n+1$.
 Now we will focus on periodic maps and how they can give us nontrivial elements of $\pi_*^S$. First we will look at some foundational examples and then move into the generalized framework.
 
 :::{#exm-pdc-maps}
-1. The degree map $p:S^1 \to S^1$ where $S^1\subset\CC$ given by $z\mapsto \z^p$ is periodic in the sense that none of its iterates are nullhomotopic. All of its suspensions are essential as well.
+1. The degree map $p:S^1 \rightarrow S^1$ where $S^1\subset\CC$ given by $z \mapsto z^p$ is periodic in the sense that none of its iterates are nullhomotopic. All of its suspensions are essential as well.
 2. Let $V(0)_k$ (aka mod $p$ Moore space) be the cofiber of the degree $p$ map on $S^k$. It has been shown by Adams and Toda that for sufficiently large $k$, there is a periodic map
 $$
 \Sigma^q V(0)_k \xrightarrow{\alpha} V(0)_k
@@ -128,7 +128,7 @@ What's interesting about this procedure is that we have a new way of organizing 
 
 ## The chromatic filtration
 
-Now it's time to try and clear up what is meant by organizing the homotopy groups of a finite complex via these infinite families. First, let's suppose that our CW complex $Y$ is $p$-local and that we have some element $y\in\pi_k(Y)$ that is represented by a map $g:S^k\rightarrow Y$. If all suspensions of $y$ have infinite order, then it would yield a nontrivial element in the rational stable homotopy group $\pi_k^S(Y)\otimes \QQ$. This is not too difficult to compute, since $\pi_^S_*$ is a generalized homology theory and tensoring with $\QQ$ effectively just turns it into ordinary reduced rational homology. This is because generalized homology theories that equivalent when evaluated on a point are equivalent as functors.
+Now it's time to try and clear up what is meant by organizing the homotopy groups of a finite complex via these infinite families. First, let's suppose that our CW complex $Y$ is $p$-local and that we have some element $y\in\pi_k(Y)$ that is represented by a map $g:S^k\rightarrow Y$. If all suspensions of $y$ have infinite order, then it would yield a nontrivial element in the rational stable homotopy group $\pi_k^S(Y)\otimes \QQ$. This is not too difficult to compute, since $\pi^S_*$ is a generalized homology theory and tensoring with $\QQ$ effectively just turns it into ordinary reduced rational homology. This is because generalized homology theories that equivalent when evaluated on a point are equivalent as functors.
 
 Now, if some suspension of $y$ turns out to have order $p^i$ for some $i$, then this suspension will factor through the cofiber of the degree $p^i$ map on the corresponding suspension on the sphere $S^k$. We denote this cofiber by $W(1)$, so that our new map is of the form $g_1:W(1)\rightarrow Y$ and $g$ is identified with the composition of the inclusion of $S^{k+e}$ into $W(1)$ as a complex. **Note: in what follows we will be ignoring suspensions and everything is assumed to be taking place in the stable range.**
 
@@ -164,7 +164,7 @@ We make the folowing natural definition:
 If an element $y\in\pi_*^S(Y)$ extends to a complex $W(n)$ of type $n$, then $y$ is **$v_{n-1}$-torsion**. If, in addition $y$ does not extend to a complex of type $n+1$, it is **$v_n$-periodic**. The chromatic filtration of $\pi_*^S(Y)$ is a decreasing family of subgroups consisting of $v_n$-torsion elements for various $n\geq 0$.
 :::
 
-I'll note that the procedure used above is different than what was used with the $\a_t$,$\beta_t$, and $\gamma_t$ families earlier. For example, if $p$ is odd and we take the map $\alpha_1 \in \pi_{2p-3}^S$ represented by the map $\alpha_1:S^{m+2p-3}\rightarrow S^m$, then $\alpha_1$ has order $p$, due to the construction from earlier. Thus, this map will extend to a map $\widetilde{\alpha_1}:V(0)_{m+2p-3}\rightarrow S^m$. It turns out that no iterate of $\alpha$ composed with $\alpha_1$ is nullhomotopic, meaning that $\a_1$ is $v_1$-periodic by the definition that was just made. The composite 
+I'll note that the procedure used above is different than what was used with the $\a_t$,$\beta_t$, and $\gamma_t$ families earlier. For example, if $p$ is odd and we take the map $\alpha_1 \in \pi_{2p-3}^S$ represented by the map $\alpha_1:S^{m+2p-3}\rightarrow S^m$, then $\alpha_1$ has order $p$, due to the construction from earlier. Thus, this map will extend to a map $\widetilde{\alpha_1}:V(0)_{m+2p-3}\rightarrow S^m$. It turns out that no iterate of $\alpha$ composed with $\alpha_1$ is nullhomotopic, meaning that $\alpha_1$ is $v_1$-periodic by the definition that was just made. The composite 
 $$
 S^{m+qi+q-1}\rightarrow V(0)_{m+qi+q-1}\xrightarrow{\alpha^i} V(0)_{m+q-1}\xrightarrow{\widetilde{\alpha_1}}S^m
 $$

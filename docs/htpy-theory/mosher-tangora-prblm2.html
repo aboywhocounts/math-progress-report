@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script>
 // Global MathJax configuration for site-wide macros
-// Note: keep this BEFORE the MathJax script include (as Quarto does)
+// Keep this before the MathJax script include.
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
@@ -87,31 +87,20 @@ window.MathJax = Object.assign(window.MathJax, {
       Sig: "\\Sigma",
       ZZp: "\\mathbb{Z}_{(p)}",
       Zp: "\\mathbb{Z}_{(p)}",
-      pt: "\\text{pt}",
+      pt: "\\mathrm{pt}",
+      ol: ["\\overline{#1}", 1],
 
       arr: ["\\xrightarrow{#1}", 1],
-      xarr: ["\\xrightarrow{#1}", 1],
-      xlongarr: ["\\xlongrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
-      xlarr: ["\\xleftarrow{#1}", 1],
-      xlonglarr: ["\\xlongleftarrow{#1}", 1],
-
-      lrarr: "\\longrightarrow",
-      xlrarr: ["\\xlongrightarrow{#1}", 1],
-      xllarr: ["\\xlongleftarrow{#1}", 1],
-      xleftarr: ["\\xleftarrow{#1}", 1],
-      to: "\\to",
-      rightarrow: "\\rightarrow",
-      leftarrow: "\\leftarrow",
+      lrarr: ["\\xlongrightarrow{#1}", 1],
+      llarr: ["\\xlongleftarrow{#1}", 1],
 
       E: "\\mathcal{E}",
       EE: "\\mathcal{E}",
+      K: "\\mathrm{K}",
       Kn: ["\\mathrm{K}(#1)", 1],
       Kpn: ["\\mathrm{K}(#1)", 1],
-      K: "\\mathrm{K}",
 
-      b: "\\beta",
-      r: "\\rho",
       Hom: "\\operatorname{Hom}",
       End: "\\operatorname{End}",
       GL: "\\operatorname{GL}",
