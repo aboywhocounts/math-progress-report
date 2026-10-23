@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <script>
 // Global MathJax configuration for site-wide macros
-// Note: keep this BEFORE the MathJax script include (as Quarto does)
+// Keep this before the MathJax script include.
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
@@ -122,31 +122,20 @@ window.MathJax = Object.assign(window.MathJax, {
       Sig: "\\Sigma",
       ZZp: "\\mathbb{Z}_{(p)}",
       Zp: "\\mathbb{Z}_{(p)}",
-      pt: "\\text{pt}",
+      pt: "\\mathrm{pt}",
+      ol: ["\\overline{#1}", 1],
 
       arr: ["\\xrightarrow{#1}", 1],
-      xarr: ["\\xrightarrow{#1}", 1],
-      xlongarr: ["\\xlongrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
-      xlarr: ["\\xleftarrow{#1}", 1],
-      xlonglarr: ["\\xlongleftarrow{#1}", 1],
-
-      lrarr: "\\longrightarrow",
-      xlrarr: ["\\xlongrightarrow{#1}", 1],
-      xllarr: ["\\xlongleftarrow{#1}", 1],
-      xleftarr: ["\\xleftarrow{#1}", 1],
-      to: "\\to",
-      rightarrow: "\\rightarrow",
-      leftarrow: "\\leftarrow",
+      lrarr: ["\\xlongrightarrow{#1}", 1],
+      llarr: ["\\xlongleftarrow{#1}", 1],
 
       E: "\\mathcal{E}",
       EE: "\\mathcal{E}",
+      K: "\\mathrm{K}",
       Kn: ["\\mathrm{K}(#1)", 1],
       Kpn: ["\\mathrm{K}(#1)", 1],
-      K: "\\mathrm{K}",
 
-      b: "\\beta",
-      r: "\\rho",
       Hom: "\\operatorname{Hom}",
       End: "\\operatorname{End}",
       GL: "\\operatorname{GL}",
@@ -361,7 +350,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1792768959618">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1792770142552">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/mosher-tangora/mt1.html" class="no-external"></a>
@@ -375,7 +364,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1792195200000" data-listing-file-modified-sort="1792768959619" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2518">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1792195200000" data-listing-file-modified-sort="1792770142552" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2519">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob2.html" class="no-external">Chapter 2: Homotopy groups and the chromatic filtration</a>
@@ -392,7 +381,7 @@ Oct 17, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1792108800000" data-listing-file-modified-sort="1792768959618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1567">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1792108800000" data-listing-file-modified-sort="1792770142552" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1567">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob1.html" class="no-external">Chapter 1: Basic definitions and two big theorems</a>
@@ -409,7 +398,7 @@ Oct 16, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1791590400000" data-listing-file-modified-sort="1792768959617" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1791590400000" data-listing-file-modified-sort="1792770142552" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/intro.html" class="no-external">Introduction</a>
@@ -426,7 +415,7 @@ Oct 10, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1770854400000" data-listing-file-modified-sort="1792768959619" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1770854400000" data-listing-file-modified-sort="1792770142552" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external">A Note on Torsion Elements in the Stable Homotopy Groups of Spheres</a>
@@ -443,7 +432,7 @@ Feb 12, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1770681600000" data-listing-file-modified-sort="1792768959619" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1770681600000" data-listing-file-modified-sort="1792770142552" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a>
@@ -460,7 +449,7 @@ Feb 10, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1768867200000" data-listing-file-modified-sort="1792768959620" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1768867200000" data-listing-file-modified-sort="1792770142554" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../rep-theory/rep-theory/the-basics.html" class="no-external">Basic definitions and concepts</a>

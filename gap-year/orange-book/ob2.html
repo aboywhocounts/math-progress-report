@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script>
 // Global MathJax configuration for site-wide macros
-// Note: keep this BEFORE the MathJax script include (as Quarto does)
+// Keep this before the MathJax script include.
 window.MathJax = window.MathJax || {};
 window.MathJax = Object.assign(window.MathJax, {
   tex: {
@@ -92,31 +92,20 @@ window.MathJax = Object.assign(window.MathJax, {
       Sig: "\\Sigma",
       ZZp: "\\mathbb{Z}_{(p)}",
       Zp: "\\mathbb{Z}_{(p)}",
-      pt: "\\text{pt}",
+      pt: "\\mathrm{pt}",
+      ol: ["\\overline{#1}", 1],
 
       arr: ["\\xrightarrow{#1}", 1],
-      xarr: ["\\xrightarrow{#1}", 1],
-      xlongarr: ["\\xlongrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
-      xlarr: ["\\xleftarrow{#1}", 1],
-      xlonglarr: ["\\xlongleftarrow{#1}", 1],
-
-      lrarr: "\\longrightarrow",
-      xlrarr: ["\\xlongrightarrow{#1}", 1],
-      xllarr: ["\\xlongleftarrow{#1}", 1],
-      xleftarr: ["\\xleftarrow{#1}", 1],
-      to: "\\to",
-      rightarrow: "\\rightarrow",
-      leftarrow: "\\leftarrow",
+      lrarr: ["\\xlongrightarrow{#1}", 1],
+      llarr: ["\\xlongleftarrow{#1}", 1],
 
       E: "\\mathcal{E}",
       EE: "\\mathcal{E}",
+      K: "\\mathrm{K}",
       Kn: ["\\mathrm{K}(#1)", 1],
       Kpn: ["\\mathrm{K}(#1)", 1],
-      K: "\\mathrm{K}",
 
-      b: "\\beta",
-      r: "\\rho",
       Hom: "\\operatorname{Hom}",
       End: "\\operatorname{End}",
       GL: "\\operatorname{GL}",
@@ -384,7 +373,7 @@ X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{j} \Sigma X \xrightarrow{\S
 <div id="exm-pdc-maps" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1</strong></span> &nbsp;</p>
 <ol type="1">
-<li>The degree map <span class="math inline">\(p:S^1 \to S^1\)</span> where <span class="math inline">\(S^1\subset\CC\)</span> given by <span class="math inline">\(z\mapsto \z^p\)</span> is periodic in the sense that none of its iterates are nullhomotopic. All of its suspensions are essential as well.</li>
+<li>The degree map <span class="math inline">\(p:S^1 \rightarrow S^1\)</span> where <span class="math inline">\(S^1\subset\CC\)</span> given by <span class="math inline">\(z \mapsto z^p\)</span> is periodic in the sense that none of its iterates are nullhomotopic. All of its suspensions are essential as well.</li>
 <li>Let <span class="math inline">\(V(0)_k\)</span> (aka mod <span class="math inline">\(p\)</span> Moore space) be the cofiber of the degree <span class="math inline">\(p\)</span> map on <span class="math inline">\(S^k\)</span>. It has been shown by Adams and Toda that for sufficiently large <span class="math inline">\(k\)</span>, there is a periodic map <span class="math display">\[
 \Sigma^q V(0)_k \xrightarrow{\alpha} V(0)_k
 \]</span></li>
@@ -419,7 +408,7 @@ S^{k+td} \xrightarrow{i} \Sigma^{td} X \xrightarrow{f^t} X \xrightarrow{j} S^{k+
 </section>
 <section id="the-chromatic-filtration" class="level2">
 <h2 class="anchored" data-anchor-id="the-chromatic-filtration">The chromatic filtration</h2>
-<p>Now it’s time to try and clear up what is meant by organizing the homotopy groups of a finite complex via these infinite families. First, let’s suppose that our CW complex <span class="math inline">\(Y\)</span> is <span class="math inline">\(p\)</span>-local and that we have some element <span class="math inline">\(y\in\pi_k(Y)\)</span> that is represented by a map <span class="math inline">\(g:S^k\rightarrow Y\)</span>. If all suspensions of <span class="math inline">\(y\)</span> have infinite order, then it would yield a nontrivial element in the rational stable homotopy group <span class="math inline">\(\pi_k^S(Y)\otimes \QQ\)</span>. This is not too difficult to compute, since <span class="math inline">\(\pi_^S_*\)</span> is a generalized homology theory and tensoring with <span class="math inline">\(\QQ\)</span> effectively just turns it into ordinary reduced rational homology. This is because generalized homology theories that equivalent when evaluated on a point are equivalent as functors.</p>
+<p>Now it’s time to try and clear up what is meant by organizing the homotopy groups of a finite complex via these infinite families. First, let’s suppose that our CW complex <span class="math inline">\(Y\)</span> is <span class="math inline">\(p\)</span>-local and that we have some element <span class="math inline">\(y\in\pi_k(Y)\)</span> that is represented by a map <span class="math inline">\(g:S^k\rightarrow Y\)</span>. If all suspensions of <span class="math inline">\(y\)</span> have infinite order, then it would yield a nontrivial element in the rational stable homotopy group <span class="math inline">\(\pi_k^S(Y)\otimes \QQ\)</span>. This is not too difficult to compute, since <span class="math inline">\(\pi^S_*\)</span> is a generalized homology theory and tensoring with <span class="math inline">\(\QQ\)</span> effectively just turns it into ordinary reduced rational homology. This is because generalized homology theories that equivalent when evaluated on a point are equivalent as functors.</p>
 <p>Now, if some suspension of <span class="math inline">\(y\)</span> turns out to have order <span class="math inline">\(p^i\)</span> for some <span class="math inline">\(i\)</span>, then this suspension will factor through the cofiber of the degree <span class="math inline">\(p^i\)</span> map on the corresponding suspension on the sphere <span class="math inline">\(S^k\)</span>. We denote this cofiber by <span class="math inline">\(W(1)\)</span>, so that our new map is of the form <span class="math inline">\(g_1:W(1)\rightarrow Y\)</span> and <span class="math inline">\(g\)</span> is identified with the composition of the inclusion of <span class="math inline">\(S^{k+e}\)</span> into <span class="math inline">\(W(1)\)</span> as a complex. <strong>Note: in what follows we will be ignoring suspensions and everything is assumed to be taking place in the stable range.</strong></p>
 <p>The complex <span class="math inline">\(W(1)\)</span> has type 1, since it is the cofiber of a self-map of a type 0 complex, <span class="math inline">\(S^k\)</span>. (To see why <span class="math inline">\(S^k\)</span> has type 0, note that <span class="math inline">\(\overline{K(0)}_*(S^k)\cong \overline{H}_*(S^k;\QQ) \neq 0\)</span>) the periodicity theorem guarantees the existence of a periodic self-map <span class="math display">\[
 f_1:\Sigma^{d_1} W(1) \rightarrow W(1)
@@ -439,7 +428,7 @@ f_2:\Sigma^{d_2} W(2)\rightarrow W(2)
 <div id="def-vn-torsion" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2</strong></span> If an element <span class="math inline">\(y\in\pi_*^S(Y)\)</span> extends to a complex <span class="math inline">\(W(n)\)</span> of type <span class="math inline">\(n\)</span>, then <span class="math inline">\(y\)</span> is <strong><span class="math inline">\(v_{n-1}\)</span>-torsion</strong>. If, in addition <span class="math inline">\(y\)</span> does not extend to a complex of type <span class="math inline">\(n+1\)</span>, it is <strong><span class="math inline">\(v_n\)</span>-periodic</strong>. The chromatic filtration of <span class="math inline">\(\pi_*^S(Y)\)</span> is a decreasing family of subgroups consisting of <span class="math inline">\(v_n\)</span>-torsion elements for various <span class="math inline">\(n\geq 0\)</span>.</p>
 </div>
-<p>I’ll note that the procedure used above is different than what was used with the <span class="math inline">\(\a_t\)</span>,<span class="math inline">\(\beta_t\)</span>, and <span class="math inline">\(\gamma_t\)</span> families earlier. For example, if <span class="math inline">\(p\)</span> is odd and we take the map <span class="math inline">\(\alpha_1 \in \pi_{2p-3}^S\)</span> represented by the map <span class="math inline">\(\alpha_1:S^{m+2p-3}\rightarrow S^m\)</span>, then <span class="math inline">\(\alpha_1\)</span> has order <span class="math inline">\(p\)</span>, due to the construction from earlier. Thus, this map will extend to a map <span class="math inline">\(\widetilde{\alpha_1}:V(0)_{m+2p-3}\rightarrow S^m\)</span>. It turns out that no iterate of <span class="math inline">\(\alpha\)</span> composed with <span class="math inline">\(\alpha_1\)</span> is nullhomotopic, meaning that <span class="math inline">\(\a_1\)</span> is <span class="math inline">\(v_1\)</span>-periodic by the definition that was just made. The composite <span class="math display">\[
+<p>I’ll note that the procedure used above is different than what was used with the <span class="math inline">\(\a_t\)</span>,<span class="math inline">\(\beta_t\)</span>, and <span class="math inline">\(\gamma_t\)</span> families earlier. For example, if <span class="math inline">\(p\)</span> is odd and we take the map <span class="math inline">\(\alpha_1 \in \pi_{2p-3}^S\)</span> represented by the map <span class="math inline">\(\alpha_1:S^{m+2p-3}\rightarrow S^m\)</span>, then <span class="math inline">\(\alpha_1\)</span> has order <span class="math inline">\(p\)</span>, due to the construction from earlier. Thus, this map will extend to a map <span class="math inline">\(\widetilde{\alpha_1}:V(0)_{m+2p-3}\rightarrow S^m\)</span>. It turns out that no iterate of <span class="math inline">\(\alpha\)</span> composed with <span class="math inline">\(\alpha_1\)</span> is nullhomotopic, meaning that <span class="math inline">\(\alpha_1\)</span> is <span class="math inline">\(v_1\)</span>-periodic by the definition that was just made. The composite <span class="math display">\[
 S^{m+qi+q-1}\rightarrow V(0)_{m+qi+q-1}\xrightarrow{\alpha^i} V(0)_{m+q-1}\xrightarrow{\widetilde{\alpha_1}}S^m
 \]</span> is the map <span class="math inline">\(\alpha_{i+1}\)</span> of the earlier construction. Note that in this formulation, we didn’t need to use the pinch map <span class="math inline">\(j:V(0)_m \rightarrow S^{m+1}\)</span>. In general, given a <span class="math inline">\(v_n\)</span>-periodic element <span class="math inline">\(g :S^k \rightarrow Y\)</span> and its extension <span class="math inline">\(g_n:W(n) \rightarrow Y\)</span>, it may be the case that the composite <span class="math display">\[
 S^K\xrightarrow{e}\Sigma^{d_n i}W(n)\xrightarrow{f^i_n} W(n)\xrightarrow{g_n} Y
