@@ -1,0 +1,173 @@
+---
+title: "Chapter 3: MU and formal group laws"
+date: 2026-10-24
+---
+In Chapter 2, we saw a new perspective on understanding the homotopy groups $\pi_*(Y)$ of a CW complex via the chromatic filtration. This reformulation depends (in a way that I don't totally understand) on the nilpotence and periodicity theorems of Chapter 1. To my understanding, the goal of this chapter is to mirror this structure/way of thinking algebraically. 
+
+In algebraic topology, this is usually formalized by a functor $F:\FH\rightarrow \mathbf{Alg}$, where $\FH$ represents the category of finite CW complexes and homotopy classes of maps between them, and $\mathbf{Alg}$ is some "algebraic" category, just meaning a space of algebraic objects that we can make sense of in the usual fashion. This category will be denoted henceforth by $\CG$, and it will mean the category of modules over a certain ring $L$ equipped with an action of a certain group $\Gamma$ that is compatible with a natural action of $\Gamma$ on $L$. The functor $F$ will be the homology theory $MU_*$, complex bordism.
+
+Studying this algebraic category reveals a very organized structure in the theory of these special $L$-modules, which is analogous to things we saw with Morava K-theory and the periodicity theorem in chapter 1. We will take this analogy further by defining a notion of type for these modules, which will allow us to state in more precise terms this correspondence due to $MU_*$. 
+
+## Complex bordism
+
+Given two smooth, closed, $n$-dimensional manifolds $M_1$ and $M_2$ and maps $f_i:M_i\rightarrow X$, where $X$ is some space, we say $f_1$ and $f_2$ are **bordant** if there exists a map $f:W\rightarrow X$ for $W$ an $(n+1)$-dimensional manifold such that $\partial W=M_1\sqcup M_2$ and $f$ restricted to $\partial W$ is the disjoint union of $f_1$ and $f_2$. The groups $MU_n(X)$ are defined to be the $n$-dimensional bordism classes under the operation of disjoint union, where we require all manifolds to satisfy certain nice conditions (all manifolds are required to be *stably complex*, but defining this isn't really important for us). We will denote by $MU_n$ the group $MU_n(\pt)$. Under the operation of cartesian product, the graded group $MU_*$ inherits the structure of a graded ring, which we denote by $MU_*$. 
+
+Due to a result of Milnor, as a graded ring, $MU_*$ is isomorphic to the polynomial ring
+
+$$
+\ZZ[x_1,x_2,...]
+$$
+
+where $|x_i|=2i$. 
+
+There is a natural action of $MU_*$ on $MU_*(X)$ described as follows: given $x\in MU_*(X)$ represented by a map $f:M\rightarrow X$, and an element $\lambda\in MU_*$ represented by a manifold $N$, $\lambda x$ is represented by the composite
+$$
+M\times N\rightarrow M\xrightarrow{f} X
+$$
+
+
+Now, $MU_*$ is a homology theory as I mentioned above (I won't prove it), and thus by Brown representability corresponds to a spectrum, which we denote by $MU$. Just as for any other spectrum, we can also associate to $MU$ a cohomology theory $MU^*$. For conventional reasons, the graded rings $MU_*(\pt)$ and $MU^*(\pt)$ are isomorphic to each other except with the gradings reversed, so that $MU^*=MU^*(\pt)$ is a polynomial ring over $\ZZ$ with a generators $x_i$ of degree $-2i$. Additionally, the cohomology theory $MU^*$ comes equipped with a cup product, and combining this with the $MU^*$-module structure of $MU^*(X)$, $MU^*(X)$ is upgraded to an $MU^*$-algebra. The cohomology theory $MU^*$ also has a Künneth-type isomorphism
+$$
+MU^*(X\times Y)\cong MU^*(X)\otimes_{MU^*} MU^*(Y)
+$$
+
+but this isomorphism doesn't occur in general, as there have to be certain assumptions in place on the spaces $X$ and $Y$ and the $MU^*$-module structure of $MU^*(X)$ and  $MU^*(Y)$. However, for what we will consider we won't have to worry about these assumptions.
+
+It's thus very natural to study modules over the ring $MU_*$ to understand this homology theory. Something that's quite interesting is that we can define this ring completely algebraically as well. To do this we will need to make some definitions regarding formal group laws. 
+
+## Formal group laws
+
+:::{#def-fgl}
+Let $R$ be a commutative ring. A **formal group law** (FGL) over $R$ is a formal power series $F(x,y)$ in $R$ such that the following are satisfied
+1. $F(x,0)=F(0,x)=x$ (identity)
+2. $F(x,y)=F(y,x)$ (commutativity)
+3. $F(x,F(y,z))=F(F(x,y),z)$ (associativity)
+:::
+FGLs are invertible; the inverse of $F(x,y)$ is the FGL $i(x)$ such that $F(x,i(x))=0$
+
+:::{#ex-fgl}
+1. Additive FGL: $F(x,y)=x+y$. Its inverse is $i(x)=-x$.
+2. Multiplicative FGL: $F(x,y)=x+y+xy=(1+x)(1-y)-1$. Its inverse is $i(x)=\frac{-x}{1+x}$.
+:::
+
+There is a universal FGL $G(x,y)$, over a ring $L$ called the Lazard ring such that for any FGL over $R$ $F$ the coefficients of $F$ are captured in a unique ring homomorphism $\theta:L\rightarrow R$. More explicitly, the universal FGL has the form $G(x,y)=\sum_{i,j} a_{i,j}x^i y^j$ where $a_{i,j}\in L$, and if $\theta:L\rightarrow R$ is the corresponding ring homomorphism to $F$, we can write $F$ uniquely as
+$$
+F(x,y)=\sum_{i,j} \theta(a_{i,j}) x^iy^j
+$$
+
+Lazard proved that as a ring, $L$ is isomorphic to $\Z[x_1,x_2,\cdots]$. If we put a grading on $L$ such that the coefficients $a_{i,j}$ of the universal FGL $G$ have degree $2(1-i-j)$, then the degree of the generator $x_i$ is $-2i$, which is clearly isomorphic to $MU^*$. In fact, this isomorphism is actually deeper than algebra. Let's make this precise. We will consider the space $X=\CC P^{\infty}$, which is the classifying space of complex line bundles. Due to this fact, there is a map
+$$
+f:\CC P^{\infty} \times \CC P^{\infty} \rightarrow \CC P^{\infty}
+$$
+
+which induces the tensor product of line bundles. It is a fact that $MU^*(X)\cong MU^*[[x]]$, where $|x|=2$, so taking the induced map $MU^*(f)$ we get a map 
+
+$$
+MU^*(\CC P^{\infty}\times \CC P^{\infty})\xleftarrow{f^*} MU^*(\CC P^{\infty}) 
+$$
+
+that is determined by where the 2-dimensional generator $x$ is sent. Utilizing the Künneth-type isomorphism above, we have an isomorphism
+$$
+MU^*(\CC P^{\infty}\times \CC P^{\infty})\cong MU^*[[x\otimes 1,1\otimes x]]
+$$
+
+so that our map $f^*$ really corresponds to a power series $F(x\otimes 1,1\otimes x)$. This power series $F$ can be shown to be a formal group law, and thus must correspond to a homomorphism $\theta:L\rightarrow MU^*$. Quillen proved that this map is in fact an isomorphism. This means that the FGL associated to complex cobordism is the universal one (the "co" prefix is used because we are discussing the cohomology theory $MU^*$). Thus, if we just move reverse the gradings, we may consider $MU_*(X)$ to be an $L$-module. 
+
+## Deeper into the algebra
+
+We are thus compelled to study the structure of the category ${}_L\mathbf{Mod}$ of $L$ modules. However, we can actually refine our objects of interest to the subcategory $\CG$ of $L$-modules equipped with an action of the group $\Gamma$ that is compatible with the action of $\Gamma$ on $L$.
+
+Let $\Gamma$ be the group of power series over $\ZZ$ of the form
+$$
+\gamma=x+b_1x^2+b_2x^3+\cdots
+$$
+
+where the group operation is functional composition. The natural action of $\Gamma$ on $L$ is defined as follows: let $G(x,y)$ be the universal FGL over $L$ and let $\gamma\in \Gamma$. Then $\gamma^{-1}(G(\gamma(x),\gamma(y)))$ is another FGL over $L$ and is therefore induced by an endomorphism $L\rightarrow L$. By definition, $\gamma$ is invertible so that this endomorphism is an automorphism, and thus we have the desired action. There is also an action of $\Gamma$ on $MU_*(X)$, but defining this is quite technical and isn't necessary.
+
+It may seem a bit random to narrow our focus to the category $\CG$, but the group $\Gamma$ comes from topology and its action is therefore a natural thing to take into account. Recall that in ordinary cohomology, $H^*(X)$ (mod 2 coefficients suppressed) is module over the Steenrod algebra. This action massively restricts the types of algebraic modules that can arise out of real topological spaces. The group $\Gamma$ is playing an analogous role specifically to the multiplicative operations. Multiplicative operations in $MU$-theory are much more complicated than in ordinary cohomology, but their behavior is dictated by where they send the generator $x\in MU^2(\CC P^{\infty})$, and $\Gamma$ captures this behavior. Not only does studying $\CG$ get rid of topologically impossible $L$-modules, but the $\Gamma$-action clears up the picture immensely. To explicitly elaborate on this we need a few more definitions from FGL theory.
+
+:::{#def-n-series}
+For each integer $n$, the $n$-series $[n](x)$ is given by the recursive formula
+$$\begin{align}
+[1](x) &=x \\
+[n](x) &=F(x,[n-1](x)) \qquad n>1\\
+[-n](x)&= i([n](x))
+\end{align}
+$$
+:::
+These $n$-series depend on the integer $n$ and the FGL $F$. They satisfy
+$$\begin{align}
+[n](x) & =nx \mod(x^2)\\
+[m+n](x) & = F([m](x),[n](x))\\
+[mn](x) & = [m]([n](x))
+\end{align}
+$$
+
+For example, if $F$ is the additive FGL, $[n](x)=nx$ and if $F$ is the multiplicative FGL, $[n](x)=(1+x)^n-1$. Of particular interest are the $p$-series. Operating in characteristic $p$, the leading term is always $ax^q$ where $q=p^h$. We make the following definition.
+
+:::{#def-height}
+Let $F(x,y)$ be a FGL over a ring $R$ in which the prime number $p$ is not a unit. If the $\mod p$ reduction of $[p](x)$ has the form 
+$$
+[p](x)=ax^{p^h} + \text{higher terms}
+$$
+
+with $a$ invertible, then we say that $F$ has height $h$ at $p$. If $[p](x)=0 \mod p$, then the height is infinity.
+:::
+
+From the above examples, the height of the additive FGL is infinity since $[p](x)=px=0\mod p$. For the multiplicative FGL, its height is 1 since $[p](x)=x^p \mod p$. This leads to a very important result for the theory of FGLs.
+
+:::{#thm-classification-fgl}
+**Classification of FGLs.**
+Two FGLs over the algebraic closure of $\FF_p$ are isomorphic if and only if they have the same height. 
+:::
+
+Let $v_n\in L$ denote the coefficient of $x^{p^n}$ in the $p$-series for the universal FGL (prime $p$ is omitted from the notation). It can be shown (but won't be done here) that $v_n$ is indecomposable in $L$ so that $v_n$ is a polynomial generator in dimension $2p^n-2$. Let $I_{p,n}\subset L$ denote the prime ideal $(p,v_1,...,v_{n-1})$.
+
+Now I can make concrete my earlier remark about the structure of $\CG$ being a bit more organized.
+:::{#thm-invariant-ideal}
+**Invariant prime ideal theorem.**  
+The only prime ideals in $L$ which are invariant under the action of $\Gamma$ are $I_{p,n}$ as just defined, where $p$ is a prime integer and $n$ is a nonnegative integer, possibly $\infty$. 
+
+Moreover, in $L/I_{p,n}$, for $n>0$, the subgroup fixed by $\Gamma$ is $\ZZ/p[v_n]$. In $L$ itself, the invariant subgroup is $\Z$. 
+:::
+
+$L$ is very complicated as a ring—it's generated by a countably infinite amount of variables, but when we look at it in the context of the $\Gamma$-action, we see that this action is very rigid. Using this theorem, we can understand the modules in $\CG$. First, recall that for a Noetherian ring $R$, any finitely generated $R$-module $M$ admits a finite filtration
+$$
+0=F_0M\subset F_1 M\subset F_2M\subset \cdots \subset F_k M=M
+$$
+
+where the subquotients $F_iM/F_{i-1}M$ are isomorphic to $R/I_i$ for a prime ideal $I_i$. Now $L$ is not Noetherian, but it is the direct limit of Noetherian rings, so this finite filtration property is still satisfied (for reasons I don't understand). For modules in $\CG$, we may actually choose the filtrations and prime ideals such that they are all $\Gamma$-invariant. Stated more formally:
+:::{#thm-landweber-filtration}
+**Landweber filtration theorem.**
+Every module $M$ in $\CG$ admits a finite filtration by submodules in $\CG$ as above such that each subquotient is isomorphic to a suspension (the modules are graded) of $L/I_{p,n}$ for some prime $p$ and some finite $n$.
+:::
+
+So not only do we only need to focus on the prime ideals $I_{p,n}$ as opposed to all of them, but additionally the other generators of $L$ that are not $v_n=x_{p^n-1}$ for some $n$ act freely on any module in $\CG$, since they are never affected by any of the quotients $L/I_{p,n}$. Furthermore, Ravenel notes that in practice people don't care about these other generators either. After localizing at a prime $p$, instead of $MU$-theory, people opt for $BP$-theory, Brown-Peterson theory. The coefficient ring for this theory is what we would expect:
+$$
+V_p=\ZZp[v_1,v_2,...]
+$$
+
+which is the result of tensoring away the frivolous generators. In another post I'll discuss this more, given its prevalence in modern research, but it seems quite complicated at the moment, and since the book operates with $MU$-theory so will I.
+
+Using these theorems, we can prove some results that similar to results in chapter 1.
+:::{#cor}
+Suppose $M$ is a $p$-local module in $\CG$ (i.e. $M\otimes \ZZp\cong M$) and $x\in M$.
+1. If $x$ is annihilated by some power of $v_n$, then it is annihilated by some power of $v_{n-1}$. In other words, if $v_n^{-1} M=0$ (each element in $M$ is annihilated by some power of $v_n$), then $v_{n-1}^{-1} M=0$.
+:::
+This statement is analogous to the statement about Morava K-theory, where we saw that if $\overline{K(n)}_*(X)=0$, then $\overline{K(n-1)}_*(X)=0$ if $X$ is $p$-local and finite.
+
+:::{.proof}
+For the second part of 1., we know $M$ has a finite filtration with subquotients isomorphic to a suspension of $L/I_{p,m}$. If $m\leq n$, then $v_n\notin I_{p,m}$ and so $v_n$ will act freely on $M$, contradicting oour assumption that $v_n^{-1}M=0$. Thus, all $m$ must be greater or equal to $n+1$. In each of these layers, $v_{n-1}\in I_{p,m}$ and so if $x\in M$, say $x\in F_k M$, then $v_{n-1} x=0$ in $F_k/F_{k-1}M$ and so $v_{n-1}\in F_{k-1}M$. One then repeats this procedure $k-1$ more times and since the filtration is finite, this will terminate and thus $v_{n-1}^{-1} M=0$. 
+:::
+
+:::{#cor}
+2. If $x\neq 0$, then there is an $n$ such that $v_n^k x\neq 0$ for any $k$. So, if $M$ is nontrivial, then so is $v_n^{-1}$ for any sufficiently large $n$.
+:::
+This statement is analogous to the isomorphism $\overline{K(n)}_*(X)\cong K(n)_*\otimes \overline{H}_*(X;\ZZ/p)$ for a $p$-local finite complex $X$. Ravenel asserts that the functor $v_n^{-1}\overline{MU}_*(X)_{(p)}$ is a homology theory that vanishes on a finite $p$-local CW complex if and only if $\overline{K(n)}_*(X)$ and that you could replace one with the other in the statement of the periodicity theorem.
+
+
+3. If $v_{n-1}^{-1}M=0$ then there exists a positive integer $k$ such that multiplication by $v_n^k$ in $M$ commutes with action of $\Gamma$.
+4. Conversely, if $v_{n-1}^{-1}M=0$ is nontrivial, then there is no positive integer $k$ such that multiplication by $v_n^k$ in $M$ commutes with the action of $\Gamma$ on $x$.
+
+
+

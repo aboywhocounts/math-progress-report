@@ -1,6 +1,6 @@
 ---
 title: "Chapter 2: Homotopy groups and the chromatic filtration"
-date: 2026-10-17
+date: 2026-10-23
 ---
 
 This chapter introduces us to the "chromatic picture" of homotopy groups/theory. As I said in the beginning of the Chapter 1 post, the graded ring $\pi_*^S$ is not well-described using generators and relations. (The graded ring structure coming from the composition product which works because we are working stably.) There's been many results on specific elements and families of elements, for example we know all elements are nilpotent and that that all stable homotopy groups of positive degree are finite, but the global structure is still a mystery. However, there are recognizable patterns within the infinite families, and using this structure, we can indeed understand the global picture. This will be put into more precise language, but I think this is the main idea. 
@@ -155,7 +155,9 @@ f_2:\Sigma^{d_2} W(2)\rightarrow W(2)
 $$
 
 which is detected by $K(2)_*$. We are then led to consider $v_2^{-1}[W(2),Y]_*^S$ analogously. We may summarize the procedure in the following diagram:
+
 ![](/images/chromatic-filtration.png){width="70%" fig-align="center"}
+
 At the $n^{\text{th}}$ stage, we have an extension $g_n$ of the original map $g$ to the complex $W(n)$ of type $n$ equipped with a periodic self-map $f_n$. If $g_n$ is not stably annihilated by an iterate of $f_n$, then the process stops and $g_n$ has nontrivial image in $v_n^{-1}[W(n),Y]_*^S$. If g_n is stably annihilated by some iterate of $f_n$, then we move to the $(n+1)^{\text{th}}$ stage.
 
 We make the folowing natural definition:

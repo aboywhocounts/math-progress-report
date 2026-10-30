@@ -28,6 +28,7 @@ Taking the kernel of this map gives us the *reduced* homology of $X$, denoted by
 Coming back to the above definition, by functoriality of homology theories and the suspension isomorphism, if we have a reduced homology theory $\overline{E}_*$ and apply it to the map $f$, we will obtain an endomorphism of $\overline{E}_*(X)$ raising the grading by $d$. We may now state the nilpotence theorem.
 
 ::: {#thm-nilpotence}
+**Nilpotence theorem.**
 There is a homology theory $MU_*$ such that a self-map $f$ of a finite CW complex is stably nilpotent if and only if some iterate of $\overline{MU}_*(f)$ is trivial.
 :::
 
@@ -42,6 +43,7 @@ Let's take the ring $\ZZ$ and consider the set $S\coloneqq \ZZ/(p)$, the element
 $$
 \ZZ_{(p)}\coloneqq \{\frac{a}{b} : a\in\ZZ, b\in S \}
 $$
+
 This is in fact a ring, with the property that it has a unique maximal ideal $\mathfrak{m}=p\ZZ_{(p)}$. Such a ring is called a *local* ring. Now, if we want to apply this to a $\ZZ$-module $M$, we keep $S$ the same, and we again let $M_{(p)}$ consist of formal fractions in $M$ with denominators in $S$. However, we declare two fractions $\frac{m_1}{s_1},\frac{m_2}{s_2}$ to be equal if there exists an element $t\in M$ such that $t(s_2m_1-s_1m_2)=0$ in $M$. The reason for this equivalence relation is to account for the torsion of $M$. Another, much more straightforward of constructing $M_{(p)}$ is to simply tensor it with $\ZZ_{(p)}$. In practice this is what we will mean when we discuss localization in the future, just tensor everything with $\ZZ_{(p)}$ and proceed.
 
 We now return to homotopy. One can perform an analogous procedure for spaces, but it is a little technical so I won't go through the construction here. The point is, for any CW complex $X$, there is a unique $X_{(p)}$ such that for any homology theory $E_*$, we have $\overline{E}_*(X_{(p)})\cong \overline{E}_*(X)\otimes \ZZ_{(p)}$. As one would expect, $X_{(p)}$ is called the *$p$-localization of $X$*, and if $X$ is finite, we say $X_{(p)}$ is a $p$-local finite complex. Some key properties of this construction are listed below.
@@ -58,6 +60,7 @@ From the definition of $p$-localization, we have the following chain of equaliti
 $$
 \overline{H}_*(X)\cong \bigoplus_p(\overline{H}_*(X)\otimes \ZZp) = \bigoplus_p \overline{H}_*(X_{(p)})=\overline{H}_* \bigl( \bigvee_p X_{(p)}\bigr)
 $$
+
 For Whitehead's theorem to apply, we need a map that carries this isomorphism of reduced homology to obtain a homotopy equivalence, and fortunately we do have such a map coming from the natural map that arises out of localization from $X$ to $X_{(p)}$. 
 
 Now, if we consider the smash product $\overline{H}_*(X \wedge Y)$ the Künneth formula tells us this is isomorphic to $\overline{H}_*(X)\otimes \overline{H}_*(Y)$. If $X=X_{(p)}$ and $Y=X_{(q)}$ for distinct primes $p,q$, then this tensor product will clearly be trivial and thus so will $X_{(p)}\wedge X_{(q)}$. Furthermore, this implies that the cartesian product of two coprime localizations is the same as their wedge sum. 
@@ -74,11 +77,13 @@ For each prime $p$ there is a sequence of homology theories $K(n)_*$ for $n\geq 
 $$
 K(n)_*(X\times Y)\cong K(n)_*(X)\otimes_{K(n)_*(\pt)} K(n)_*(Y)
 $$
+
 5. Let $X$ be a $p$-local finite CW complex. If $\overline{K(n)}_*(X)$ vanishes, then so does $\overline{K(n-1)}_*(X)$.
 6. If $X$ is as above, then
 $$
 \overline{K(n)}_*(X)=K(n)_*(\pt)\otimes \overline{H}_*(X;\ZZ/p)
 $$
+
 for $n$ sufficiently large. In other words, $\overline{K(n)}_*(X)$ is nontrivial if $X$ is simply connected and not contractible.
 :::
 
@@ -89,6 +94,7 @@ A $p$-local finite complex $X$ has **type** $n$ if $n$ is the smallest integer s
 :::
 
 ::: {#thm-periodicity .theorem}
+**Periodicity theorem.**
 Let $X$ and $Y$ be $p$-local finite CW complexes of type $n$ where $n<\infty$.
 
 1. There is a self map $f:\Sig^{d+i}\longrightarrow \Sig^i X$ for some $i\geq 0$ such that $K(n)_*(f)$ is an isomorphism and $K(m)_*(f)$ is trivial for $m>n$. We will call such a map $f$ a *$v_n$-map*. When $n=0$ then $d=0$. When $n>0$, $d$ is a multiple of $2(p^n-1)$. 
