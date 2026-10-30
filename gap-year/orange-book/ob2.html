@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-17">
+<meta name="dcterms.date" content="2026-10-23">
 
 <title>Chapter 2: Homotopy groups and the chromatic filtration – A Young Man’s Mathematical Journey</title>
 <style>
@@ -43,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d779191fb58665fba6013d76b5d4c7b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-35c3568c17950149c2e0b720c3d25ea4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,6 +94,9 @@ window.MathJax = Object.assign(window.MathJax, {
       Zp: "\\mathbb{Z}_{(p)}",
       pt: "\\mathrm{pt}",
       ol: ["\\overline{#1}", 1],
+      CG: ["\\mathbf{C\Gamma}"],
+      FH: ["\\mathbf{FH}"],
+      Sq: ["\\text{Sq}"],
 
       arr: ["\\xrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
@@ -237,6 +240,12 @@ window.Quarto = {
  <span class="menu-text">Chapter 2: Homotopy groups and the chromatic filtration</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: MU and formal group laws</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -313,7 +322,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 17, 2026</p>
+      <p class="date">October 23, 2026</p>
     </div>
   </div>
   
@@ -423,7 +432,13 @@ W(1)\xleftarrow{f_1} \Sigma^{d_1} \xleftarrow{f_1} \Sigma^{2d_1} \xleftarrow{f_1
 <p>If it turns out that <span class="math inline">\(g_1f_1^{i_1}\)</span> is stably nullhomotopic, then let <span class="math inline">\(W(2)\)</span> denote the cofiber of the map <span class="math inline">\(f_1^{i_1}\)</span> and let <span class="math inline">\(g_2\)</span> be the extension of <span class="math inline">\(g_1\)</span> over <span class="math inline">\(W(2)\)</span>. It’s clear that <span class="math inline">\(W(2)\)</span> has type 2 and so admits a periodic self-map <span class="math display">\[
 f_2:\Sigma^{d_2} W(2)\rightarrow W(2)
 \]</span></p>
-<p>which is detected by <span class="math inline">\(K(2)_*\)</span>. We are then led to consider <span class="math inline">\(v_2^{-1}[W(2),Y]_*^S\)</span> analogously. We may summarize the procedure in the following diagram: <img src="../../images/chromatic-filtration.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"> At the <span class="math inline">\(n^{\text{th}}\)</span> stage, we have an extension <span class="math inline">\(g_n\)</span> of the original map <span class="math inline">\(g\)</span> to the complex <span class="math inline">\(W(n)\)</span> of type <span class="math inline">\(n\)</span> equipped with a periodic self-map <span class="math inline">\(f_n\)</span>. If <span class="math inline">\(g_n\)</span> is not stably annihilated by an iterate of <span class="math inline">\(f_n\)</span>, then the process stops and <span class="math inline">\(g_n\)</span> has nontrivial image in <span class="math inline">\(v_n^{-1}[W(n),Y]_*^S\)</span>. If g_n is stably annihilated by some iterate of <span class="math inline">\(f_n\)</span>, then we move to the <span class="math inline">\((n+1)^{\text{th}}\)</span> stage.</p>
+<p>which is detected by <span class="math inline">\(K(2)_*\)</span>. We are then led to consider <span class="math inline">\(v_2^{-1}[W(2),Y]_*^S\)</span> analogously. We may summarize the procedure in the following diagram:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/chromatic-filtration.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>At the <span class="math inline">\(n^{\text{th}}\)</span> stage, we have an extension <span class="math inline">\(g_n\)</span> of the original map <span class="math inline">\(g\)</span> to the complex <span class="math inline">\(W(n)\)</span> of type <span class="math inline">\(n\)</span> equipped with a periodic self-map <span class="math inline">\(f_n\)</span>. If <span class="math inline">\(g_n\)</span> is not stably annihilated by an iterate of <span class="math inline">\(f_n\)</span>, then the process stops and <span class="math inline">\(g_n\)</span> has nontrivial image in <span class="math inline">\(v_n^{-1}[W(n),Y]_*^S\)</span>. If g_n is stably annihilated by some iterate of <span class="math inline">\(f_n\)</span>, then we move to the <span class="math inline">\((n+1)^{\text{th}}\)</span> stage.</p>
 <p>We make the folowing natural definition:</p>
 <div id="def-vn-torsion" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2</strong></span> If an element <span class="math inline">\(y\in\pi_*^S(Y)\)</span> extends to a complex <span class="math inline">\(W(n)\)</span> of type <span class="math inline">\(n\)</span>, then <span class="math inline">\(y\)</span> is <strong><span class="math inline">\(v_{n-1}\)</span>-torsion</strong>. If, in addition <span class="math inline">\(y\)</span> does not extend to a complex of type <span class="math inline">\(n+1\)</span>, it is <strong><span class="math inline">\(v_n\)</span>-periodic</strong>. The chromatic filtration of <span class="math inline">\(\pi_*^S(Y)\)</span> is a decreasing family of subgroups consisting of <span class="math inline">\(v_n\)</span>-torsion elements for various <span class="math inline">\(n\geq 0\)</span>.</p>
