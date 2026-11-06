@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.20">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,14 +40,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-89397e169c891b662c49deaf26fd70ac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ce0f0d1e95892c391167071f7e5e54e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,12 +98,6 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
   </script>
 <script>
 // Global MathJax configuration for site-wide macros
@@ -183,19 +178,18 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">A Young Man’s Mathematical Journey</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -216,15 +210,16 @@ window.Quarto = {
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Latest Updates</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">Latest Updates</li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -235,7 +230,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -245,13 +240,10 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Gap Year Reading</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Gap Year Reading</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../gap-year/intro.html" class="sidebar-item-text sidebar-link">
@@ -280,13 +272,10 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Topology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Topology</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link">
@@ -303,13 +292,10 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Representation Theory</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Representation Theory</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rep-theory/rep-theory/the-basics.html" class="sidebar-item-text sidebar-link">
@@ -331,7 +317,7 @@ window.Quarto = {
         
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -359,150 +345,167 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1793545563098">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1793984115289">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../gap-year/mosher-tangora/mt1.html" class="no-external"></a>
+<a href="../gap-year/mosher-tangora/mt1.html" class="no-external-icon"></a>
 </h3>
-<div class="delink listing-description"><a href="../gap-year/mosher-tangora/mt1.html" class="no-external">
+<div class="listing-description">
+<a href="../gap-year/mosher-tangora/mt1.html" class="no-external-icon">
 
-</a></div>
-</div>
-<div class="metadata">
-<a href="../gap-year/mosher-tangora/mt1.html" class="no-external">
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1792800000000" data-listing-file-modified-sort="1793545563098" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1974">
+<div class="metadata">
+
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1792800000000" data-listing-file-modified-sort="1793984115289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1974">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../gap-year/orange-book/ob3 take 1.html" class="no-external">Chapter 3: MU and formal group laws</a>
+<a href="../gap-year/orange-book/ob3 take 1.html" class="no-external-icon">Chapter 3: MU and formal group laws</a>
 </h3>
-<div class="delink listing-description"><a href="../gap-year/orange-book/ob3 take 1.html" class="no-external">
+<div class="listing-description">
+<a href="../gap-year/orange-book/ob3 take 1.html" class="no-external-icon">
 This chapter discusses the extraordinary (co)homology theory <span class="math inline">\(MU\)</span>, also known as complex (co)bordism and the algebra of its cohomology. Geometrically, <span class="math inline">\(MU\)</span> tells us…<span class="math inline"></span><span class="math inline"></span>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../gap-year/orange-book/ob3 take 1.html" class="no-external">
+<a href="../gap-year/orange-book/ob3 take 1.html" class="no-external-icon">
 <div class="listing-date">
 Oct 24, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1792800000000" data-listing-file-modified-sort="1793545563098" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2202">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1792800000000" data-listing-file-modified-sort="1793984115289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3109">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../gap-year/orange-book/ob3.html" class="no-external">Chapter 3: MU and formal group laws</a>
+<a href="../gap-year/orange-book/ob3.html" class="no-external-icon">Chapter 3: MU and formal group laws</a>
 </h3>
-<div class="delink listing-description"><a href="../gap-year/orange-book/ob3.html" class="no-external">
+<div class="listing-description">
+<a href="../gap-year/orange-book/ob3.html" class="no-external-icon">
 In Chapter 2, we saw a new perspective on understanding the homotopy groups <span class="math inline">\(\pi_*(Y)\)</span> of a CW complex via the chromatic filtration. This reformulation depends (in a way…
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../gap-year/orange-book/ob3.html" class="no-external">
+<a href="../gap-year/orange-book/ob3.html" class="no-external-icon">
 <div class="listing-date">
 Oct 24, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1792713600000" data-listing-file-modified-sort="1793545563098" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2519">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1792713600000" data-listing-file-modified-sort="1793984115289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2519">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../gap-year/orange-book/ob2.html" class="no-external">Chapter 2: Homotopy groups and the chromatic filtration</a>
+<a href="../gap-year/orange-book/ob2.html" class="no-external-icon">Chapter 2: Homotopy groups and the chromatic filtration</a>
 </h3>
-<div class="delink listing-description"><a href="../gap-year/orange-book/ob2.html" class="no-external">
+<div class="listing-description">
+<a href="../gap-year/orange-book/ob2.html" class="no-external-icon">
 This chapter introduces us to the “chromatic picture” of homotopy groups/theory. As I said in the beginning of the Chapter 1 post, the graded ring <span class="math inline">\(\pi_*^S\)</span> is not…
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../gap-year/orange-book/ob2.html" class="no-external">
+<a href="../gap-year/orange-book/ob2.html" class="no-external-icon">
 <div class="listing-date">
 Oct 23, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1792108800000" data-listing-file-modified-sort="1793545563098" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1569">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1792108800000" data-listing-file-modified-sort="1793984115289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1569">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../gap-year/orange-book/ob1.html" class="no-external">Chapter 1: Basic definitions and two big theorems</a>
+<a href="../gap-year/orange-book/ob1.html" class="no-external-icon">Chapter 1: Basic definitions and two big theorems</a>
 </h3>
-<div class="delink listing-description"><a href="../gap-year/orange-book/ob1.html" class="no-external">
+<div class="listing-description">
+<a href="../gap-year/orange-book/ob1.html" class="no-external-icon">
 From what I can tell, the motivating problem for the development of the tools discussed in the Orange Book is trying to understand the structure of <span class="math inline">\(\pi_*^S\)</span>, the stable…<span class="math inline"></span><span class="math inline"></span><em></em>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../gap-year/orange-book/ob1.html" class="no-external">
+<a href="../gap-year/orange-book/ob1.html" class="no-external-icon">
 <div class="listing-date">
 Oct 16, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1791590400000" data-listing-file-modified-sort="1793545563097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="122">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1791590400000" data-listing-file-modified-sort="1793984115288" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="122">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../gap-year/intro.html" class="no-external">Introduction</a>
+<a href="../gap-year/intro.html" class="no-external-icon">Introduction</a>
 </h3>
-<div class="delink listing-description"><a href="../gap-year/intro.html" class="no-external">
+<div class="listing-description">
+<a href="../gap-year/intro.html" class="no-external-icon">
 In my gap year, I plan to read through as much material as I can in homotopy theory to better prepare myself for graduate school. I began by finishing up Mosher and Tangora’s <em>…</em><em></em>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../gap-year/intro.html" class="no-external">
+<a href="../gap-year/intro.html" class="no-external-icon">
 <div class="listing-date">
 Oct 10, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1770854400000" data-listing-file-modified-sort="1793545563099" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1770854400000" data-listing-file-modified-sort="1793984115290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external">A Note on Torsion Elements in the Stable Homotopy Groups of Spheres</a>
+<a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external-icon">A Note on Torsion Elements in the Stable Homotopy Groups of Spheres</a>
 </h3>
-<div class="delink listing-description"><a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external">
+<div class="listing-description">
+<a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external-icon">
 This post will pertain to a solution to another exercise from Mosher and Tangora’s <em>Cohomology Operations and Applications in Homotopy Theory</em>. The solution of this problem…
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external">
+<a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external-icon">
 <div class="listing-date">
 Feb 12, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1770681600000" data-listing-file-modified-sort="1793545563098" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1770681600000" data-listing-file-modified-sort="1793984115289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a>
+<a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external-icon">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a>
 </h3>
-<div class="delink listing-description"><a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external">
+<div class="listing-description">
+<a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external-icon">
 In this post I’d like to post a solution to exerices 12.1 from Mosher and Tangora’s <em>Cohomology Operations and Applications in Homotopy Theory</em>. This problem took me a lot of…
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external">
+<a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external-icon">
 <div class="listing-date">
 Feb 10, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1768867200000" data-listing-file-modified-sort="1793545563100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1768867200000" data-listing-file-modified-sort="1793984115291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../rep-theory/rep-theory/the-basics.html" class="no-external">Basic definitions and concepts</a>
+<a href="../rep-theory/rep-theory/the-basics.html" class="no-external-icon">Basic definitions and concepts</a>
 </h3>
-<div class="delink listing-description"><a href="../rep-theory/rep-theory/the-basics.html" class="no-external">
+<div class="listing-description">
+<a href="../rep-theory/rep-theory/the-basics.html" class="no-external-icon">
 I would like this section to contain the fundamentals of representation theory of finite groups. As an undergraduate at UVA, I made the mistake of not taking Algebra 2, the…
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../rep-theory/rep-theory/the-basics.html" class="no-external">
+<a href="../rep-theory/rep-theory/the-basics.html" class="no-external-icon">
 <div class="listing-date">
 Jan 20, 2026
 </div>
@@ -590,7 +593,8 @@ Jan 20, 2026
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -599,8 +603,69 @@ Jan 20, 2026
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -614,6 +679,7 @@ Jan 20, 2026
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -776,44 +842,54 @@ Jan 20, 2026
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -911,6 +987,9 @@ Jan 20, 2026
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 
