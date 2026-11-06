@@ -168,9 +168,70 @@ For the second part of 1., we know $M$ has a finite filtration with subquotients
 :::
 This statement is analogous to the isomorphism $\overline{K(n)}_*(X)\cong K(n)_*\otimes \overline{H}_*(X;\ZZ/p)$ for a $p$-local finite complex $X$. Ravenel asserts that the functor $v_n^{-1}\overline{MU}_*(X)_{(p)}$ is a homology theory that vanishes on a finite $p$-local CW complex if and only if $\overline{K(n)}_*(X)$ and that you could replace one with the other in the statement of the periodicity theorem.
 
+:::{.proof}
+For any $M\in \CG$, the filtration that it admits via the Landweber filtration theorem must be finite. All subquotients will have the form $\Sigma^i L/I_{p,m}$ for some $m$, and all we have to do is take $n$ large enough so that $n>m$ for all $m$ appearing in the subquotients and thus this $v_n$ will act freely on $M$ and so $v_n^{-1}M$ will be nontrivial.
+:::
 
+
+:::{#cor}
 3. If $v_{n-1}^{-1}M=0$ then there exists a positive integer $k$ such that multiplication by $v_n^k$ in $M$ commutes with action of $\Gamma$.
+:::
+
+If we replace the functor $\overline{K(n)_*}$ in the the periodicity theorem with the functor $v_n^{-1}\overline{MU}_{(p)*}$, (which is fine according to Ravenel, and this makes sense given the metaphor we're trying to understand), then we can see that this is an algebraic analogue of the periodicity theorem since the theorem is saying that for certain spaces ($p$-local, finite type) there is a topological self-map that induces multiplication by some power of $v_n$ on $\overline{K(n)}_*(X)$ that is an isomorphism. It isn't explicit in the theorem statement, but recall that the $d$ of the theorem is a multiple of $2p^n-1$ for $n>0$. Algebraically, this multiplication must intertwine with the inherent action of $\Gamma$ for it to be a valid isomorphism, and this is exactly what this part of the corollary is saying. The statement that follows is the converse of this.
+
+:::{#cor}
 4. Conversely, if $v_{n-1}^{-1}M=0$ is nontrivial, then there is no positive integer $k$ such that multiplication by $v_n^k$ in $M$ commutes with the action of $\Gamma$ on $x$.
+:::
 
 
+If we trust that the two functors $\overline{K(n)_*}$ and $v_n^{-1}\overline{MU}_{(p)*}$ are essentially doing the same thing, albeit in different worlds, we can mimic the definition of type for modules in $\CG$. We will say that a $p$-local module $M\in \CG$ has **type $n$** if $n$ is the first positive integer such that $v_n^{-1}M\neq 0$. Here, $p$-local just means that $M\otimes \ZZp\cong M$. A homomorphism $f:\Sigma^d M\rightarrow M$ in $\CG$ is a **$v_n$-map** if it induces an ismorphism on $v_n^{-1}M$ and is the trivial on $v_m^{-1}M$ for $m\neq n$. 
 
+Using this definition we can prove a final corollary of the Landweber filtration theorem.
+
+:::{#cor}
+For a $p$-local module $M\in \CG$, if $v_{n-1}^{-1}M$ is nontrivial, then $M$ does not admit a $v_n$-map.
+:::
+
+:::{.proof}
+Say $M$ has type $m<n$ so that each Landweber subquotient is the suspension of $L/I_{p,k}$ for $k\geq m$. This must be true since $v_{n-1}^{-1}M$ is nontrivial. It follows from the contrapositive of 1. that $v_m^{-1}M$, $v_n^{-1}M$, and $v_m^{-1}v_n^{-1}M$ are all nontrivial as well, since $M$ has type $m$. Now, if $f$ is a $v_n$-map, then $f$ must induce an ismorphism on $v_n^{-1}M$ and since elements that aren't annihilated by a power of $v_n$ also correspond to elements that aren't annihilated by a power of $v_m$, $f$ induces an isomorphism on $v_m^{-1}v_n^{-1}M$. However, by definition $f$ must be trivial on $v_m^{-1}M$ and thus also on $v_n^{-1}v_m^{-1}M$, but this would force $$v_n^{-1}v_m^{-1}M=$v_m^{-1}v_n^{-1}M$$ to be trivial, which contradicts our assumption. Thus, the $v_n$-map $f$ cannot exist.
+:::
+
+## Categorically speaking
+
+So from the last section it's clear how similar the theory of $L$-modules with $\Gamma$ action is to the $MU$-theory of spaces. As stated before this correspondence is carried by the functor $MU_*:\FH\rightarrow \CG$. The final part of this chapter dives into the thick subcategory theorem. Intuitively, a thick subcategory $\mathbf{C}$ of a category $\mathbf{D}$, is a full subcategory whose objects are all a finite number of simple constructions (shifts, extensions, direct sums, etc.) away from each other. In the context of $\CG$, this means that if we are given a short exact sequence of modules
+
+$$
+0\rightarrow M'\rightarrow M\rightarrow M^" \rightarrow 0
+$$
+
+then $M$ is in the thick subcategory $\mathbf{C}$ if and only if $M'$ and $M^"$ are as well. For $\FH$, if we are given a cofiber sequence
+
+$$
+X\xrightarrow{f} Y\rightarrow C_f
+$$
+then one object is in the thick subcategory $\mathbf{F}$ if and only if the other two are. Additionally it's required that if $X\vee Y\in \mathbf{F}$ then so are $X$ and $Y$.
+
+Thick subcategories are thus a natural thing to be interested in. What I find surprising is that the thick subcategories of $\CG_{(p)}$ and $\FH_{(p)}$ are governed by $v_n$-behavior. This is the content of the thick subcategory theorem, which I'll state now. 
+
+:::{#thm-fullsubcatalg}
+If $\mathbf{C}$ is a thick subcategory of $\CG_{(p)}$, then $\mathbf{C}$ is either trivial, all of $\CG_{(p)}$, or consists of all $p$-local modules $M$ in $\CG_{(p)}$ such that $v_{n-1}^{-1}M=0$. We will denote the latter category by $\mathbf{C}_{p,n}$.
+:::
+
+:::{#thm-fullsubcattop}
+If $\mathbf{F}$ is a thick subcategory of $\FH_{(p)}$, then $\mathbf{F}$ is either trivial, all of $\FH_{(p)}$, or consists of all $p$-local finite CW complexes $X$ with $v_{n-1}^{-1}\overline{MU}_*(X)=0$. We will denote the latter category by $\mathbf{F}_{p,n}$.
+:::
+
+As before, we can replace the condition $v_{n-1}^{-1}\overline{MU}_*(X)=0$ with $\overline{K(n-1)}_*(X)=0$. These theorems give us nested sequences of thick subcategories 
+
+$$
+\mathbf{FH}_{(p)} = \mathbf{F}_{p,0} \supset \mathbf{F}_{p,1} \supset \mathbf{F}_{p,2} \cdots \{\text{pt.}\}
+$$
+
+$$
+\mathbf{C\Gamma}_{(p)} = \mathbf{C}_{p,0} \supset \mathbf{C}_{p,1} \supset \mathbf{C}_{p,2} \cdots \{0\}
+$$
+
+and $MU_*$ sends one to the other. The proof of the algebraic thick subcategory theorem is not too bad, but the topological one is much more difficult due to the use of the Adams spectral sequence.
+
+
+We thus see how rich the structure of $\CG$ is and how it can provide so much information on the $MU$-theory of spaces. In the next chapter we'll develop this a bit more to eventually prove the topological thick subcateogry theorem. We will also soon upgrade our focus on finite CW complexes to focus on finite CW spectra, which will open the door to the language and techniques of stable homotopy theory. All that has been discussed can be reformulated from this perspective without having to change too much, but it was hard for me to adjust so I've just been sticking with Ravenel's conventions. Indeed, the world of spectra is the natural setting for all of this, so I'm excited to do things the right way soon. `
