@@ -228,7 +228,7 @@ $$
 $$
 
 $$
-\mathbf{C\Gamma}_{(p)} = \mathbf{C}_{p,0} \supset \mathbf{C}_{p,1} \supset \mathbf{C}_{p,2} \cdots \{0\}
+\mathbf{C}\Gamma_{(p)} = \mathbf{C}_{p,0} \supset \mathbf{C}_{p,1} \supset \mathbf{C}_{p,2} \cdots \{0\}
 $$
 
 and $MU_*$ sends one to the other. The proof of the algebraic thick subcategory theorem is not too bad, but the topological one is much more difficult due to the use of the Adams spectral sequence.
