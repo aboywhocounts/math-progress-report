@@ -28,6 +28,7 @@ website:
           - gap-year/orange-book/ob1.qmd
           - gap-year/orange-book/ob2.qmd
           - gap-year/orange-book/ob3.qmd
+          - gap-year/orange-book/ob4.qmd
       - section: "Topology"
         contents:
           - htpy-theory/mosher-tangora-prblm1.qmd
