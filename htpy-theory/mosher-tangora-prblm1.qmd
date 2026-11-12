@@ -9,8 +9,6 @@ In this post I'd like to post a solution to exerices 12.1 from Mosher and Tangor
 
 I should mention before starting that whenever $\pi_i^S(-)$ appears, I mean the **2-component** of the stable homotopy group. Additionally, much of the notation and terminology used here is from Mosher and Tangora's book, but I'll try and indicate when I'm using something specific from there. Also, I will denote the stable homotopy groups of spheres by $\pi_*^S$ for brevity.
 
-The problem:
-
 :::{#prob-mt1}
 Let $M_n=S^n \cup_{2} e^{n+1}$. We can also think of this as $\S^{n-1}\RP^2$,  the $(n-1)$-suspension of the real projective plane. Compute the homotopy groups $\pi_{n+k}(M_n)$ for large $n$ and small $k$. 
 :::
