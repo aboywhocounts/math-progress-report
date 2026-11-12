@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b337f537912f5ab074b938eebad4c5d7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-718b669a5f8c5f488a8672a677208347.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -140,7 +140,8 @@ window.MathJax = Object.assign(window.MathJax, {
       tr: "\\operatorname{tr}",
       id: "\\operatorname{id}",
       Gal: "\\operatorname{Gal}",
-      Char: "\\operatorname{char}"
+      Char: "\\operatorname{char}",
+      Ext: "\\operatorname{Ext}"
     }
   }
 });
@@ -176,6 +177,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -240,13 +242,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Gap Year Reading</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../gap-year/intro.html" class="sidebar-item-text sidebar-link">
@@ -281,13 +283,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Topology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link">
@@ -304,13 +306,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Representation Theory</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rep-theory/rep-theory/the-basics.html" class="sidebar-item-text sidebar-link">
@@ -318,10 +320,6 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Field Theory</span></span>
   </li>
     </ul>
     </div>
@@ -374,7 +372,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1794286800000" data-listing-file-modified-sort="1794493545863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1063">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1794459600000" data-listing-file-modified-sort="1794510039997" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2069">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob4.html" class="no-external">Chapter 4: Morava things</a>
@@ -386,12 +384,29 @@ In this post I’ll be discussing ideas due to Jack Morava. Eventually, we’ll 
 <div class="metadata">
 <a href="../gap-year/orange-book/ob4.html" class="no-external">
 <div class="listing-date">
-Nov 10, 2026
+Nov 12, 2026
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1792814400000" data-listing-file-modified-sort="1793042472869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1974">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1793332800000" data-listing-file-modified-sort="1794510151922" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3131">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../gap-year/orange-book/ob3.html" class="no-external">Chapter 3: MU and formal group laws</a>
+</h3>
+<div class="delink listing-description"><a href="../gap-year/orange-book/ob3.html" class="no-external">
+In Chapter 2, we saw a new perspective on understanding the homotopy groups <span class="math inline">\(\pi_*(Y)\)</span> of a CW complex via the chromatic filtration. This reformulation depends (in a way…
+</a></div>
+</div>
+<div class="metadata">
+<a href="../gap-year/orange-book/ob3.html" class="no-external">
+<div class="listing-date">
+Oct 30, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1792814400000" data-listing-file-modified-sort="1793042472869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1974">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob3 take 1.html" class="no-external">Chapter 3: MU and formal group laws</a>
@@ -408,24 +423,7 @@ Oct 24, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1792814400000" data-listing-file-modified-sort="1794013941403" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3109">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../gap-year/orange-book/ob3.html" class="no-external">Chapter 3: MU and formal group laws</a>
-</h3>
-<div class="delink listing-description"><a href="../gap-year/orange-book/ob3.html" class="no-external">
-In Chapter 2, we saw a new perspective on understanding the homotopy groups <span class="math inline">\(\pi_*(Y)\)</span> of a CW complex via the chromatic filtration. This reformulation depends (in a way…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../gap-year/orange-book/ob3.html" class="no-external">
-<div class="listing-date">
-Oct 24, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1792728000000" data-listing-file-modified-sort="1792845097732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2519">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1792728000000" data-listing-file-modified-sort="1794510491670" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2519">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob2.html" class="no-external">Chapter 2: Homotopy groups and the chromatic filtration</a>
@@ -442,7 +440,7 @@ Oct 23, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1792123200000" data-listing-file-modified-sort="1793038299459" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1569">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1792123200000" data-listing-file-modified-sort="1794510817926" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1571">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob1.html" class="no-external">Chapter 1: Basic definitions and two big theorems</a>

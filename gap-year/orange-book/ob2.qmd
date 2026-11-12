@@ -12,6 +12,8 @@ Besides looking at things from this new perspective, in this post we'll also dev
 First, a definition.
 
 ::: {#def-cofib_seq}
+**(Cofiber Sequence)**
+
 A **cofiber sequence** is a sequence of spaces and maps of the form
 $$
 X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{j} \Sigma X \xrightarrow{\Sigma f} \cdots
@@ -31,6 +33,7 @@ $$
 $$
 
 Everything to the left of $[C_f,Z]$ is naturally a group and so exactness means the usual thing. The terms to the right don't have an intrinsic group structure, but we can make exactness make sense since each of these sets contains a distinguished element (the trivial map). 
+
 2. Let $E_*$ be a homology theory. Then there is a long exact sequence
 $$
 \cdots \xrightarrow{j_*} \overline{E}_m(X) \xrightarrow{f_*} \overline{E}_m(Y) \xrightarrow{i_*} \overline{E}_m(C_f) \xrightarrow{j_*} \overline{E}_{m-1}(\Sig X) \xrightarrow{f_*} \cdots
@@ -57,6 +60,7 @@ We first assume $X$ has been sufficienty suspended to be the target of a $v_n$ m
 $$
 \cdots \overset{j_*}{\longrightarrow} \overline{K(m)}_t(\Sigma^d X) \overset{f_*}{\longrightarrow} \overline{K(m)}_t(X) \overset{i_*}{\longrightarrow} \overline{K(m)}_t(W) \overset{j_*}{\longrightarrow} \overline{K(m)}_{t-1}(\Sigma^d X) \overset{f_*}{\longrightarrow} \cdots
 $$
+:::
 
 For $W$ to be type $n+1$, we must show that $K(m)_*(W)=0$ for $m<n+1$ and that $f$ induces an isomorphism on $K(n+1)_*(W)$.
 If $m<n$, then since $X$ is type $n$, we know that $\overline{K(m)}_*(X)=0$ and thus also $\overline{K(m)}_*(\Sig^d X)=0$, forcing $\overline{K(m)}_*(W)=0$. For $m=n$, we know that $f_*$ is an isomorphism for every $t$ as $X$ is type $n$, and thus by exactness $\overline{K(n)}_*(W)=0$. When $m>n$, $f_*=0$ by definition, and we also have that $\overline{K(m)}+_*(X)\neq 0$ by the contrapositive of (5) of the properties of Morava K-theory. Now, if $f_*=0$, then by exactness, $j_*$ must be a surjection and $i_*$ an injection and so as a $K(m)_*$-module, $\overline{K(m)}_t(W)$ is an extension of $\overline{K(m)}_t(\Sig^{d+1} X)$ by $\overline{K(m)}_t(X)$. However as all $K(m)_*$-modules are free, this exact sequence splits and we have
@@ -67,6 +71,7 @@ $$
 Therefore, $W$ has type $n+1$.
 
 ## Periodic maps: examples and general procedure
+
 Now we will focus on periodic maps and how they can give us nontrivial elements of $\pi_*^S$. First we will look at some foundational examples and then move into the generalized framework.
 
 :::{#exm-pdc-maps}
@@ -77,11 +82,13 @@ $$
 $$
 
 where $q=8$ for $p=2$ and $q=2p-2$ for $p$ odd. In the context of the periodicity theorem, $n=1$. The induced map on $K(1)_*(V(0)_k)$ is multiplication by $v_1$ for $p$ odd and $v_1^4$ for $p=2$. The $p=2$ case is interesting and what's even more interesting is that there is no self-map inducing multiplication by a smaller power of $v_1$ (for reasons which I don't completely understand at the moment).
+
 3. Suppose $p\geq 5$ and take the cofiber of the map $\alpha$ above and denote it by $V(1)_k$. It has been shown that for $k$ sufficiently large, there is a periodic map
 $$
 \Sigma^{2p^2-2} V(1)_k \xrightarrow{\beta} V(1)_k
 $$
 inducing multiplication by $v_2$ in $K(2)$-theory.
+
 4. For $p\geq 7$, denote by $V(2)_k$ the cofiber of the map $\beta$ above. There is a periodic map
 $$
 \Sigma^{2p^3-2} V(2)_k \xrightarrow{\gamma} V(2)_k
@@ -163,6 +170,8 @@ At the $n^{\text{th}}$ stage, we have an extension $g_n$ of the original map $g$
 We make the folowing natural definition:
 
 ::: {#def-vn-torsion}
+**$v_n$-torsion**
+
 If an element $y\in\pi_*^S(Y)$ extends to a complex $W(n)$ of type $n$, then $y$ is **$v_{n-1}$-torsion**. If, in addition $y$ does not extend to a complex of type $n+1$, it is **$v_n$-periodic**. The chromatic filtration of $\pi_*^S(Y)$ is a decreasing family of subgroups consisting of $v_n$-torsion elements for various $n\geq 0$.
 :::
 
@@ -179,6 +188,8 @@ $$
 is essential ($e$ is inclusion map of bottom cell), even though we know $g_nf^i_n$ is. If it's nullhomotopic, then $g_nf_n^i$ will extend to a map from the cofiber of $e$, $C_e$. The extension may or may not be trivial on the bottom cell of $C_e$, but even so it must be nontrivial on one of the $2^n$ cells of $W(n)$, because if not then it would be nullhomotopic which would contradict our assumption. We can test this new bottom cell (i.e. of $C_e$) and consider the inclusion map of that cell and rinse and repeat until we get an essential composition from a sphere to $Y$. Thus, for any $i$, we can get a nontrivial element of $\pi_*^S(Y)$. We make the following definition:
 
 :::{#def-pdc-family}
+**Periodic families**
+
 Given a $v_n$-periodic element $y\in\pi_*^S(Y)$, the elements described above for various $i>0$ constitute the **$v_n$-periodic family associated with $y$**.
 :::
 
@@ -189,7 +200,9 @@ We start with an inverse system of cofiber sequences:
 ![](/images/v1-pd-1.png){width="75%" fig-align="center"}
 
 which induces a direct system of long exact sequences
+
 ![](/images/v1-pd-2.png){width="70%" fig-align="center"}
+
 whose limit is a long exact sequence of the form 
 $$
 \cdots\rightarrow \pi_k(Y) \rightarrow p^{-1}\pi_k(Y) \rightarrow \pi_k(Y)/(p^{\infty}) \rightarrow \cdots

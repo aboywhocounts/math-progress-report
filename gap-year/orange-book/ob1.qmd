@@ -12,6 +12,8 @@ There are two main theorems in this book: the nilpotence theorem and the periodi
 We begin with a definition.
 
 ::: {#def-selfmap}
+**(Self-map)**
+
 Suppose we have a map $f:\Sigma^d X \xrightarrow{f} X$, where $d\geq 0$. We may iterate it (appropriately suspending) by considering the composites
 $$
 \cdots \Sigma^{3d} X \xrightarrow{\Sigma^{2d}f} \Sigma^{2d} X \xrightarrow{\Sigma^d f} \Sigma^d X \xrightarrow{f} X
@@ -28,7 +30,8 @@ Taking the kernel of this map gives us the *reduced* homology of $X$, denoted by
 Coming back to the above definition, by functoriality of homology theories and the suspension isomorphism, if we have a reduced homology theory $\overline{E}_*$ and apply it to the map $f$, we will obtain an endomorphism of $\overline{E}_*(X)$ raising the grading by $d$. We may now state the nilpotence theorem.
 
 ::: {#thm-nilpotence}
-**Nilpotence theorem.**
+**(Nilpotence)**
+
 There is a homology theory $MU_*$ such that a self-map $f$ of a finite CW complex is stably nilpotent if and only if some iterate of $\overline{MU}_*(f)$ is trivial.
 :::
 
@@ -90,11 +93,14 @@ for $n$ sufficiently large. In other words, $\overline{K(n)}_*(X)$ is nontrivial
 We need one last definition to state the periodicity theorem.
 
 ::: {#def-type_n}
+**(Type n)**
+
 A $p$-local finite complex $X$ has **type** $n$ if $n$ is the smallest integer such that $K(n)_*(X)$ is nontrivial. If $X$ is contractible, then $X$ has type $\infty$.
 :::
 
 ::: {#thm-periodicity .theorem}
-**Periodicity theorem.**
+**(Periodicity)**
+
 Let $X$ and $Y$ be $p$-local finite CW complexes of type $n$ where $n<\infty$.
 
 1. There is a self map $f:\Sig^{d+i}\longrightarrow \Sig^i X$ for some $i\geq 0$ such that $K(n)_*(f)$ is an isomorphism and $K(m)_*(f)$ is trivial for $m>n$. We will call such a map $f$ a *$v_n$-map*. When $n=0$ then $d=0$. When $n>0$, $d$ is a multiple of $2(p^n-1)$. 
@@ -109,4 +115,4 @@ Moreover, $i$ and $j$ can be chosen independently of $h$.
 As we can see, if we want to understand periodic self-maps, we better understand Morava K-theories. We note that it isn't logically necessary for $X$ to have type $n$, but it just happens to be the only interesting case. (If the type of $X$ is larger than $n$, then the trivial map satisfies the theorem. If the type is smaller than $n$, then for $d=0$ the degree $p$ map satisfies the theorem, and if $d>0$, the theorem follows as $K(m)_*(f)=K(m)_*(\pt)\otimes H_*(f)$ and some iterate of $H_*(f)$ must be trivial reasons due to the finiteness of $X$). 
 From 2. we see that $f$ is actually unique in the sense that if we have some other periodic self-map $g$ and take $Y=X$ and $h$ the identity, it shows that $f^i\simeq g^j$ for some $i,j$. 
 
-Thus we have stated the two main theorems of this book. Already, things are getting complicated as we are dealing with extraordinary homology theories, and there is a lot of math that we have glossed over. In the next few posts I'll be discussing $MU_*$ and $K(n)_*$ in more depth. There are some very cool connections with algebra and number theory that will drive the discussion and are necessary to develop the theory. 
+Thus we have stated the two main theorems of this book. Already, things are getting complicated as we are dealing with extraordinary homology theories, and there is a lot of math that we have glossed over. In the next few posts I'll be discussing $MU_*$ and $K(n)_*$ in more depth. There are some very cool connections with algebra and number theory that will drive the discussion and are necessary to develop the theory.

@@ -1,0 +1,125 @@
+/* css styles */
+
+:root {
+  --brand-indigo: #4f46e5;
+  --brand-violet: #7c3aed;
+  --brand-teal: #0f766e;
+  --brand-gold: #f59e0b;
+  --panel-soft: #eef2ff;
+  --panel-strong: #e0e7ff;
+  --text-strong: #1f2937;
+  --text-soft: #475569;
+}
+
+body {
+  color: var(--text-strong);
+  background: linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
+}
+
+.navbar {
+  background: linear-gradient(90deg, var(--brand-indigo), var(--brand-violet));
+  border-bottom: none;
+  box-shadow: 0 4px 18px rgba(79, 70, 229, 0.18);
+}
+
+.navbar a,
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #e0e7ff !important;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #f5f3ff 0%, #eef2ff 100%);
+  border-right: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+.sidebar .sidebar-item a,
+.sidebar a {
+  color: var(--text-soft);
+}
+
+.sidebar .sidebar-item a:hover,
+.sidebar a:hover {
+  color: var(--brand-indigo);
+}
+
+.sidebar .sidebar-item.selected > a,
+.sidebar .sidebar-item.selected > .sidebar-item-container > a {
+  color: var(--brand-violet);
+  font-weight: 700;
+}
+
+#quarto-document-content a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+#quarto-document-content a:hover {
+  color: var(--brand-violet);
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  color: var(--brand-indigo);
+}
+
+div.definition {
+  border: 2px solid #7c3aed;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f5f3ff, #eef2ff);
+  overflow: hidden; /* keeps the header from spilling out */
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+div.definition > p:first-child {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #e9d5ff;
+  border-bottom: 1px solid #c4b5fd;
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+div.definition > p:first-child + p {
+  margin: 0;
+  padding: 1rem 1.25rem;
+}
+
+div.theorem:not(.definition) {
+  border: 2px solid #7c3aed;
+  border-left: 8px solid #0f766e;
+  background: linear-gradient(180deg, #f5f3ff, #eef2ff);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.08);
+}
+
+div.theorem:not(.definition) > p:first-child {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #e9d5ff;
+  border-bottom: 1px solid #c4b5fd;
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+div.theorem:not(.definition) > p:first-child + p {
+  margin: 0;
+  padding: 1rem 1.25rem;
+}
+
+.proof::after {
+  content: "□";
+  display: block;
+  text-align: right;
+  margin-top: 0.05rem;
+  color: var(--brand-black);
+}

@@ -38,6 +38,8 @@ It's thus very natural to study modules over the ring $MU_*$ to understand this 
 ## Formal group laws
 
 :::{#def-fgl}
+**(Formal Group Law)**
+
 Let $R$ be a commutative ring. A **formal group law** (FGL) over $R$ is a formal power series $F(x,y)$ in $R$ such that the following are satisfied
 1. $F(x,0)=F(0,x)=x$ (identity)
 2. $F(x,y)=F(y,x)$ (commutativity)
@@ -73,7 +75,7 @@ $$
 
 so that our map $f^*$ really corresponds to a power series $F(x\otimes 1,1\otimes x)$. This power series $F$ can be shown to be a formal group law, and thus must correspond to a homomorphism $\theta:L\rightarrow MU^*$. Quillen proved that this map is in fact an isomorphism. This means that the FGL associated to complex cobordism is the universal one (the "co" prefix is used because we are discussing the cohomology theory $MU^*$). Thus, if we just move reverse the gradings, we may consider $MU_*(X)$ to be an $L$-module. 
 
-## Deeper into the algebra
+## More on formal groups
 
 We are thus compelled to study the structure of the category ${}_L\mathbf{Mod}$ of $L$ modules. However, we can actually refine our objects of interest to the subcategory $\mathbf{C \Gamma}$ of $L$-modules equipped with an action of the group $\Gamma$ that is compatible with the action of $\Gamma$ on $L$.
 
@@ -87,6 +89,8 @@ where the group operation is functional composition. The natural action of $\Gam
 It may seem a bit random to narrow our focus to the category $\mathbf{C \Gamma}$, but the group $\Gamma$ comes from topology and its action is therefore a natural thing to take into account. Recall that in ordinary cohomology, $H^*(X)$ (mod 2 coefficients suppressed) is module over the Steenrod algebra. This action massively restricts the types of algebraic modules that can arise out of real topological spaces. The group $\Gamma$ is playing an analogous role specifically to the multiplicative operations. Multiplicative operations in $MU$-theory are much more complicated than in ordinary cohomology, but their behavior is dictated by where they send the generator $x\in MU^2(\CC P^{\infty})$, and $\Gamma$ captures this behavior. Not only does studying $\mathbf{C \Gamma}$ get rid of topologically impossible $L$-modules, but the $\Gamma$-action clears up the picture immensely. To explicitly elaborate on this we need a few more definitions from FGL theory.
 
 :::{#def-n-series}
+**($n$-series)**
+
 For each integer $n$, the $n$-series $[n](x)$ is given by the recursive formula
 $$\begin{align}
 [1](x) &=x \\
@@ -117,7 +121,8 @@ with $a$ invertible, then we say that $F$ has height $h$ at $p$. If $[p](x)=0 \m
 From the above examples, the height of the additive FGL is infinity since $[p](x)=px=0\mod p$. For the multiplicative FGL, its height is 1 since $[p](x)=x^p \mod p$. This leads to a very important result for the theory of FGLs.
 
 :::{#thm-classification-fgl}
-**Classification of FGLs.**
+**(Classification of FGLs)**
+
 Two FGLs over the algebraic closure of $\FF_p$ are isomorphic if and only if they have the same height. 
 :::
 
@@ -126,7 +131,8 @@ Let $v_n\in L$ denote the coefficient of $x^{p^n}$ in the $p$-series for the uni
 Now I can make concrete my earlier remark about the structure of $\mathbf{C \Gamma}$ being a bit more organized.
 
 :::{#thm-invariant-ideal}
-**Invariant prime ideal theorem.**  
+**(Invariant prime ideal theorem)**
+
 The only prime ideals in $L$ which are invariant under the action of $\Gamma$ are $I_{p,n}$ as just defined, where $p$ is a prime integer and $n$ is a nonnegative integer, possibly $\infty$. 
 
 Moreover, in $L/I_{p,n}$, for $n>0$, the subgroup fixed by $\Gamma$ is $\ZZ/p[v_n]$. In $L$ itself, the invariant subgroup is $\ZZ$. 
@@ -140,7 +146,8 @@ $$
 where the subquotients $F_iM/F_{i-1}M$ are isomorphic to $R/I_i$ for a prime ideal $I_i$. Now $L$ is not Noetherian, but it is the direct limit of Noetherian rings, so this finite filtration property is still satisfied (for reasons I don't understand). For modules in $\mathbf{C \Gamma}$, we may actually choose the filtrations and prime ideals such that they are all $\Gamma$-invariant. Stated more formally:
 
 :::{#thm-landweber-filtration}
-**Landweber filtration theorem.**
+**(Landweber filtration theorem)**
+
 Every module $M$ in $\mathbf{C \Gamma}$ admits a finite filtration by submodules in $\mathbf{C \Gamma}$ as above such that each subquotient is isomorphic to a suspension (the modules are graded) of $L/I_{p,n}$ for some prime $p$ and some finite $n$.
 :::
 
@@ -169,7 +176,7 @@ For the second part of 1., we know $M$ has a finite filtration with subquotients
 This statement is analogous to the isomorphism $\overline{K(n)}_*(X)\cong K(n)_*\otimes \overline{H}_*(X;\ZZ/p)$ for a $p$-local finite complex $X$. Ravenel asserts that the functor $v_n^{-1}\overline{MU}_*(X)_{(p)}$ is a homology theory that vanishes on a finite $p$-local CW complex if and only if $\overline{K(n)}_*(X)$ and that you could replace one with the other in the statement of the periodicity theorem.
 
 :::{.proof}
-For any $M\in \CG$, the filtration that it admits via the Landweber filtration theorem must be finite. All subquotients will have the form $\Sigma^i L/I_{p,m}$ for some $m$, and all we have to do is take $n$ large enough so that $n>m$ for all $m$ appearing in the subquotients and thus this $v_n$ will act freely on $M$ and so $v_n^{-1}M$ will be nontrivial.
+For any $M\in \mathbf{C \Gamma}$, the filtration that it admits via the Landweber filtration theorem must be finite. All subquotients will have the form $\Sigma^i L/I_{p,m}$ for some $m$, and all we have to do is take $n$ large enough so that $n>m$ for all $m$ appearing in the subquotients and thus this $v_n$ will act freely on $M$ and so $v_n^{-1}M$ will be nontrivial.
 :::
 
 
@@ -184,21 +191,21 @@ If we replace the functor $\overline{K(n)_*}$ in the the periodicity theorem wit
 :::
 
 
-If we trust that the two functors $\overline{K(n)_*}$ and $v_n^{-1}\overline{MU}_{(p)*}$ are essentially doing the same thing, albeit in different worlds, we can mimic the definition of type for modules in $\mathbf{C \Gamma}$. We will say that a $p$-local module $M\in \CG$ has **type $n$** if $n$ is the first positive integer such that $v_n^{-1}M\neq 0$. Here, $p$-local just means that $M\otimes \ZZp\cong M$. A homomorphism $f:\Sigma^d M\rightarrow M$ in $\mathbf{C \Gamma}$ is a **$v_n$-map** if it induces an ismorphism on $v_n^{-1}M$ and is the trivial on $v_m^{-1}M$ for $m\neq n$. 
+If we trust that the two functors $\overline{K(n)_*}$ and $v_n^{-1}\overline{MU}_{(p)*}$ are essentially doing the same thing, albeit in different worlds, we can mimic the definition of type for modules in $\mathbf{C \Gamma}$. We will say that a $p$-local module $M\in \mathbf{C \Gamma}$ has **type $n$** if $n$ is the first positive integer such that $v_n^{-1}M\neq 0$. Here, $p$-local just means that $M\otimes \ZZp\cong M$. A homomorphism $f:\Sigma^d M\rightarrow M$ in $\mathbf{C \Gamma}$ is a **$v_n$-map** if it induces an ismorphism on $v_n^{-1}M$ and is the trivial on $v_m^{-1}M$ for $m\neq n$. 
 
 Using this definition we can prove a final corollary of the Landweber filtration theorem.
 
 :::{#cor}
-For a $p$-local module $M\in \CG$, if $v_{n-1}^{-1}M$ is nontrivial, then $M$ does not admit a $v_n$-map.
+For a $p$-local module $M\in \mathbf{C \Gamma}$, if $v_{n-1}^{-1}M$ is nontrivial, then $M$ does not admit a $v_n$-map.
 :::
 
 :::{.proof}
 Say $M$ has type $m<n$ so that each Landweber subquotient is the suspension of $L/I_{p,k}$ for $k\geq m$. This must be true since $v_{n-1}^{-1}M$ is nontrivial. It follows from the contrapositive of 1. that $v_m^{-1}M$, $v_n^{-1}M$, and $v_m^{-1}v_n^{-1}M$ are all nontrivial as well, since $M$ has type $m$. Now, if $f$ is a $v_n$-map, then $f$ must induce an ismorphism on $v_n^{-1}M$ and since elements that aren't annihilated by a power of $v_n$ also correspond to elements that aren't annihilated by a power of $v_m$, $f$ induces an isomorphism on $v_m^{-1}v_n^{-1}M$. However, by definition $f$ must be trivial on $v_m^{-1}M$ and thus also on $v_n^{-1}v_m^{-1}M$, but this would force $$v_n^{-1}v_m^{-1}M=$v_m^{-1}v_n^{-1}M$$ to be trivial, which contradicts our assumption. Thus, the $v_n$-map $f$ cannot exist.
 :::
 
-## Categorically speaking
+## Thick subcategories
 
-So from the last section it's clear how similar the theory of $L$-modules with $\Gamma$ action is to the $MU$-theory of spaces. As stated before this correspondence is carried by the functor $MU_*:\FH\rightarrow \CG$. The final part of this chapter dives into the thick subcategory theorem. Intuitively, a thick subcategory $\mathbf{C}$ of a category $\mathbf{D}$, is a full subcategory whose objects are all a finite number of simple constructions (shifts, extensions, direct sums, etc.) away from each other. In the context of $\mathbf{C \Gamma}$, this means that if we are given a short exact sequence of modules
+So from the last section it's clear how similar the theory of $L$-modules with $\Gamma$ action is to the $MU$-theory of spaces. As stated before this correspondence is carried by the functor $MU_*:\FH\rightarrow \mathbf{C \Gamma}$. The final part of this chapter dives into the thick subcategory theorem. Intuitively, a thick subcategory $\mathbf{C}$ of a category $\mathbf{D}$, is a full subcategory whose objects are all a finite number of simple constructions (shifts, extensions, direct sums, etc.) away from each other. In the context of $\mathbf{C \Gamma}$, this means that if we are given a short exact sequence of modules
 
 $$
 0\rightarrow M'\rightarrow M\rightarrow M^" \rightarrow 0
@@ -233,5 +240,6 @@ $$
 
 and $MU_*$ sends one to the other. The proof of the algebraic thick subcategory theorem is not too bad, but the topological one is much more difficult due to the use of the Adams spectral sequence.
 
+##
 
-We thus see how rich the structure of $\mathbf{C \Gamma}$ is and how it can provide so much information on the $MU$-theory of spaces. In the next chapter we'll develop this a bit more to eventually prove the topological thick subcateogry theorem. We will also soon upgrade our focus on finite CW complexes to focus on finite CW spectra, which will open the door to the language and techniques of stable homotopy theory. All that has been discussed can be reformulated from this perspective without having to change too much, but it was hard for me to adjust so I've just been sticking with Ravenel's conventions. Indeed, the world of spectra is the natural setting for all of this, so I'm excited to do things the right way soon. `
+We thus see how rich the structure of $\mathbf{C \Gamma}$ is and how it can provide so much information on the $MU$-theory of spaces. In the next chapter we'll develop this a bit more to eventually prove the topological thick subcateogry theorem. We will also soon upgrade our focus on finite CW complexes to focus on finite CW spectra, which will open the door to the language and techniques of stable homotopy theory. All that has been discussed can be reformulated from this perspective without having to change too much, but it was hard for me to adjust so I've just been sticking with Ravenel's conventions. Indeed, the world of spectra is the natural setting for all of this, so I'm excited to do things the right way soon.
