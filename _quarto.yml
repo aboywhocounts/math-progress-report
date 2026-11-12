@@ -10,7 +10,7 @@ website:
   # NEW: Add a top navigation bar
   navbar:
     left:
-      - href: website-deets/index.qmd
+      - href: index.qmd
         text: Home
       - href: website-deets/feed.qmd
         text: Feed / Blog

@@ -1,0 +1,9 @@
+---
+title: "A Young Man's Mathematical Journey"
+---
+
+Welcome to my mathematical progress report. The goal of this "blog" is for me to have an organized place to type up notes and my thoughts about the math I'm doing. In the past I've just used notebooks, and while that's fun, it takes a lot of time and I honestly don't know where a lot of those notebooks have gone. Plus, this is better for the trees.
+
+These notes are not meant to be taken too seriously, and it may happen that there are statements that are incorrect. I'll try to make sure everything is as logically sound as possible, but I'm only human. I hope you enjoy!
+
+For a little about me you can find the about page [here](website-deets/about.qmd).
