@@ -299,6 +299,8 @@ window.Quarto = {
    
   <ul>
   <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#periodic-maps-examples-and-general-procedure" id="toc-periodic-maps-examples-and-general-procedure" class="nav-link" data-scroll-target="#periodic-maps-examples-and-general-procedure">Periodic maps: examples and general procedure</a></li>
+  <li><a href="#the-chromatic-filtration" id="toc-the-chromatic-filtration" class="nav-link" data-scroll-target="#the-chromatic-filtration">The chromatic filtration</a></li>
   </ul>
 </nav>
     </div>
@@ -336,7 +338,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>First, a definition.</p>
 <div id="def-cofib_seq" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1</strong></span> A <strong>cofiber sequence</strong> is a sequence of spaces and maps of the form <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 1</strong></span> <strong>(Cofiber Sequence)</strong></p>
+<p>A <strong>cofiber sequence</strong> is a sequence of spaces and maps of the form <span class="math display">\[
 X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{j} \Sigma X \xrightarrow{\Sigma f} \cdots
 \]</span></p>
 <p>where each space to the right of <span class="math inline">\(Y\)</span> is the mapping cone of the map preceeding the map to it, and each map to the right of <span class="math inline">\(f\)</span> is the canonical inclusion of a maps target into its mapping cone.</p>
@@ -349,13 +352,14 @@ X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{j} \Sigma X \xrightarrow{\S
 [X,Z] \xleftarrow{f^*} [Y,Z] \xleftarrow{i^*} [C_f,Z] \xleftarrow{j^*} [\Sig X, Z] \xleftarrow{\Sig f} \cdots
 \]</span></li>
 </ol>
-<p>Everything to the left of <span class="math inline">\([C_f,Z]\)</span> is naturally a group and so exactness means the usual thing. The terms to the right don’t have an intrinsic group structure, but we can make exactness make sense since each of these sets contains a distinguished element (the trivial map). 2. Let <span class="math inline">\(E_*\)</span> be a homology theory. Then there is a long exact sequence <span class="math display">\[
+<p>Everything to the left of <span class="math inline">\([C_f,Z]\)</span> is naturally a group and so exactness means the usual thing. The terms to the right don’t have an intrinsic group structure, but we can make exactness make sense since each of these sets contains a distinguished element (the trivial map).</p>
+<ol start="2" type="1">
+<li><p>Let <span class="math inline">\(E_*\)</span> be a homology theory. Then there is a long exact sequence <span class="math display">\[
 \cdots \xrightarrow{j_*} \overline{E}_m(X) \xrightarrow{f_*} \overline{E}_m(Y) \xrightarrow{i_*} \overline{E}_m(C_f) \xrightarrow{j_*} \overline{E}_{m-1}(\Sig X) \xrightarrow{f_*} \cdots
-\]</span></p>
-<ol start="3" type="1">
-<li>Suppose <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are each <span class="math inline">\((k-1)\)</span>-connected and let <span class="math inline">\(W\)</span> be a finite complex which is a double suspension with top cell in dimension less than <span class="math inline">\(2k-1\)</span>. Then there is a long exact sequence of abelian groups <span class="math display">\[
+\]</span></p></li>
+<li><p>Suppose <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are each <span class="math inline">\((k-1)\)</span>-connected and let <span class="math inline">\(W\)</span> be a finite complex which is a double suspension with top cell in dimension less than <span class="math inline">\(2k-1\)</span>. Then there is a long exact sequence of abelian groups <span class="math display">\[
 [W,X] \xrightarrow{f_*} [W,Y] \xrightarrow{i_*} [W,C_f] \xrightarrow{j_*} [W,\Sig X] \xrightarrow{\Sig f} \cdots
-\]</span></li>
+\]</span></p></li>
 </ol>
 <p>This sequence will terminate at the point where the connectivity of the target exceeds the dimension of <span class="math inline">\(W\)</span>.</p>
 </div>
@@ -368,10 +372,12 @@ X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{j} \Sigma X \xrightarrow{\S
 <p><span class="proof-title"><em>Proof</em>. </span>We first assume <span class="math inline">\(X\)</span> has been sufficienty suspended to be the target of a <span class="math inline">\(v_n\)</span> map <span class="math inline">\(f\)</span>, and we let <span class="math inline">\(W\)</span> be the cofiber. Using <a href="#prp-cofib-pt2" class="quarto-xref">Proposition&nbsp;1</a>, we consider the following LES: <span class="math display">\[
 \cdots \overset{j_*}{\longrightarrow} \overline{K(m)}_t(\Sigma^d X) \overset{f_*}{\longrightarrow} \overline{K(m)}_t(X) \overset{i_*}{\longrightarrow} \overline{K(m)}_t(W) \overset{j_*}{\longrightarrow} \overline{K(m)}_{t-1}(\Sigma^d X) \overset{f_*}{\longrightarrow} \cdots
 \]</span></p>
+</div>
 <p>For <span class="math inline">\(W\)</span> to be type <span class="math inline">\(n+1\)</span>, we must show that <span class="math inline">\(K(m)_*(W)=0\)</span> for <span class="math inline">\(m&lt;n+1\)</span> and that <span class="math inline">\(f\)</span> induces an isomorphism on <span class="math inline">\(K(n+1)_*(W)\)</span>. If <span class="math inline">\(m&lt;n\)</span>, then since <span class="math inline">\(X\)</span> is type <span class="math inline">\(n\)</span>, we know that <span class="math inline">\(\overline{K(m)}_*(X)=0\)</span> and thus also <span class="math inline">\(\overline{K(m)}_*(\Sig^d X)=0\)</span>, forcing <span class="math inline">\(\overline{K(m)}_*(W)=0\)</span>. For <span class="math inline">\(m=n\)</span>, we know that <span class="math inline">\(f_*\)</span> is an isomorphism for every <span class="math inline">\(t\)</span> as <span class="math inline">\(X\)</span> is type <span class="math inline">\(n\)</span>, and thus by exactness <span class="math inline">\(\overline{K(n)}_*(W)=0\)</span>. When <span class="math inline">\(m&gt;n\)</span>, <span class="math inline">\(f_*=0\)</span> by definition, and we also have that <span class="math inline">\(\overline{K(m)}+_*(X)\neq 0\)</span> by the contrapositive of (5) of the properties of Morava K-theory. Now, if <span class="math inline">\(f_*=0\)</span>, then by exactness, <span class="math inline">\(j_*\)</span> must be a surjection and <span class="math inline">\(i_*\)</span> an injection and so as a <span class="math inline">\(K(m)_*\)</span>-module, <span class="math inline">\(\overline{K(m)}_t(W)\)</span> is an extension of <span class="math inline">\(\overline{K(m)}_t(\Sig^{d+1} X)\)</span> by <span class="math inline">\(\overline{K(m)}_t(X)\)</span>. However as all <span class="math inline">\(K(m)_*\)</span>-modules are free, this exact sequence splits and we have <span class="math display">\[
 \overline{K(m)}_*(W)\cong \overline{K(m)}_*(\Sigma^{d+1} X) \oplus \overline{K(m)}_*(X)
 \]</span></p>
 <p>Therefore, <span class="math inline">\(W\)</span> has type <span class="math inline">\(n+1\)</span>.</p>
+</section>
 <section id="periodic-maps-examples-and-general-procedure" class="level2">
 <h2 class="anchored" data-anchor-id="periodic-maps-examples-and-general-procedure">Periodic maps: examples and general procedure</h2>
 <p>Now we will focus on periodic maps and how they can give us nontrivial elements of <span class="math inline">\(\pi_*^S\)</span>. First we will look at some foundational examples and then move into the generalized framework.</p>
@@ -383,11 +389,15 @@ X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{j} \Sigma X \xrightarrow{\S
 \Sigma^q V(0)_k \xrightarrow{\alpha} V(0)_k
 \]</span></li>
 </ol>
-<p>where <span class="math inline">\(q=8\)</span> for <span class="math inline">\(p=2\)</span> and <span class="math inline">\(q=2p-2\)</span> for <span class="math inline">\(p\)</span> odd. In the context of the periodicity theorem, <span class="math inline">\(n=1\)</span>. The induced map on <span class="math inline">\(K(1)_*(V(0)_k)\)</span> is multiplication by <span class="math inline">\(v_1\)</span> for <span class="math inline">\(p\)</span> odd and <span class="math inline">\(v_1^4\)</span> for <span class="math inline">\(p=2\)</span>. The <span class="math inline">\(p=2\)</span> case is interesting and what’s even more interesting is that there is no self-map inducing multiplication by a smaller power of <span class="math inline">\(v_1\)</span> (for reasons which I don’t completely understand at the moment). 3. Suppose <span class="math inline">\(p\geq 5\)</span> and take the cofiber of the map <span class="math inline">\(\alpha\)</span> above and denote it by <span class="math inline">\(V(1)_k\)</span>. It has been shown that for <span class="math inline">\(k\)</span> sufficiently large, there is a periodic map <span class="math display">\[
+<p>where <span class="math inline">\(q=8\)</span> for <span class="math inline">\(p=2\)</span> and <span class="math inline">\(q=2p-2\)</span> for <span class="math inline">\(p\)</span> odd. In the context of the periodicity theorem, <span class="math inline">\(n=1\)</span>. The induced map on <span class="math inline">\(K(1)_*(V(0)_k)\)</span> is multiplication by <span class="math inline">\(v_1\)</span> for <span class="math inline">\(p\)</span> odd and <span class="math inline">\(v_1^4\)</span> for <span class="math inline">\(p=2\)</span>. The <span class="math inline">\(p=2\)</span> case is interesting and what’s even more interesting is that there is no self-map inducing multiplication by a smaller power of <span class="math inline">\(v_1\)</span> (for reasons which I don’t completely understand at the moment).</p>
+<ol start="3" type="1">
+<li><p>Suppose <span class="math inline">\(p\geq 5\)</span> and take the cofiber of the map <span class="math inline">\(\alpha\)</span> above and denote it by <span class="math inline">\(V(1)_k\)</span>. It has been shown that for <span class="math inline">\(k\)</span> sufficiently large, there is a periodic map <span class="math display">\[
 \Sigma^{2p^2-2} V(1)_k \xrightarrow{\beta} V(1)_k
-\]</span> inducing multiplication by <span class="math inline">\(v_2\)</span> in <span class="math inline">\(K(2)\)</span>-theory. 4. For <span class="math inline">\(p\geq 7\)</span>, denote by <span class="math inline">\(V(2)_k\)</span> the cofiber of the map <span class="math inline">\(\beta\)</span> above. There is a periodic map <span class="math display">\[
+\]</span> inducing multiplication by <span class="math inline">\(v_2\)</span> in <span class="math inline">\(K(2)\)</span>-theory.</p></li>
+<li><p>For <span class="math inline">\(p\geq 7\)</span>, denote by <span class="math inline">\(V(2)_k\)</span> the cofiber of the map <span class="math inline">\(\beta\)</span> above. There is a periodic map <span class="math display">\[
 \Sigma^{2p^3-2} V(2)_k \xrightarrow{\gamma} V(2)_k
-\]</span></p>
+\]</span></p></li>
+</ol>
 <p>As one can guess, this induces multplication by <span class="math inline">\(v_2\)</span> in <span class="math inline">\(K(2)\)</span>-theory. Denote its cofiber by <span class="math inline">\(V(3)_k\)</span>.</p>
 </div>
 <p>All of these periodic maps in the examples above give rise to infinite families of elements in <span class="math inline">\(\pi_*^S\)</span> as follows.</p>
@@ -437,7 +447,8 @@ f_2:\Sigma^{d_2} W(2)\rightarrow W(2)
 <p>At the <span class="math inline">\(n^{\text{th}}\)</span> stage, we have an extension <span class="math inline">\(g_n\)</span> of the original map <span class="math inline">\(g\)</span> to the complex <span class="math inline">\(W(n)\)</span> of type <span class="math inline">\(n\)</span> equipped with a periodic self-map <span class="math inline">\(f_n\)</span>. If <span class="math inline">\(g_n\)</span> is not stably annihilated by an iterate of <span class="math inline">\(f_n\)</span>, then the process stops and <span class="math inline">\(g_n\)</span> has nontrivial image in <span class="math inline">\(v_n^{-1}[W(n),Y]_*^S\)</span>. If g_n is stably annihilated by some iterate of <span class="math inline">\(f_n\)</span>, then we move to the <span class="math inline">\((n+1)^{\text{th}}\)</span> stage.</p>
 <p>We make the folowing natural definition:</p>
 <div id="def-vn-torsion" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2</strong></span> If an element <span class="math inline">\(y\in\pi_*^S(Y)\)</span> extends to a complex <span class="math inline">\(W(n)\)</span> of type <span class="math inline">\(n\)</span>, then <span class="math inline">\(y\)</span> is <strong><span class="math inline">\(v_{n-1}\)</span>-torsion</strong>. If, in addition <span class="math inline">\(y\)</span> does not extend to a complex of type <span class="math inline">\(n+1\)</span>, it is <strong><span class="math inline">\(v_n\)</span>-periodic</strong>. The chromatic filtration of <span class="math inline">\(\pi_*^S(Y)\)</span> is a decreasing family of subgroups consisting of <span class="math inline">\(v_n\)</span>-torsion elements for various <span class="math inline">\(n\geq 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 2</strong></span> <strong><span class="math inline">\(v_n\)</span>-torsion</strong></p>
+<p>If an element <span class="math inline">\(y\in\pi_*^S(Y)\)</span> extends to a complex <span class="math inline">\(W(n)\)</span> of type <span class="math inline">\(n\)</span>, then <span class="math inline">\(y\)</span> is <strong><span class="math inline">\(v_{n-1}\)</span>-torsion</strong>. If, in addition <span class="math inline">\(y\)</span> does not extend to a complex of type <span class="math inline">\(n+1\)</span>, it is <strong><span class="math inline">\(v_n\)</span>-periodic</strong>. The chromatic filtration of <span class="math inline">\(\pi_*^S(Y)\)</span> is a decreasing family of subgroups consisting of <span class="math inline">\(v_n\)</span>-torsion elements for various <span class="math inline">\(n\geq 0\)</span>.</p>
 </div>
 <p>I’ll note that the procedure used above is different than what was used with the <span class="math inline">\(\a_t\)</span>,<span class="math inline">\(\beta_t\)</span>, and <span class="math inline">\(\gamma_t\)</span> families earlier. For example, if <span class="math inline">\(p\)</span> is odd and we take the map <span class="math inline">\(\alpha_1 \in \pi_{2p-3}^S\)</span> represented by the map <span class="math inline">\(\alpha_1:S^{m+2p-3}\rightarrow S^m\)</span>, then <span class="math inline">\(\alpha_1\)</span> has order <span class="math inline">\(p\)</span>, due to the construction from earlier. Thus, this map will extend to a map <span class="math inline">\(\widetilde{\alpha_1}:V(0)_{m+2p-3}\rightarrow S^m\)</span>. It turns out that no iterate of <span class="math inline">\(\alpha\)</span> composed with <span class="math inline">\(\alpha_1\)</span> is nullhomotopic, meaning that <span class="math inline">\(\alpha_1\)</span> is <span class="math inline">\(v_1\)</span>-periodic by the definition that was just made. The composite <span class="math display">\[
 S^{m+qi+q-1}\rightarrow V(0)_{m+qi+q-1}\xrightarrow{\alpha^i} V(0)_{m+q-1}\xrightarrow{\widetilde{\alpha_1}}S^m
@@ -446,7 +457,8 @@ S^K\xrightarrow{e}\Sigma^{d_n i}W(n)\xrightarrow{f^i_n} W(n)\xrightarrow{g_n} Y
 \]</span></p>
 <p>is essential (<span class="math inline">\(e\)</span> is inclusion map of bottom cell), even though we know <span class="math inline">\(g_nf^i_n\)</span> is. If it’s nullhomotopic, then <span class="math inline">\(g_nf_n^i\)</span> will extend to a map from the cofiber of <span class="math inline">\(e\)</span>, <span class="math inline">\(C_e\)</span>. The extension may or may not be trivial on the bottom cell of <span class="math inline">\(C_e\)</span>, but even so it must be nontrivial on one of the <span class="math inline">\(2^n\)</span> cells of <span class="math inline">\(W(n)\)</span>, because if not then it would be nullhomotopic which would contradict our assumption. We can test this new bottom cell (i.e.&nbsp;of <span class="math inline">\(C_e\)</span>) and consider the inclusion map of that cell and rinse and repeat until we get an essential composition from a sphere to <span class="math inline">\(Y\)</span>. Thus, for any <span class="math inline">\(i\)</span>, we can get a nontrivial element of <span class="math inline">\(\pi_*^S(Y)\)</span>. We make the following definition:</p>
 <div id="def-pdc-family" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3</strong></span> Given a <span class="math inline">\(v_n\)</span>-periodic element <span class="math inline">\(y\in\pi_*^S(Y)\)</span>, the elements described above for various <span class="math inline">\(i&gt;0\)</span> constitute the <strong><span class="math inline">\(v_n\)</span>-periodic family associated with <span class="math inline">\(y\)</span></strong>.</p>
+<p><span class="theorem-title"><strong>Definition 3</strong></span> <strong>Periodic families</strong></p>
+<p>Given a <span class="math inline">\(v_n\)</span>-periodic element <span class="math inline">\(y\in\pi_*^S(Y)\)</span>, the elements described above for various <span class="math inline">\(i&gt;0\)</span> constitute the <strong><span class="math inline">\(v_n\)</span>-periodic family associated with <span class="math inline">\(y\)</span></strong>.</p>
 </div>
 <p><strong><em>Remark</em></strong> Let’s return to the <span class="math inline">\(v_1\)</span> situation and the group <span class="math inline">\(v_1^{-1}[W(1),Y]_*^S\)</span>. This is specifically looking at <span class="math inline">\(v_1\)</span>-periodic behavior of <span class="math inline">\(p^i\)</span>-torsion in <span class="math inline">\(\pi_*(Y)\)</span>, which is great, but it would be nice to examine <span class="math inline">\(v_1\)</span>-periodic behavior independently of the exponent of <span class="math inline">\(p\)</span>, as this will give us the complete picture of <span class="math inline">\(v_1\)</span>-periodicity in <span class="math inline">\(\pi_k^S(Y)\)</span>. What we really need then, is a way to compatibly tie together all the <span class="math inline">\(v_1^{-1}[C_{p^i},Y]_*^S\)</span> for all <span class="math inline">\(i\)</span> in a way that yields a direct system that we can take the direct limit of.</p>
 <p>We start with an inverse system of cofiber sequences:</p>
@@ -455,7 +467,13 @@ S^K\xrightarrow{e}\Sigma^{d_n i}W(n)\xrightarrow{f^i_n} W(n)\xrightarrow{g_n} Y
 <p><img src="../../images/v1-pd-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
-<p>which induces a direct system of long exact sequences <img src="../../images/v1-pd-2.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"> whose limit is a long exact sequence of the form <span class="math display">\[
+<p>which induces a direct system of long exact sequences</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/v1-pd-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>whose limit is a long exact sequence of the form <span class="math display">\[
 \cdots\rightarrow \pi_k(Y) \rightarrow p^{-1}\pi_k(Y) \rightarrow \pi_k(Y)/(p^{\infty}) \rightarrow \cdots
 \]</span></p>
 <p>where <span class="math display">\[
@@ -465,8 +483,6 @@ S^K\xrightarrow{e}\Sigma^{d_n i}W(n)\xrightarrow{f^i_n} W(n)\xrightarrow{g_n} Y
 <p>Now, using some properties of <span class="math inline">\(v_1\)</span> maps on the Moore spaces <span class="math inline">\(C_{p^i}\)</span>, we can indeed define the groups <span class="math inline">\(v_1^{-1}[C_{p^i},Y]_*^S\)</span> compatibly for various <span class="math inline">\(i\)</span>. Thus, we may define <span class="math inline">\(v_1^{-1}\pi_k/(p^\infty)\)</span> as the limit of these groups.</p>
 
 
-</section>
-</div>
 </section>
 
 </main> <!-- /main -->

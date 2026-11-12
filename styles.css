@@ -69,10 +69,57 @@ h1, h2, h3 {
   color: var(--brand-indigo);
 }
 
+div.definition {
+  border: 2px solid #7c3aed;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f5f3ff, #eef2ff);
+  overflow: hidden; /* keeps the header from spilling out */
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+div.definition > p:first-child {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #e9d5ff;
+  border-bottom: 1px solid #c4b5fd;
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+div.definition > p:first-child + p {
+  margin: 0;
+  padding: 1rem 1.25rem;
+}
+
+div.theorem:not(.definition) {
+  border: 2px solid #7c3aed;
+  border-left: 8px solid #0f766e;
+  background: linear-gradient(180deg, #f5f3ff, #eef2ff);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.08);
+}
+
+div.theorem:not(.definition) > p:first-child {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #e9d5ff;
+  border-bottom: 1px solid #c4b5fd;
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+div.theorem:not(.definition) > p:first-child + p {
+  margin: 0;
+  padding: 1rem 1.25rem;
+}
+
 .proof::after {
   content: "□";
   display: block;
   text-align: right;
-  margin-top: 0.25rem;
-  color: var(--brand-teal);
+  margin-top: 0.05rem;
+  color: var(--brand-black);
 }
