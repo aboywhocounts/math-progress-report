@@ -7,7 +7,6 @@ project:
 website:
   title: "A Young Man's Mathematical Journey"
   
-  # NEW: Add a top navigation bar
   navbar:
     left:
       - href: index.qmd
@@ -17,12 +16,13 @@ website:
       - href: website-deets/about.qmd
         text: About Me
 
-  # EXISTING: Your topic sidebar
   sidebar:
     style: "docked"
     search: true
+    collapse-level: 1
     contents:
       - section: "Gap Year Reading"
+        collapsed: true
         contents:
           - gap-year/intro.qmd
           - gap-year/orange-book/ob1.qmd
@@ -30,19 +30,21 @@ website:
           - gap-year/orange-book/ob3.qmd
           - gap-year/orange-book/ob4.qmd
       - section: "Topology"
+        collapsed: true
         contents:
           - htpy-theory/mosher-tangora-prblm1.qmd
           - htpy-theory/mosher-tangora-prblm2.qmd
 
       - section: "Representation Theory"
+        collapsed: true
         contents:
           - rep-theory/rep-theory/the-basics.qmd
-      - section: "Field Theory"
 
      
 format:
   html:
-    theme: cosmo
+    theme: pulse
+    css: styles.css
     toc: true
     html-math-method: mathjax
     include-in-header: math-macros.html
