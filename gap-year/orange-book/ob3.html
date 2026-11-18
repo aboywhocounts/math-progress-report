@@ -249,7 +249,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../gap-year/orange-book/ob4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 4: Morava things</span></a>
+ <span class="menu-text">Chapter 4: Results due to Jack Morava</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem</span></a>
   </div>
 </li>
       </ul>
@@ -301,7 +307,7 @@ window.Quarto = {
   <li><a href="#complex-bordism" id="toc-complex-bordism" class="nav-link active" data-scroll-target="#complex-bordism">Complex bordism</a></li>
   <li><a href="#formal-group-laws" id="toc-formal-group-laws" class="nav-link" data-scroll-target="#formal-group-laws">Formal group laws</a></li>
   <li><a href="#more-on-formal-groups" id="toc-more-on-formal-groups" class="nav-link" data-scroll-target="#more-on-formal-groups">More on formal groups</a></li>
-  <li><a href="#thick-subcategories" id="toc-thick-subcategories" class="nav-link" data-scroll-target="#thick-subcategories">Thick subcategories</a></li>
+  <li><a href="#thick-ssaubcategories" id="toc-thick-ssaubcategories" class="nav-link" data-scroll-target="#thick-ssaubcategories">Thick ssaubcategories</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
@@ -473,8 +479,8 @@ V_p=\ZZp[v_1,v_2,...]
 <p><span class="proof-title"><em>Proof</em>. </span>Say <span class="math inline">\(M\)</span> has type <span class="math inline">\(m&lt;n\)</span> so that each Landweber subquotient is the suspension of <span class="math inline">\(L/I_{p,k}\)</span> for <span class="math inline">\(k\geq m\)</span>. This must be true since <span class="math inline">\(v_{n-1}^{-1}M\)</span> is nontrivial. It follows from the contrapositive of 1. that <span class="math inline">\(v_m^{-1}M\)</span>, <span class="math inline">\(v_n^{-1}M\)</span>, and <span class="math inline">\(v_m^{-1}v_n^{-1}M\)</span> are all nontrivial as well, since <span class="math inline">\(M\)</span> has type <span class="math inline">\(m\)</span>. Now, if <span class="math inline">\(f\)</span> is a <span class="math inline">\(v_n\)</span>-map, then <span class="math inline">\(f\)</span> must induce an ismorphism on <span class="math inline">\(v_n^{-1}M\)</span> and since elements that aren’t annihilated by a power of <span class="math inline">\(v_n\)</span> also correspond to elements that aren’t annihilated by a power of <span class="math inline">\(v_m\)</span>, <span class="math inline">\(f\)</span> induces an isomorphism on <span class="math inline">\(v_m^{-1}v_n^{-1}M\)</span>. However, by definition <span class="math inline">\(f\)</span> must be trivial on <span class="math inline">\(v_m^{-1}M\)</span> and thus also on <span class="math inline">\(v_n^{-1}v_m^{-1}M\)</span>, but this would force <span class="math display">\[v_n^{-1}v_m^{-1}M=$v_m^{-1}v_n^{-1}M\]</span> to be trivial, which contradicts our assumption. Thus, the <span class="math inline">\(v_n\)</span>-map <span class="math inline">\(f\)</span> cannot exist.</p>
 </div>
 </section>
-<section id="thick-subcategories" class="level2">
-<h2 class="anchored" data-anchor-id="thick-subcategories">Thick subcategories</h2>
+<section id="thick-ssaubcategories" class="level2">
+<h2 class="anchored" data-anchor-id="thick-ssaubcategories">Thick ssaubcategories</h2>
 <p>So from the last section it’s clear how similar the theory of <span class="math inline">\(L\)</span>-modules with <span class="math inline">\(\Gamma\)</span> action is to the <span class="math inline">\(MU\)</span>-theory of spaces. As stated before this correspondence is carried by the functor <span class="math inline">\(MU_*:\FH\rightarrow \mathbf{C \Gamma}\)</span>. The final part of this chapter dives into the thick subcategory theorem. Intuitively, a thick subcategory <span class="math inline">\(\mathbf{C}\)</span> of a category <span class="math inline">\(\mathbf{D}\)</span>, is a full subcategory whose objects are all a finite number of simple constructions (shifts, extensions, direct sums, etc.) away from each other. In the context of <span class="math inline">\(\mathbf{C \Gamma}\)</span>, this means that if we are given a short exact sequence of modules</p>
 <p><span class="math display">\[
 0\rightarrow M'\rightarrow M\rightarrow M^" \rightarrow 0
