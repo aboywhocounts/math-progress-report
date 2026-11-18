@@ -203,7 +203,7 @@ For a $p$-local module $M\in \mathbf{C \Gamma}$, if $v_{n-1}^{-1}M$ is nontrivia
 Say $M$ has type $m<n$ so that each Landweber subquotient is the suspension of $L/I_{p,k}$ for $k\geq m$. This must be true since $v_{n-1}^{-1}M$ is nontrivial. It follows from the contrapositive of 1. that $v_m^{-1}M$, $v_n^{-1}M$, and $v_m^{-1}v_n^{-1}M$ are all nontrivial as well, since $M$ has type $m$. Now, if $f$ is a $v_n$-map, then $f$ must induce an ismorphism on $v_n^{-1}M$ and since elements that aren't annihilated by a power of $v_n$ also correspond to elements that aren't annihilated by a power of $v_m$, $f$ induces an isomorphism on $v_m^{-1}v_n^{-1}M$. However, by definition $f$ must be trivial on $v_m^{-1}M$ and thus also on $v_n^{-1}v_m^{-1}M$, but this would force $$v_n^{-1}v_m^{-1}M=$v_m^{-1}v_n^{-1}M$$ to be trivial, which contradicts our assumption. Thus, the $v_n$-map $f$ cannot exist.
 :::
 
-## Thick subcategories
+## Thick ssaubcategories
 
 So from the last section it's clear how similar the theory of $L$-modules with $\Gamma$ action is to the $MU$-theory of spaces. As stated before this correspondence is carried by the functor $MU_*:\FH\rightarrow \mathbf{C \Gamma}$. The final part of this chapter dives into the thick subcategory theorem. Intuitively, a thick subcategory $\mathbf{C}$ of a category $\mathbf{D}$, is a full subcategory whose objects are all a finite number of simple constructions (shifts, extensions, direct sums, etc.) away from each other. In the context of $\mathbf{C \Gamma}$, this means that if we are given a short exact sequence of modules
 
