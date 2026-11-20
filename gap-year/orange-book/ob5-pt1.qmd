@@ -1,5 +1,5 @@
 ---
-title: "Chapter 5: Spectra and the Thick Subcategory Theorem"
+title: "Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)"
 date: 2026-11-17
 ---
 
@@ -29,7 +29,7 @@ if we take the homotopy fiber of $f$, denoted by $F_f$, then there is a natural 
 
 ## Maps of spectra
 
-Now I need to clear up by what is meant by a "map of spectra", because we need to be precise here. One could naively take a map of spectra $f:E\rightarrow F$ to just be a sequence of maps $f_n:E_n\rightarrow F_n$ such that the appropriate diagrams commute. These maps are the morphisms in the category $\mathbf{Sp}$, but turn out to too restrictive if we want to do computations with general spectra, which is a big part of this book. For finite spectra it's fine, but I'll state the general defintion as well. I'll note that the defintion that follows will actually define *homotopy classes of maps* between spectra, i.e. the morphisms in the homotopy category $\mathbf{HoSp}$. This is the category that Ravenel will implicitly be working over, and I'll try to make note of when I switch to $\mathbf{Sp}$ (although I'll admit I'm a bit confused on which constructions are ok in which category, however I'll do my best to be clear, and more importantly, correct).
+Now I need to clear up by what is meant by a "map of spectra", because we need to be precise here. One could naively take a map of spectra $f:E\rightarrow F$ to just be a sequence of maps $f_n:E_n\rightarrow F_n$ such that the appropriate diagrams commute. These maps are the morphisms in the category $\mathbf{Sp}$, but turn out to too restrictive if we want to do computations with general spectra, which is a big part of this book. For finite spectra it's fine, but I'll state the general defintion as well. I'll note that the defintion that follows will actually define *homotopy classes of maps* between spectra, i.e. the morphisms in the homotopy category $\mathbf{HoSp}$. This is the category that Ravenel will implicitly be working over, thus whenever I say $f$ is a map of spectra, I will always mean $f$ is a homotopy class of maps, unless explicitly stated otherwise.
 
 If the target of a map of spectra $f:E\rightarrow  $F$ is an $\Omega$-spectrum, then if $f_n\simeq \Omega f_{n+1}$ for all $n$ is the correct definition, but doesn't work in general. It seems that unless the target is an $\Omega$-spectrum, a single $F_n$ won't necessarily contain all of the "stable information" of the entire spectrum. More precisely, when $F_n$ is an $\Omega$-spectrum, all of the information in the spectrum is contained in the zero-th space $F_0$, simply because we know that $F_n\simeq \Omega^n F_0$. This isn't the case for a general spectrum, and applying the loop space functor is not an equivalence of objects, resulting in differences between the individual spaces $F_n$. (This isn't very rigorous, but it's my understanding of it and I felt it was important to have some sort of explanation as to why the other definition isn't sufficient.) To remedy this deficiency, we replace the spectrum $F$ with a homotopy equivalent $\Omega$-spectrum $\widetilde{F}$ as follows: let $\widetilde{F}_n$ be defined by 
 
@@ -39,13 +39,24 @@ $$
 
 then $\widetilde{F}_n\simeq \Omega \widetilde{F}_{n+1}$ since we're taking the colimit, so that $\widetilde{F}$ is an $\Omega$-spectrum. Now, we need to show that $\pi_n(F)\cong \pi_n(\widetilde{F})$ for all $n$. Ultimately, this pops right out of the definitons and using the fact that filtered colimits commute with the homotopy groups functor (spheres are compact). 
 
-We thus define a map $f:E\rightarrow F$ between spectra to be a collection of maps 
+We thus have the following definition:
 
+:::{#def-map.spectra}
+**(Map of spectra (in $\mathbf{HoSp}$))**
+
+A **map of spectra** $f:E\rightarrow F$ is a collection of maps of the form
 $$
 E_n\xrightarrow{f_n} \widetilde{F_n}= \varinjlim \Omega^kF_{n+k}
 $$
 
-such that $f_n\simeq \Omega f_{n+1}$. If $E$ and $F$ are suspension spectra, then the collection of maps $\{f_n\}$ can be obtained by $f_n$ for a fixed $n$ using the adjunction of the suspension and loop space functors. 
+such that $f_n\simeq \Omega f_{n+1}$. 
+:::
+
+If $E$ and $F$ are suspension spectra, then the collection of maps $\{f_n\}$ can be obtained by $f_n$ for a fixed $n$ using the adjunction of the suspension and loop space functors. With this defintion, for a spectrum $E$, we define the $E$-cohomology of a spectrum $X$ to be 
+
+$$
+E^k(X)=[X,\Sigma^k E]=[\Sigma^{-k} X, E]=[X,E]_{-k}
+$$
 
 ## Smash products
 
@@ -64,20 +75,36 @@ $$
 \Sigma E_n \wedge F_n = S^1\wedge E_n\wedge F_n= \Sigma(E_n\wedge F_n)=\Sigma (E\wedge F)_{2n} \rightarrow (E\wedge F)_{2n+1}= \Sigma E_n\wedge F_n
 $$
 
-the last composition comes from the appropriate identity map and the associativity of the smash product. 
+the last composition comes from the appropriate identity map and that the smash product is associative, which can be shown. It can also be shown to be commutative. 
 
 ### Brave new algebra
 
-For what follows, we're switching from the homotopy category of spectra $\mathbf{HoSp}$ to the point-set category $\mathbf{Sp}$ (objects are spectra and morphisms are the naive maps from above). In a sense we can actually do algebra in $\mathbf{Sp}$, which I'll try to sketch a brief idea of. This seems quite technical so I won't go into rigorous detail, but I'll mention the big ideas simply because I think this is really cool. The smash product is the crux of this change of perspective. We have to modify our objects to make sure that it becomes naturally commutative and associative, but in the right context, it's analogous to the tensor product in $\mathbf{Ab}$, the category of abelian groups. The tensor product in $\mathbf{Ab}$ allows us to construct rings and modules, which gives us a whole host of new things to study. Similarly, the smash product allows us to define *ring spectra* and *module spectra*. In $\mathbf{Ab}$, the unit with respect to $\otimes$ is $\Z$, and in $\mathbf{Sp}$ it is the sphere spectrum. To get a ring spectrum, we take a spectrum $E$ along with a multiplication map $E\wedge E \rightarrow E$ and a unit map $S^0\rightarrow E$, and requiring a few diagrams commute. A module spectrum $M$ over $E$ is one equipped with a map $E\wedge M\rightarrow M$, also requiring some diagrams to commute. Armed with these constructions we can do some really cool things. If you're interested in this sort of thing I'd urge you to check out this lecture given by Tomer Schlank [here](https://youtu.be/YY-scFduSos?si=9_q_R3tMg2EifV9R){target="_blank"}. For me it was really eye-opening and has really intensified my interest in stable homotopy theory, especially from the chromatic POV.
+The smash product is analogous to the tensor product in the category of abelian groups $\mathbf{Ab}$. This category has a symmetric monoidal structure given by the triple $(\mathbf{Ab},\otimes,\ZZ)$, which just means the category forms a monoid with respect to the tensor product and the multiplicative unit is the integers $\ZZ$. For spectra, both $\mathbf{HoSp}$ and $\mathbf{Sp}$ are equipped with symmetric monoidal structure given by $(\mathbf{Sp},\wedge, S^0)$, so that the monoid operation is the smash product and the unit is the sphere spectrum $S^0$. I have to note that there are some intricacies to the symmetric monoidal structure of $\Sp$ that I won't go into here. The right notion of the smash product itself is hard to formulate for plain spectra, and work must be done to make it behave as we wish (i.e. for it to be associative and commutative like $\otimes$). There is a way to make everything nice, but it's beyond me and the scope of what I'll be writing.
 
-***Remark*** In Ravenel's appendix, he makes these definitions implicitly in $\mathbf{HoSp}$. There is a precise way to reconcile his constructions in $\mathbf{Sp}$, but it's a bit beyond me and isn't necessary to the content of my posts. Eventually I'll figure out how to state things precisely and rigorously, but I won't worry about it too much right now. 
+Just as we can use the symmetric monoidal structure of $\Ab$ to contruct commutative algebraic objects such as rings and modules and do interesting things with them, we can construct analogous objects in $\HoSp$. Precisely, if we have a spectrum $E$ together with a multiplication map $E \wedge E \rightarrow E$ and unit map $\eta:S^0\rightarrow E$ such that a few diagrams are commutative (up to homotopy). A module spectrum $M$ over $E$ is one equipped with a map $E \wedge M \rightarrow M$, where some other diagrams commute (also up to homotopy). We can actually extend this construction to $\mathbf{Sp}$, with some more work, and this actually makes things very interesting. This is because maps between spectra in this category have a much richer structure: while $\mathbf{HoSp}$ is enriched over $\mathbf{Ab}$, $\mathbf{Sp}$ is instead enriched over $\mathbf{Top}$––the category of topological spaces, which has a much richer structure. This allows us to talk about homotopies between maps of spectra, and homotopies between homotopies, and so on. The complex structure of the mapping spaces makes the theory of spectra very interesting and deeply intertwined with algebra. Indeed, this discussion sets the stage for doing more complex algebra (and even algebraic geometry) with spectra. This area of research was dubbed "brave new algebra", which is pretty apt name if you ask me. If you're interested in this sort of perspective I urge you to check out this lecture given by Tomer Schlank [here](https://youtu.be/YY-scFduSos?si=9_q_R3tMg2EifV9R){target="_blank"}. For me it was really eye-opening overview of the "brave new algebra" philosophy and kickstarted my interest in stable homotopy theory.
 
 Let's return to the smash product. For a spectrum $X$ and a map of spectra $f:X\rightarrow Y$, we define $X^{(k)}=\bigwedge^k X$ to be the $k$-fold smash product and $f^{(k)}:X^{(k)}\rightarrow Y^{(k)}$ is the evident map. 
 
 :::{#def-smash.nil}
+
 A map $f:X\rightarrow Y$ is **smash nilpotent** if $f^{(k)}$ is nullhomotopic for some $k$.
 :::
 
 For a homology theory $E_*$, another equivalent definition of the $E$-homology of a spectrum $X$ is $E_*(X)=\pi_*(E\wedge X)$. Using this, we can rewrite the nilpotence theorem as follows:
 
+:::{#thm-nilpotence.smash}
+**(Nilpotence theorem (smash product form))**
 
+Let $f:F\rightarrow X$ be a map of spectra where $F$ is finite. Then $f$ is smash nilpotent if the map $MU\wedge f:MU\wedge F \rightarrow MU\wedge X$ is nullhomotopic.
+:::
+
+This is clearly rewriting the nilpotence theorem in a more natural way for spectra: $MU$ detects nilpotent maps (i.e. homotopically trivial maps) in $\mathbf{HoSp}$ just as it did with spaces. 
+
+An important corollary is the following:
+
+:::{#thm-nil.cor}
+
+Let $W$,$X$, and $Y$ all be $p$-local finite spectra and let $f:X\rightarrow Y$ be a map. Then the map $W\wedge f^{(k)}$ is nullhomotopic for $k$ sufficiently large if the induced map $K(n)_*(W\wedge f)$ is the trivial homomorphism for all $n\geq 0$.
+:::
+
+It is from this corollary that we will prove the TST. This post is getting a little long, so I'll break it into two. This concludes the first part.
