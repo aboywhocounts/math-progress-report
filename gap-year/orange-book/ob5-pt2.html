@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-11-17">
 
-<title>Chapter 5: Spectra and the Thick Subcategory Theorem – A Young Man’s Mathematical Journey</title>
+<title>Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2) – A Young Man’s Mathematical Journey</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b6b163d04951693fd4ebd33f9ad89df0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-20bdd20b920a529a3010e9596d6b577c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -98,6 +98,9 @@ window.MathJax = Object.assign(window.MathJax, {
       CG: ["\\mathbf{C}\Gamma"],
       FH: ["\\mathbf{FH}"],
       Sq: ["\\text{Sq}"],
+      Ab: ["\\mathbf{Ab}"],
+      HoSp: ["\\mathbf{HoSp}"],
+      Sp: ["\\mathbf{Sp}"],
 
       arr: ["\\xrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
@@ -117,7 +120,8 @@ window.MathJax = Object.assign(window.MathJax, {
       id: "\\operatorname{id}",
       Gal: "\\operatorname{Gal}",
       Char: "\\operatorname{char}",
-      Ext: "\\operatorname{Ext}"
+      Ext: "\\operatorname{Ext}",
+      Tor: "\\operatorname{Tor}"
     }
   }
 });
@@ -196,7 +200,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5.html">Chapter 5: Spectra and the Thick Subcategory Theorem</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -218,10 +222,10 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text" id="quarto-sidebar-section-1-label">Gap Year Reading</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../gap-year/intro.html" class="sidebar-item-text sidebar-link">
@@ -253,11 +257,8 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../gap-year/orange-book/ob5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem</span></a>
-  </div>
-</li>
+ <span class="menu-text">gap-year/orange-book/ob5.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -304,23 +305,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#spectra" id="toc-spectra" class="nav-link active" data-scroll-target="#spectra">Spectra</a>
-  <ul class="collapse">
-  <li><a href="#maps-of-spectra" id="toc-maps-of-spectra" class="nav-link" data-scroll-target="#maps-of-spectra">Maps of spectra</a></li>
-  <li><a href="#smash-products" id="toc-smash-products" class="nav-link" data-scroll-target="#smash-products">Smash products</a>
-  <ul class="collapse">
-  <li><a href="#brave-new-algebra" id="toc-brave-new-algebra" class="nav-link" data-scroll-target="#brave-new-algebra">Brave new algebra</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#the-spanier-whitehead-dual" id="toc-the-spanier-whitehead-dual" class="nav-link active" data-scroll-target="#the-spanier-whitehead-dual">The Spanier-Whitehead Dual</a></li>
+  <li><a href="#a-couple-of-proofs" id="toc-a-couple-of-proofs" class="nav-link" data-scroll-target="#a-couple-of-proofs">A couple of proofs</a></li>
+  <li><a href="#ending-thoughts" id="toc-ending-thoughts" class="nav-link" data-scroll-target="#ending-thoughts">Ending thoughts</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5.html">Chapter 5: Spectra and the Thick Subcategory Theorem</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chapter 5: Spectra and the Thick Subcategory Theorem</h1>
+<h1 class="title">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</h1>
 </div>
 
 
@@ -343,61 +339,126 @@ window.Quarto = {
 </header>
 
 
-<p>In this post we’re finally abandoning spaces and transitioning to focusing on the objects of stable homotopy theory: spectra. I’ll define them and say some things about them, mainly to get myself acquainted with them more since they’re kind of confusing. The other core part of this post is related to the proof of the thick subcategory theorem (TST) for the category <span class="math inline">\(\FH_{(p)}\)</span>, which now denotes something different but I’ll elaborate more later. The proof of the TST will pop out of a reformulation of the nilpotence theorem.</p>
-<section id="spectra" class="level1">
-<h1>Spectra</h1>
-<p>As Ravenel notes in the book, the world of spectra is the natural setting for most everything that is discussed. This is simply because the constructions used in the book – homotopy groups, homology, cohomology – are well-behaved with respect to the suspension map. In fact, things get easier especially in the world of homotopy if we allow ourselves to work in the stable range. Take homotopy classes of map <span class="math inline">\(X\rightarrow Y\)</span> as an example. Working unstably, this set doesn’t have much additional structure that we can work with. When <span class="math inline">\(X\)</span> is an <span class="math inline">\(n\)</span>-sphere with <span class="math inline">\(n\geq 2\)</span>, this set becomes an abelian group, and we have some ways to compute them, but most of these groups are unknown. If we instead take stable maps between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, this set immediately becomes an abelian group (assuming some things about connectivity). Still, we don’t know a lot of these groups, even when <span class="math inline">\(X\)</span> is a sphere, but they are much easier to work with given this algebraic structure. The stable homotopy category has this additional structure baked in, and the suspension map is inverted, so that we can suspend and desuspend as we wish and things will still make sense.</p>
-<div id="def-spectrum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1</strong></span> <strong>(Spectrum)</strong></p>
-<p>A <strong>spectrum</strong> <span class="math inline">\(X\)</span> is a sequence of spaces <span class="math inline">\(\{X_n\}\)</span> equipped with structure maps <span class="math inline">\(\sigma_X:\Sigma X_n \rightarrow X_{n+1}\)</span>. From any space we may construct its <strong>suspension spectrum</strong> <span class="math inline">\(\Sigma^{\infty} X\)</span>, with <span class="math inline">\((\Sigma^{\infty} X)_n=\Sigma^n X\)</span>, whose structure maps are just the identity maps. A <strong>CW-spectrum</strong> is a spectrum that is the suspension spectrum of a CW complex. A CW-spectrum is called <strong>finite</strong> if the associated CW complex is finite.</p>
+<section id="the-spanier-whitehead-dual" class="level1">
+<h1>The Spanier-Whitehead Dual</h1>
+<p>There is one last ingredient we need to prove the corollary in part 1 and thus the TST. It is called the <strong>Spanier-Whitehead dual</strong> and is analogous to the linear dual of a finite dimensional vector space. Its fundamental properties are captured in the following theorem.</p>
+<div id="thm-SpanWhite.dual" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1</strong></span> Let <span class="math inline">\(X\)</span> be a finite spectrum. Then, we may associate to <span class="math inline">\(X\)</span> a homotopically unique finite spectrum <span class="math inline">\(DX\)</span> called the Spanier-Whitehead dual with the following properites:</p>
+<ol type="1">
+<li><p>For any spectrum <span class="math inline">\(Y\)</span>, there is a natural isomorphism <span class="math inline">\([X,Y]_*\cong \pi_*(DX\wedge Y)\)</span>. By natural I mean this isomorphism is natural in <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Under this correspondence, we say a map <span class="math inline">\(\Sigma^n X\rightarrow Y\)</span> is <strong>adjoint</strong> to the map <span class="math inline">\(S^n\rightarrow DX\wedge Y\)</span>. If <span class="math inline">\(X=S^0\)</span>, then it’s clear that <span class="math inline">\(S^0\)</span> is self-dual. If <span class="math inline">\(X=Y\)</span>, then the identity map is adjoint to a map <span class="math inline">\(e:S^0\rightarrow DX\wedge X\)</span>.</p></li>
+<li><p>The above isomorphism is also reflected in Morava K-theory. Explicitly, for Morava K-theory</p></li>
+</ol>
+<p><span class="math display">\[
+\Hom_{K(n)_*}(K(n)_*(X),K(n)_*(Y))\cong K(n)_*(DX\wedge Y)
+\]</span></p>
+<p>This is due to the fact that <span class="math inline">\(K(n)_*(X)\)</span> is free as a module over <span class="math inline">\(K(n)_*\)</span>. The Künneth isomorphism allows us to break down the right hand side into a tensor product over <span class="math inline">\(K(n)_*\)</span>, with freeness guaranteeing no <span class="math inline">\(\Tor\)</span> terms, then we can use the tensor-hom adjunction and freeness again to guarantee no <span class="math inline">\(Ext\)</span> terms and the desired isomorphism will pop right out.</p>
+<p>If <span class="math inline">\(X=Y\)</span>, then <span class="math inline">\(K(n)_*(e)\)</span> is nontrivial as long as <span class="math inline">\(K(n)_*(X)\)</span> is.</p>
+<ol start="3" type="1">
+<li><p><span class="math inline">\(DDX\simeq X\)</span> and <span class="math inline">\([X,Y]_*\cong [DY,DX]_*\)</span></p></li>
+<li><p>For any homology theory <span class="math inline">\(E_*\)</span>, there is a natural isomorphism <span class="math inline">\(E_k(X)\cong E^{-k}(DX)\)</span>. This follows from the chain of equalities</p></li>
+</ol>
+<p><span class="math display">\[
+E_k(X)=\pi_k(E\wedge X)=[S^0,E\wedge X]_k\cong[DX,E]_{k}=E^{-k}(DX)
+\]</span></p>
+<p>it’s required that <span class="math inline">\(X\)</span> is finite, or the equalities may not hold.</p>
+<ol start="5" type="1">
+<li>The Spanier-Whitehead dual distributes over the smash product:</li>
+</ol>
+<p><span class="math display">\[
+D(X\wedge Y)\cong DX\wedge DY
+\]</span></p>
+<ol start="6" type="1">
+<li>The functor <span class="math inline">\(X\mapsto DX\)</span> is contravariant.</li>
+</ol>
 </div>
-<p>The structure maps <span class="math inline">\(\sigma_X:\Sigma X_n \rightarrow X_{n+1}\)</span> of a spectrum <span class="math inline">\(X\)</span> are adjoint to maps <span class="math inline">\(X_n\rightarrow \Omega X_{n+1}\)</span> given that the suspension and loop space functors are adjoint functors. If the latter maps are homotopy equivalences (i.e.&nbsp;dual to the notion of a suspension spectrum), then <span class="math inline">\(X\)</span> is called an <strong><span class="math inline">\(\Omega\)</span>-spectrum</strong>. This also implies that <span class="math inline">\(X_n\simeq \Omega^i X_{n+i}\)</span>, and <span class="math inline">\(X\)</span> is called an <strong>infinite loop space</strong>. These spaces play an important role in homotopy theory. For example the Eilenberg-Maclane spectrum <span class="math inline">\(HA\)</span> where <span class="math inline">\(A\)</span> is abelian group is an infinite loop space.</p>
-<p>For a spectrum <span class="math inline">\(X\)</span>, we define its homotopy groups by $<em>i(X)=</em>{n+i}(X_n)<code>. By the Freudenthal's suspension theorem, when $n&gt;i+1$, these are equal, so the limit converges. Another way to interpret this is that for spectra coming from spaces, the homotopy groups of the spectrum are the stable homotopy groups of the associated spaces. For a homology theory $E_*$, we define the $E$-homology of $X$ by $E_i(X)=\varinjlim \overline{E}_{n+i}(X_n)</code>. Note that reduced and unreduced homology is used here, which just means we don’t have to distinguish between them with spectra. This makes sense since the suspension map is an isomorphism on reduced homology but not on unreduced homology, so we’re just making sure things behave as they should, similar to how we force ourselves to be working in the stable range with homotopy groups.</p>
-<p>We say a spectrum <span class="math inline">\(X\)</span> is <strong>connective</strong> if its homotopy groups are bounded below, i.e.&nbsp;if there exists a <span class="math inline">\(k\)</span> such that <span class="math inline">\(\pi_i(X)=0\)</span> for <span class="math inline">\(i&lt;k\)</span>. The spectrum <span class="math inline">\(X\)</span> has finite type if <span class="math inline">\(\pi_i(X)\)</span> is finitely generated as an abelian group for all <span class="math inline">\(i\)</span>. Another nice thing about working with spectra is that cofibers and fibers agree, up to a dimension shift. If we consider the cofiber sequence</p>
+<p>This does bear some resemblance to the linear dual of a finite dimensional vector space: 1. is analogous to <span class="math inline">\(\Hom(V,W)\cong V^*\otimes W\)</span> and 3. and 5. have their partner statements as well.</p>
+<p>Ravenel also notes there is a geometric interpretation for this dual: a finite spectrum <span class="math inline">\(X\)</span> corresponds to a finite CW complex, which is also denoted by <span class="math inline">\(X\)</span>. For large enough <span class="math inline">\(N\)</span>, we can embed <span class="math inline">\(X\)</span> into Euclidean space <span class="math inline">\(\RR^N\)</span>, and thus <span class="math inline">\(S^N\)</span> by one-point compactification. The Spanier-Whitehead dual <span class="math inline">\(DX\)</span> is then some suspension of the suspension spectrum of the complement <span class="math inline">\(S^N-X\)</span>.</p>
+<p>For <span class="math inline">\(X\)</span> as above, let <span class="math inline">\(W\)</span> be the spectrum defined so that the composite</p>
 <p><span class="math display">\[
-X\xrightarrow{f} Y\rightarrow C_f
+W\xrightarrow{f} S^0\xrightarrow{e} DX\wedge X
 \]</span></p>
-<p>if we take the homotopy fiber of <span class="math inline">\(f\)</span>, denoted by <span class="math inline">\(F_f\)</span>, then there is a natural map <span class="math inline">\(g:\Sigma F_f \rightarrow C_f\)</span>, and it can be shown that this is a weak equivalence. So for spectra, any cofiber sequence is also a fiber sequence, and either/both may be extended infinitely to the left and right.</p>
-<section id="maps-of-spectra" class="level2">
-<h2 class="anchored" data-anchor-id="maps-of-spectra">Maps of spectra</h2>
-<p>Now I need to clear up by what is meant by a “map of spectra”, because we need to be precise here. One could naively take a map of spectra <span class="math inline">\(f:E\rightarrow F\)</span> to just be a sequence of maps <span class="math inline">\(f_n:E_n\rightarrow F_n\)</span> such that the appropriate diagrams commute. These maps are the morphisms in the category <span class="math inline">\(\mathbf{Sp}\)</span>, but turn out to too restrictive if we want to do computations with general spectra, which is a big part of this book. For finite spectra it’s fine, but I’ll state the general defintion as well. I’ll note that the defintion that follows will actually define <em>homotopy classes of maps</em> between spectra, i.e.&nbsp;the morphisms in the homotopy category <span class="math inline">\(\mathbf{HoSp}\)</span>. This is the category that Ravenel will implicitly be working over, and I’ll try to make note of when I switch to <span class="math inline">\(\mathbf{Sp}\)</span> (although I’ll admit I’m a bit confused on which constructions are ok in which category, however I’ll do my best to be clear, and more importantly, correct).</p>
-<p>If the target of a map of spectra $f:E<span class="math inline">\(F\)</span> is an <span class="math inline">\(\Omega\)</span>-spectrum, then if <span class="math inline">\(f_n\simeq \Omega f_{n+1}\)</span> for all <span class="math inline">\(n\)</span> is the correct definition, but doesn’t work in general. It seems that unless the target is an <span class="math inline">\(\Omega\)</span>-spectrum, a single <span class="math inline">\(F_n\)</span> won’t necessarily contain all of the “stable information” of the entire spectrum. More precisely, when <span class="math inline">\(F_n\)</span> is an <span class="math inline">\(\Omega\)</span>-spectrum, all of the information in the spectrum is contained in the zero-th space <span class="math inline">\(F_0\)</span>, simply because we know that <span class="math inline">\(F_n\simeq \Omega^n F_0\)</span>. This isn’t the case for a general spectrum, and applying the loop space functor is not an equivalence of objects, resulting in differences between the individual spaces <span class="math inline">\(F_n\)</span>. (This isn’t very rigorous, but it’s my understanding of it and I felt it was important to have some sort of explanation as to why the other definition isn’t sufficient.) To remedy this deficiency, we replace the spectrum <span class="math inline">\(F\)</span> with a homotopy equivalent <span class="math inline">\(\Omega\)</span>-spectrum <span class="math inline">\(\widetilde{F}\)</span> as follows: let <span class="math inline">\(\widetilde{F}_n\)</span> be defined by</p>
+<p>is a cofiber sequence, so that <span class="math inline">\(C_f=DX\wedge X\)</span>. It’s a fact that such a <span class="math inline">\(W\)</span> always exists in <span class="math inline">\(\HoSp\)</span> and that in our case <span class="math inline">\(W\)</span> is also finite.</p>
+<div id="lem-ob5" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1</strong></span> With the above notation, there is a cofiber sequence</p>
 <p><span class="math display">\[
-\widetilde{F_n}= \varinjlim \Omega^k F_{n+k}\left(  = \varinjlim (\Omega F_n \xrightarrow{\Omega} \Omega^2 F_n \xrightarrow{\Omega} \Omega^3 F_n \rightarrow \cdots) \right)
+C_{f^{(k)}}\rightarrow C_{f^{(k-1)}} \rightarrow \Sigma W^{(k-1)} \wedge C_f
 \]</span></p>
-<p>then <span class="math inline">\(\widetilde{F}_n\simeq \Omega \widetilde{F}_{n+1}\)</span> since we’re taking the colimit, so that <span class="math inline">\(\widetilde{F}\)</span> is an <span class="math inline">\(\Omega\)</span>-spectrum. Now, we need to show that <span class="math inline">\(\pi_n(F)\cong \pi_n(\widetilde{F})\)</span> for all <span class="math inline">\(n\)</span>. Ultimately, this pops right out of the definitons and using the fact that filtered colimits commute with the homotopy groups functor (spheres are compact).</p>
-<p>We thus define a map <span class="math inline">\(f:E\rightarrow F\)</span> between spectra to be a collection of maps</p>
-<p><span class="math display">\[
-E_n\xrightarrow{f_n} \widetilde{F_n}= \varinjlim \Omega^kF_{n+k}
-\]</span></p>
-<p>such that <span class="math inline">\(f_n\simeq \Omega f_{n+1}\)</span>. If <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are suspension spectra, then the collection of maps <span class="math inline">\(\{f_n\}\)</span> can be obtained by <span class="math inline">\(f_n\)</span> for a fixed <span class="math inline">\(n\)</span> using the adjunction of the suspension and loop space functors.</p>
+<p>for each <span class="math inline">\(k&gt;1\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Standard lemma in homotopy theory says that for a cofiber sequence <span class="math inline">\(X\xrightarrow{f} Y\xrightarrow{g} Z\)</span>, we can obtain the following diagram where all rows and columns are cofiber sequences.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/lem.ob5.1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>If we take <span class="math inline">\(X=W^{(k)}\)</span>, <span class="math inline">\(Y=W^{(k-1)}\)</span>, <span class="math inline">\(Z=S^0\)</span>, and <span class="math inline">\(g=f^{(k-1)}\)</span>, then we obtain the following diagram.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/lem.ob5.2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>(The <span class="math inline">\(f\)</span> in the left column is really <span class="math inline">\(W^{(k-1)}\wedge f\)</span>). The cofiber sequence on the right is what we were looking for.</p>
+</div>
 </section>
-<section id="smash-products" class="level2">
-<h2 class="anchored" data-anchor-id="smash-products">Smash products</h2>
-<p>There is a natural way to take products of spectra called the smash product. For spaces <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, the smash product <span class="math inline">\(X \wedge Y\)</span> is defined to be the quotient space <span class="math inline">\(X\times Y/(X\times \{y_0\} \cup \{x_0\} \times Y)\)</span>. For spectra, the definition is actually quite complicated, so I won’t go into too much detail here. For the purposes of the book, we can take the smash product of two spectra <span class="math inline">\(E\wedge F\)</span> to be given by</p>
+<section id="a-couple-of-proofs" class="level1">
+<h1>A couple of proofs</h1>
+<p>We now move on to the proof of the corollary of the nilpotence theorem and then to proof of the TST. Before I get into it, the proof of the corollary relies on methods that aren’t introduced fully until chapter 7, so later in the proof I’ll make a disclaimer where exactly these come in. I’ll still try to give my interpretation of the general gist of what those results do and why we need them of course.</p>
+<p>To recall just exactly what we’re trying to prove here: suppose <span class="math inline">\(W,X\)</span>, and <span class="math inline">\(Y\)</span> are <span class="math inline">\(p\)</span>-local finite spectra and <span class="math inline">\(f:X\rightarrow Y\)</span> is a map. We need to show that if <span class="math inline">\(K(n)_*(W\wedge f)\)</span> is trivial for all <span class="math inline">\(n\)</span>, then <span class="math inline">\(W\wedge f^{(k)}\)</span> is nullhomotopic for some <span class="math inline">\(k\)</span> sufficiently large.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(R=DW\wedge W\)</span> and <span class="math inline">\(e:S^0\rightarrow R\)</span> is adjoint to the identity map on <span class="math inline">\(W\)</span>. We have that <span class="math inline">\(R\)</span> is a ring spectrum with multiplication given by</p>
 <p><span class="math display">\[
-(E\wedge F)_{2n}=E_n \wedge F_n \qquad \qquad (E\wedge F)_{2n+1}=\Sigma E_n\wedge F_n
+R\wedge R=DW\wedge W\wedge DW\wedge W\xrightarrow{DW\wedge De\wedge W} DW\wedge S^0\wedge W=R
 \]</span></p>
-<p>with structure maps</p>
+<p>since <span class="math inline">\(D(e:S^0\rightarrow DW\wedge W)\)</span> is the map <span class="math inline">\(De:D(DW\wedge W)\rightarrow DS^0=W\wedge DW\rightarrow S^0\)</span>, and the smash product is commutative. Additionally, <span class="math inline">\(e\)</span> corresponds to the unit map of <span class="math inline">\(R\)</span> via its definition.</p>
+<p>The map <span class="math inline">\(f\)</span> is adjoint to the map <span class="math inline">\(\hat{f}:S^0\rightarrow DX\wedge Y\)</span>, so smashing with <span class="math inline">\(W\)</span>, this means <span class="math inline">\(W\wedge f\)</span> is adjoint to the composite</p>
 <p><span class="math display">\[
-\Sigma E_n \wedge \Sigma F_n =\Sigma (E\wedge F)_{2n+1} \xrightarrow{\sigma_E \wedge \sigma_F} (E\wedge F)_{2n+2}= E_{n+1} \wedge F_{n+1}
-\]</span> <span class="math display">\[
-\Sigma E_n \wedge F_n = S^1\wedge E_n\wedge F_n= \Sigma(E_n\wedge F_n)=\Sigma (E\wedge F)_{2n} \rightarrow (E\wedge F)_{2n+1}= \Sigma E_n\wedge F_n
+S^0\xrightarrow{\hat{f}} DX\wedge Y=S^0\wedge DX \wedge Y\xrightarrow{e\wedge DX\wedge Y} DW\wedge W\wedge DX\wedge Y=R\wedge DX\wedge Y
 \]</span></p>
-<p>the last composition comes from the appropriate identity map and the associativity of the smash product.</p>
-<section id="brave-new-algebra" class="level3">
-<h3 class="anchored" data-anchor-id="brave-new-algebra">Brave new algebra</h3>
-<p>For what follows, we’re switching from the homotopy category of spectra <span class="math inline">\(\mathbf{HoSp}\)</span> to the point-set category <span class="math inline">\(\mathbf{Sp}\)</span> (objects are spectra and morphisms are the naive maps from above). In a sense we can actually do algebra in <span class="math inline">\(\mathbf{Sp}\)</span>, which I’ll try to sketch a brief idea of. This seems quite technical so I won’t go into rigorous detail, but I’ll mention the big ideas simply because I think this is really cool. The smash product is the crux of this change of perspective. We have to modify our objects to make sure that it becomes naturally commutative and associative, but in the right context, it’s analogous to the tensor product in <span class="math inline">\(\mathbf{Ab}\)</span>, the category of abelian groups. The tensor product in <span class="math inline">\(\mathbf{Ab}\)</span> allows us to construct rings and modules, which gives us a whole host of new things to study. Similarly, the smash product allows us to define <em>ring spectra</em> and <em>module spectra</em>. In <span class="math inline">\(\mathbf{Ab}\)</span>, the unit with respect to <span class="math inline">\(\otimes\)</span> is <span class="math inline">\(\Z\)</span>, and in <span class="math inline">\(\mathbf{Sp}\)</span> it is the sphere spectrum. To get a ring spectrum, we take a spectrum <span class="math inline">\(E\)</span> along with a multiplication map <span class="math inline">\(E\wedge E \rightarrow E\)</span> and a unit map <span class="math inline">\(S^0\rightarrow E\)</span>, and requiring a few diagrams commute. A module spectrum <span class="math inline">\(M\)</span> over <span class="math inline">\(E\)</span> is one equipped with a map <span class="math inline">\(E\wedge M\rightarrow M\)</span>, also requiring some diagrams to commute. Armed with these constructions we can do some really cool things. If you’re interested in this sort of thing I’d urge you to check out this lecture given by Tomer Schlank <a href="https://youtu.be/YY-scFduSos?si=9_q_R3tMg2EifV9R" target="_blank">here</a>. For me it was really eye-opening and has really intensified my interest in stable homotopy theory, especially from the chromatic POV.</p>
-<p><strong><em>Remark</em></strong> In Ravenel’s appendix, he makes these definitions implicitly in <span class="math inline">\(\mathbf{HoSp}\)</span>. There is a precise way to reconcile his constructions in <span class="math inline">\(\mathbf{Sp}\)</span>, but it’s a bit beyond me and isn’t necessary to the content of my posts. Eventually I’ll figure out how to state things precisely and rigorously, but I won’t worry about it too much right now.</p>
-<p>Let’s return to the smash product. For a spectrum <span class="math inline">\(X\)</span> and a map of spectra <span class="math inline">\(f:X\rightarrow Y\)</span>, we define <span class="math inline">\(X^{(k)}=\bigwedge^k X\)</span> to be the <span class="math inline">\(k\)</span>-fold smash product and <span class="math inline">\(f^{(k)}:X^{(k)}\rightarrow Y^{(k)}\)</span> is the evident map.</p>
-<div id="def-smash.nil" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2</strong></span> A map <span class="math inline">\(f:X\rightarrow Y\)</span> is <strong>smash nilpotent</strong> if <span class="math inline">\(f^{(k)}\)</span> is nullhomotopic for some <span class="math inline">\(k\)</span>.</p>
+<p>The last term <span class="math inline">\(R\wedge DX\wedge Y\)</span> will be denoted by <span class="math inline">\(F\)</span> and the entire composite will be denoted by <span class="math inline">\(g:S^0\rightarrow F\)</span>. By expanding the maps we can generalize this to see that <span class="math inline">\(W\wedge f^{(i)}\)</span> is adjoint to the composition</p>
+<p><span class="math display">\[
+S^0\xrightarrow{g^{(i)}} F^{(i)}=R^{(i)}\wedge DX^{(i)} \wedge Y^{(i)}\xrightarrow{m} R\wedge DX^{(i)} \wedge Y^{(i)}
+\]</span></p>
+<p>where the last map is induced by the multiplication map of <span class="math inline">\(R\)</span>.</p>
+<p>Now, if we can show that <span class="math inline">\(MU\wedge g^{(i)}\)</span> is nullhomotopic, then this will imply that <span class="math inline">\(g^{(i)}\)</span> (and <span class="math inline">\(g\)</span>) is smash nilpotent by the nilpotence theorem. This will of course imply that the composite <span class="math inline">\(m g^{(i)}\)</span> will eventually nullhomotopic for high enough <span class="math inline">\(i\)</span> and thus its adjoint <span class="math inline">\(W\wedge f^{(i)}\)</span> will be nullhomotopic, proving the result. We can prove that <span class="math inline">\(MU\wedge g^{(i)}\)</span> is nullhomotopic by showing a certain spectra <span class="math inline">\(MU\wedge T\)</span> is contractible, where <span class="math inline">\(T\)</span> is essentially a localization of <span class="math inline">\(g\)</span>, analogous to the construction with modules. In this context this is called a <em>mapping telescope</em>. Explicitly, let <span class="math inline">\(T_i=R\wedge DX^{(i)} \wedge Y^{(i)}\)</span> and define</p>
+<p><span class="math display">\[
+T=\varinjlim(S^0\xrightarrow{g} T_1\xrightarrow{T_1\wedge \hat{f}} T_2\xrightarrow{T_2\wedge\hat{f}} \cdots)
+\]</span></p>
+<p>(it’s not super obvious that this is effectively localizing the map <span class="math inline">\(g\)</span>, but Ravenel has written it this way for brevity and if you expand and use the defintion of <span class="math inline">\(\hat{f}\)</span> it’s easy to see). Using the “localiziation” perspective, <span class="math inline">\(MU\wedge T\)</span> being contractible necessarily means that <span class="math inline">\(MU\wedge g\)</span> (and thus <span class="math inline">\(MU\wedge g^{(i)}\)</span>) is nullhomotopic.</p>
+<p>By hypothesis, we have that <span class="math inline">\(K(n)_*(W\wedge f)=0\)</span> for all <span class="math inline">\(n\)</span>. As <span class="math inline">\(g\)</span> is the adjoint of this map and we know that Morava K-theory plays nicely with duality, we also have <span class="math inline">\(K(n)_*(g)=0\)</span> for all <span class="math inline">\(n\)</span>. By definition of <span class="math inline">\(T\)</span>, this means that <span class="math inline">\(K(n)_*(T)=\pi_*(K(n)\wedge T)=0\)</span> for all <span class="math inline">\(n\)</span>. But this means <span class="math inline">\(K(n)\wedge T\)</span> is contractible. TL;DR: we have to show <span class="math inline">\(MU\wedge T\)</span> is contractible assuming that <span class="math inline">\(K(n)\wedge T\)</span> is contractible for all <span class="math inline">\(n\)</span>.</p>
+<p>This is where we use stuff from chapter 7. Since we’re working <span class="math inline">\(p\)</span>-locally, we can focus on <span class="math inline">\(BP\wedge T\)</span>, as <span class="math inline">\(MU_{(p)}\)</span> is an infinite wedge of suspensions of <span class="math inline">\(BP\)</span>. The key notion from chapter 7 that is relevant here is Bousfield equivalence classes. Two spectra <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are Bousfield equivalent if for any spectrum <span class="math inline">\(X\)</span>, <span class="math inline">\(E\wedge X\)</span> is contractible if and only if <span class="math inline">\(F\wedge X\)</span> as well. This can be written as <span class="math inline">\(\langle E \rangle =\langle F \rangle\)</span>. Using this notation, the most recent claim can be rewritten as <span class="math inline">\(\langle MU_{(p)} \rangle=\langle BP \rangle\)</span>. A key theorem of chapter 7 says that the class <span class="math inline">\(\langle BP \rangle\)</span> decomposes into smaller pieces built by the classes <span class="math inline">\(\langle K(n) \rangle\)</span> and <span class="math inline">\(\langle P(n) \rangle\)</span> where <span class="math inline">\(P(n)\)</span> is another important spectrum. We already have that <span class="math inline">\(K(n)\wedge T\simeq 0\)</span> for all <span class="math inline">\(n\)</span> so we just need to take care of <span class="math inline">\(P(n)\)</span> by showing <span class="math inline">\(P(m)\wedge T\)</span> is contractible for large enough <span class="math inline">\(m\)</span>.</p>
+<p>The spectra <span class="math inline">\(X,Y,\)</span> and <span class="math inline">\(W\)</span> are all finite, so by the properties of <span class="math inline">\(K(n)\)</span>, we can break up <span class="math inline">\(K(m)_*(W\wedge f)\)</span> into <span class="math inline">\(K(m)_*\otimes H_*(W\wedge f)\)</span>. This is really shorthand for <span class="math inline">\(id_{K(m)_*}\otimes H_*(W\wedge f)\)</span>, consistent with Ravenel’s notation throughout the book. It’s also important to note that this was stated earlier in terms of spaces/spectra, but it’s true for maps as well, not exactly sure where this comes from though. It turns out we can do the same thing with <span class="math inline">\(P(m)\)</span> so that <span class="math inline">\(P(m)_*(W\wedge f)=P(m)_*\otimes H_*(W\wedge f)\)</span> (also, both these tensor products occur over <span class="math inline">\(\FF_p\)</span>). The coefficient ring <span class="math inline">\(K(n)_*\)</span> is a graded field, as well as a non-zero vector space over <span class="math inline">\(\FF_p\)</span>, and since <span class="math inline">\(K(m)_*(W\wedge f)=K(m)_*\otimes H_*(W\wedge f)=0\)</span> it must be that <span class="math inline">\(H_*(W\wedge f)\)</span> is the zero map. This implies that <span class="math inline">\(P(m)_*(W\wedge f)=0\)</span>, and since this is the foundation for the telescope <span class="math inline">\(T\)</span>, it follows that <span class="math inline">\(P(m)\wedge T\)</span> is contractible, and we are done.</p>
 </div>
-<p>For a homology theory <span class="math inline">\(E_*\)</span>, another equivalent definition of the <span class="math inline">\(E\)</span>-homology of a spectrum <span class="math inline">\(X\)</span> is <span class="math inline">\(E_*(X)=\pi_*(E\wedge X)\)</span>. Using this, we can rewrite the nilpotence theorem as follows:</p>
+<p>This proof was pretty technical in my opinion and it took me a second to figure out. I had to look up things and consult other sources so things might not be 100% accurate but I think I got the main argument/idea down. I’ll now go through the proof of the TST, which I’ll restate.</p>
+<p>Let <span class="math inline">\(\FH_{(p)}\)</span> be the category of <span class="math inline">\(p\)</span>-local finite spectra. Recall that a full subcategory <span class="math inline">\(\mathbf{C}\)</span> is <strong>thick</strong> if for any cofiber sequence <span class="math inline">\(X\xrightarrow{f} Y\rightarrow C_f\)</span> in <span class="math inline">\(\mathbf{C}\)</span>, if two of the three spectra are in <span class="math inline">\(\mathbf{C}\)</span>, then so is the third. Additionally, if <span class="math inline">\(X\vee Y\)</span> is in <span class="math inline">\(\mathbf{C}\)</span>, then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are both in <span class="math inline">\(\mathbf{C}\)</span></p>
+<div id="thm-TST.spectra" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2</strong></span> <strong>(Thick Subcategory Theorem)</strong></p>
+<p>If <span class="math inline">\(\mathbf{C}\)</span> is a thick subcategory of <span class="math inline">\(\FH_{(p)}\)</span>, then <span class="math inline">\(\mathbf{C}\)</span> is either trivial, all of <span class="math inline">\(\FH_{(p)}\)</span>, or consists of all <span class="math inline">\(p\)</span>-local finite spectra <span class="math inline">\(X\)</span> with <span class="math inline">\(v_{n-1}^{-1}MU_*(X)=0\)</span> (this is equivalent to the condition that <span class="math inline">\(v_{n-1}^{-1}BP_*(X)=0\)</span> and <span class="math inline">\(K(n-1)_*(X)=0\)</span> for reasons in chapter 7). We will denote the latter category by <span class="math inline">\(\mathbf{F}_{p,n}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(\mathbf{C}\subset \FH_{(p)}\)</span> is thick and let <span class="math inline">\(X\in \mathbf{C}\)</span>. Let <span class="math inline">\(n\)</span> be the smallest integer such that <span class="math inline">\(v_n^{-1}MU_*(X)\)</span> is nonzero, so that <span class="math inline">\(X\in \mathbf{F}_{p,n}\)</span>. Such an <span class="math inline">\(n\)</span> must exist or <span class="math inline">\(\mathbf{C}\)</span> would be trivial. Thus <span class="math inline">\(\mathbf{C}\subset\mathbf{F}_{p,n}\)</span>. We must show the reverse inclusion.</p>
+<p>Let <span class="math inline">\(Y\in \mathbf{F}_{p,n}\)</span> (i.e.&nbsp;<span class="math inline">\(p\)</span>-local finite spectra of type <span class="math inline">\(n\)</span>). We want to show <span class="math inline">\(Y\in \mathbf{C}\)</span>. Since <span class="math inline">\(X\in \mathbf{C}\)</span> and <span class="math inline">\(\mathbf{C}\)</span> is thick, for any finite spectrum <span class="math inline">\(F\)</span>, the smash product <span class="math inline">\(X\wedge F\in \mathbf{C}\)</span>. This comes down to the fact that <span class="math inline">\(F\)</span> is the suspension spectrum of a finite CW complex, and we can obtain <span class="math inline">\(X\wedge F\)</span> from a finite series of cofiber sequences that correspond to attaching the cells of <span class="math inline">\(F\)</span>. Let <span class="math inline">\(F=DX\wedge Y\)</span>, and <span class="math inline">\(X\wedge DX\wedge Y\in \mathbf{C}\)</span>, which using the notation of <a href="#lem-ob5" class="quarto-xref">Lemma&nbsp;1</a>, means <span class="math inline">\(C_f\wedge Y\in \mathbf{C}\)</span>. <a href="#lem-ob5" class="quarto-xref">Lemma&nbsp;1</a> tells us that we have a cofiber sequence <span class="math inline">\(C_{f^{(2)}}\rightarrow C_{f}\rightarrow \Sigma W \wedge C_f\)</span>, and smashing with <span class="math inline">\(Y\)</span> yields the sequence</p>
+<p><span class="math display">\[
+C_{f^{(2)}}\wedge Y \rightarrow C_{f}\wedge Y \rightarrow \Sigma W \wedge C_f\wedge Y
+\]</span></p>
+<p>Now the middle term is in <span class="math inline">\(\mathbf{C}\)</span>, and so is the last term since <span class="math inline">\(\Sigma W\)</span> is a finite spectrum. By thickness, the first term is in <span class="math inline">\(\mathbf{C}\)</span> as well. Inducting upwards, we have that <span class="math inline">\(C_{f^{(k)}}\wedge Y\in \mathbf{C}\)</span> for all <span class="math inline">\(k\)</span>. If we can show that <span class="math inline">\(f^{(k)}\wedge Y\)</span> is nullhomotpic for high enough <span class="math inline">\(k\)</span>, then the cofiber <span class="math inline">\(C_{f^{(k)}}\wedge Y\)</span> will degenerate into a wedge sum, and this will give that <span class="math inline">\(Y\in \mathbf{C}\)</span>.</p>
+<p>By hypothesis, <span class="math inline">\(K(i)_*(X)\)</span> is nontrivial when <span class="math inline">\(i\geq n\)</span>, and by Spanier-Whitehead duality, this means that <span class="math inline">\(K(i)_*(e)\)</span> is nontrivial for <span class="math inline">\(i\geq n\)</span>. Morava K-theory is a homology theory, so applying it to the cofiber sequence <span class="math inline">\(W\xrightarrow{f} S^0 \xrightarrow{e} DX\wedge X\)</span> yields an exact sequence</p>
+<p><span class="math display">\[
+K(i)_*(W)\xrightarrow{K(i)_*(f)} K(i)_*(S^0)=K(i)_*\xrightarrow{K(i)_*(e)} K(i)_*(DX\wedge X)
+\]</span></p>
+<p>but <span class="math inline">\(\ker(K(i)_*(e))\)</span> will be a proper graded <span class="math inline">\(K(i)_*\)</span>-submodule of the coefficient ring, but this is exactly a proper homogeneous ideal, which must be trivial so <span class="math inline">\(K(i)_*(e)\)</span> is injective and <span class="math inline">\(K(i)_*(f)\)</span> is zero. From our assumptions, this is true when <span class="math inline">\(i\geq n\)</span>. We also assumed that <span class="math inline">\(Y\in \mathbf{F}_{p,n}\)</span> so that <span class="math inline">\(K(i)_*(Y)=0\)</span> for <span class="math inline">\(i&lt;n\)</span>. Putting these together and using the Künneth isomorphism for Morava K-theory, we see that <span class="math inline">\(K(i)_*(Y\wedge f)\)</span> is trivial for all <span class="math inline">\(i\)</span>. By the corollary to the nilpotence theorem, this means that <span class="math inline">\(Y\wedge f^{(k)}\)</span> is nullhomotopic for sufficiently large <span class="math inline">\(k\)</span>. Now the smash product plays nice with cofiber sequences in <span class="math inline">\(\HoSp\)</span>, so <span class="math inline">\(Y\wedge C_{f^{(k)}}\)</span> is the cofiber of <span class="math inline">\(Y\wedge f^{(k)}\)</span>. Since this map is nullhomotopic, this cofiber degenerates to <span class="math inline">\(Y\vee \left(\Sigma Y \wedge W^{(k)}\right)\)</span>. We’ve already shown that <span class="math inline">\(Y\wedge C_{f^{(k)}}=Y\vee \left(\Sigma Y \wedge W^{(k)}\right)\in \mathbf{C}\)</span>, and by thickness it follows that <span class="math inline">\(Y\in \mathbf{C}\)</span>.</p>
+</div>
+</section>
+<section id="ending-thoughts" class="level1">
+<h1>Ending thoughts</h1>
+<p>With this, we’ve shown that the structure of the category of <span class="math inline">\(p\)</span>-local finite spectra is stratified by type, and consequently by chromatic height. We have a nice nested sequence of thick subcategories</p>
+<p><span class="math display">\[
+\mathbf{FH}_{(p)} = \mathbf{F}_{p,0} \supset \mathbf{F}_{p,1} \supset \mathbf{F}_{p,2} \cdots \{\text{pt.}\}
+\]</span></p>
+<p>Showing that the chromatic perspective is valuable to understanding these objects. However, this filtration is dependent on the nilpotence theorem. Essentially, this means that once you know what maps between spectra are nilpotent, you automatically know how things are constructed.</p>
+<p>Up next is the periodicity theorem which will be proved using the TST and will require “some hard homotopy theory” to quote Ravenel, so it should be interesting.</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
