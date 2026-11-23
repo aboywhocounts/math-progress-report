@@ -13,7 +13,7 @@
 
 body {
   color: var(--text-strong);
-  background: linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
+  background: #ffffff;
 }
 
 .navbar {
@@ -67,6 +67,31 @@ body {
 
 h1, h2, h3 {
   color: var(--brand-indigo);
+}
+
+/* Clear heading hierarchy */
+#quarto-document-content h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 3px solid var(--panel-strong);
+}
+
+#quarto-document-content h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--brand-violet);
+}
+
+#quarto-document-content h3 {
+  font-size: 1.25rem;
+  font-weight: 650;
+  margin-top: 1.25rem;
 }
 
 div.definition {

@@ -92,6 +92,9 @@ window.MathJax = Object.assign(window.MathJax, {
       CG: ["\\mathbf{C}\Gamma"],
       FH: ["\\mathbf{FH}"],
       Sq: ["\\text{Sq}"],
+      Ab: ["\\mathbf{Ab}"],
+      HoSp: ["\\mathbf{HoSp}"],
+      Sp: ["\\mathbf{Sp}"],
 
       arr: ["\\xrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
@@ -111,7 +114,8 @@ window.MathJax = Object.assign(window.MathJax, {
       id: "\\operatorname{id}",
       Gal: "\\operatorname{Gal}",
       Char: "\\operatorname{char}",
-      Ext: "\\operatorname{Ext}"
+      Ext: "\\operatorname{Ext}",
+      Tor: "\\operatorname{Tor}"
     }
   }
 });
@@ -246,7 +250,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../gap-year/orange-book/ob4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 4: Morava things</span></a>
+ <span class="menu-text">Chapter 4: Results due to Jack Morava</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob5-pt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob5-pt2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</span></a>
   </div>
 </li>
       </ul>
@@ -359,7 +375,7 @@ E_*(X)\xrightarrow{\epsilon} E_*(\text{pt})
 <h2 class="anchored" data-anchor-id="periodicity-theorem">Periodicity Theorem</h2>
 <p>We now pivot to the periodicity theorem and its setup. We will employ the use of another extraordinary homology theory called Morava K-theory, but first we need to discuss localization at the prime <span class="math inline">\(p\)</span>.</p>
 <p>Let’s take the ring <span class="math inline">\(\ZZ\)</span> and consider the set <span class="math inline">\(S= \ZZ/(p)\)</span>, the elements of <span class="math inline">\(\ZZ\)</span> that lie outside of the prime ideal <span class="math inline">\((p)\)</span> (i.e.&nbsp;<span class="math inline">\(S\)</span> consists of all integers not divisible by <span class="math inline">\(p\)</span>). Now, consider the set <span class="math display">\[
-\ZZ_{(p)}= \{\frac{a}{b} : a\in\ZZ, b\in S \}
+\ZZ_{(p)}= \left\{\frac{a}{b} : a\in\ZZ, b\in S \right\}
 \]</span></p>
 <p>This is in fact a ring, with the property that it has a unique maximal ideal <span class="math inline">\(\mathfrak{m}=p\ZZ_{(p)}\)</span>. Such a ring is called a <em>local</em> ring. Now, if we want to apply this to a <span class="math inline">\(\ZZ\)</span>-module <span class="math inline">\(M\)</span>, we keep <span class="math inline">\(S\)</span> the same, and we again let <span class="math inline">\(M_{(p)}\)</span> consist of formal fractions in <span class="math inline">\(M\)</span> with denominators in <span class="math inline">\(S\)</span>. However, we declare two fractions <span class="math inline">\(\frac{m_1}{s_1},\frac{m_2}{s_2}\)</span> to be equal if there exists an element <span class="math inline">\(t\in M\)</span> such that <span class="math inline">\(t(s_2m_1-s_1m_2)=0\)</span> in <span class="math inline">\(M\)</span>. The reason for this equivalence relation is to account for the torsion of <span class="math inline">\(M\)</span>. Another, much more straightforward of constructing <span class="math inline">\(M_{(p)}\)</span> is to simply tensor it with <span class="math inline">\(\ZZ_{(p)}\)</span>. In practice this is what we will mean when we discuss localization in the future, just tensor everything with <span class="math inline">\(\ZZ_{(p)}\)</span> and proceed.</p>
 <p>We now return to homotopy. One can perform an analogous procedure for spaces, but it is a little technical so I won’t go through the construction here. The point is, for any CW complex <span class="math inline">\(X\)</span>, there is a unique <span class="math inline">\(X_{(p)}\)</span> such that for any homology theory <span class="math inline">\(E_*\)</span>, we have <span class="math inline">\(\overline{E}_*(X_{(p)})\cong \overline{E}_*(X)\otimes \ZZ_{(p)}\)</span>. As one would expect, <span class="math inline">\(X_{(p)}\)</span> is called the <em><span class="math inline">\(p\)</span>-localization of <span class="math inline">\(X\)</span></em>, and if <span class="math inline">\(X\)</span> is finite, we say <span class="math inline">\(X_{(p)}\)</span> is a <span class="math inline">\(p\)</span>-local finite complex. Some key properties of this construction are listed below.</p>

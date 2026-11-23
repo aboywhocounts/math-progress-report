@@ -1,5 +1,5 @@
 ---
-title: "Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)"
+title: "Chapter 5 (Part 1): Spectra and the Thick Subcategory Theorem"
 date: 2026-11-17
 ---
 

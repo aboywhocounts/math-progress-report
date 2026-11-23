@@ -1,5 +1,5 @@
 ---
-title: "Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)"
+title: "Chapter 5 (Part 2): Spectra and the Thick Subcategory Theorem"
 date: 2026-11-17
 ---
 
@@ -84,6 +84,8 @@ We now move on to the proof of the corollary of the nilpotence theorem and then 
 
 To recall just exactly what we're trying to prove here: suppose $W,X$, and $Y$ are $p$-local finite spectra and $f:X\rightarrow Y$ is a map. We need to show that if $K(n)_*(W\wedge f)$ is trivial for all $n$, then $W\wedge f^{(k)}$ is nullhomotopic for some $k$ sufficiently large.
 
+## Proof of the corollary
+
 :::{.proof}
 Let $R=DW\wedge W$ and $e:S^0\rightarrow R$ is adjoint to the identity map on $W$. We have that $R$ is a ring spectrum with multiplication given by
 
@@ -115,7 +117,7 @@ $$
 
 (it's not super obvious that this is effectively localizing the map $g$, but Ravenel has written it this way for brevity and if you expand and use the defintion of $\hat{f}$ it's easy to see). Using the "localiziation" perspective, $MU\wedge T$ being contractible necessarily means that $MU\wedge g$ (and thus $MU\wedge g^{(i)}$) is nullhomotopic. 
 
-By hypothesis, we have that $K(n)_*(W\wedge f)=0$ for all $n$. As $g$ is the adjoint of this map and we know that Morava K-theory plays nicely with duality, we also have $K(n)_*(g)=0$ for all $n$. By definition of $T$, this means that $K(n)_*(T)=\pi_*(K(n)\wedge T)=0$ for all $n$. But this means $K(n)\wedge T$ is contractible. TL;DR: we have to show $MU\wedge T$ is contractible assuming that $K(n)\wedge T$ is contractible for all $n$. 
+By hypothesis, we have that $K(n)_*(W\wedge f)=0$ for all $n$. As $g$ is the adjoint of this map and we know that Morava K-theory plays nicely with duality, we also have $K(n)_*(g)=0$ for all $n$. By definition of $T$, this means that $K(n)_*(T)=\pi_*(K(n)\wedge T)=0$ for all $n$. But this means $K(n)\wedge T$ is contractible. **TL;DR**: we have to show $MU\wedge T$ is contractible assuming that $K(n)\wedge T$ is contractible for all $n$. 
 
 This is where we use stuff from chapter 7. Since we're working $p$-locally, we can focus on $BP\wedge T$, as $MU_{(p)}$ is an infinite wedge of suspensions of $BP$. The key notion from chapter 7 that is relevant here is Bousfield equivalence classes. Two spectra $E$ and $F$ are Bousfield equivalent if for any spectrum $X$, $E\wedge X$ is contractible if and only if $F\wedge X$ as well. This can be written as $\langle E \rangle =\langle F \rangle$. Using this notation, the most recent claim can be rewritten as $\langle MU_{(p)} \rangle=\langle BP \rangle$. A key theorem of chapter 7 says that the class $\langle BP \rangle$ decomposes into smaller pieces built by the classes $\langle K(n) \rangle$ and $\langle P(n) \rangle$ where $P(n)$ is another important spectrum. We already have that $K(n)\wedge T\simeq 0$ for all $n$ so we just need to take care of $P(n)$ by showing $P(m)\wedge T$ is contractible for large enough $m$.
 
@@ -123,6 +125,8 @@ The spectra $X,Y,$ and $W$ are all finite, so by the properties of $K(n)$, we ca
 :::
 
 This proof was pretty technical in my opinion and it took me a second to figure out. I had to look up things and consult other sources so things might not be 100% accurate but I think I got the main argument/idea down. I'll now go through the proof of the TST, which I'll restate. 
+
+## Proof of TST
 
 Let $\FH_{(p)}$ be the category of $p$-local finite spectra. Recall that a full subcategory $\mathbf{C}$ is **thick** if for any cofiber sequence $X\xrightarrow{f} Y\rightarrow C_f$ in $\mathbf{C}$, if two of the three spectra are in $\mathbf{C}$, then so is the third. Additionally, if $X\vee Y$ is in $\mathbf{C}$, then $X$ and $Y$ are both in $\mathbf{C}$
 

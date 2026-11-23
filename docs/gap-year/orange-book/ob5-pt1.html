@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-11-17">
+
+<title>Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1) – A Young Man’s Mathematical Journey</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-718b669a5f8c5f488a8672a677208347.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+// Global MathJax configuration for site-wide macros
+// Keep this before the MathJax script include.
+window.MathJax = window.MathJax || {};
+window.MathJax = Object.assign(window.MathJax, {
+  tex: {
+    packages: { '[+]': ['ams', 'mathtools'] },
+    macros: {
+      RR: "\\mathbb{R}",
+      CC: "\\mathbb{C}",
+      ZZ: "\\mathbb{Z}",
+      QQ: "\\mathbb{Q}",
+      FF: "\\mathbb{F}",
+      kk: "\\mathbb{k}",
+      RP: "\\mathbb{RP}",
+      Sig: "\\Sigma",
+      ZZp: "\\mathbb{Z}_{(p)}",
+      Zp: "\\mathbb{Z}_{(p)}",
+      pt: "\\mathrm{pt}",
+      ol: ["\\overline{#1}", 1],
+      CG: ["\\mathbf{C}\Gamma"],
+      FH: ["\\mathbf{FH}"],
+      Sq: ["\\text{Sq}"],
+      Ab: ["\\mathbf{Ab}"],
+      HoSp: ["\\mathbf{HoSp}"],
+      Sp: ["\\mathbf{Sp}"],
+
+      arr: ["\\xrightarrow{#1}", 1],
+      larr: ["\\xleftarrow{#1}", 1],
+      lrarr: ["\\xlongrightarrow{#1}", 1],
+      llarr: ["\\xlongleftarrow{#1}", 1],
+
+      E: "\\mathcal{E}",
+      EE: "\\mathcal{E}",
+      K: "\\mathrm{K}",
+      Kn: ["\\mathrm{K}(#1)", 1],
+      Kpn: ["\\mathrm{K}(#1)", 1],
+
+      Hom: "\\operatorname{Hom}",
+      End: "\\operatorname{End}",
+      GL: "\\operatorname{GL}",
+      tr: "\\operatorname{tr}",
+      id: "\\operatorname{id}",
+      Gal: "\\operatorname{Gal}",
+      Char: "\\operatorname{char}",
+      Ext: "\\operatorname{Ext}",
+      Tor: "\\operatorname{Tor}"
+    }
+  }
+});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">A Young Man’s Mathematical Journey</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../website-deets/feed.html"> 
+<span class="menu-text">Feed / Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../website-deets/about.html"> 
+<span class="menu-text">About Me</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5-pt1.html">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Gap Year Reading</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1: Basic definitions and two big theorems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2: Homotopy groups and the chromatic filtration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3: MU and formal group laws</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4: Results due to Jack Morava</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob5-pt1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob5-pt2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Topology</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../htpy-theory/mosher-tangora-prblm1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../htpy-theory/mosher-tangora-prblm2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Note on Torsion Elements in the Stable Homotopy Groups of Spheres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Representation Theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../rep-theory/rep-theory/the-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic definitions and concepts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#spectra" id="toc-spectra" class="nav-link active" data-scroll-target="#spectra">Spectra</a>
+  <ul class="collapse">
+  <li><a href="#maps-of-spectra" id="toc-maps-of-spectra" class="nav-link" data-scroll-target="#maps-of-spectra">Maps of spectra</a></li>
+  <li><a href="#smash-products" id="toc-smash-products" class="nav-link" data-scroll-target="#smash-products">Smash products</a>
+  <ul class="collapse">
+  <li><a href="#brave-new-algebra" id="toc-brave-new-algebra" class="nav-link" data-scroll-target="#brave-new-algebra">Brave new algebra</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5-pt1.html">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 17, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this post we’re finally abandoning spaces and transitioning to focusing on the objects of stable homotopy theory: spectra. I’ll define them and say some things about them, mainly to get myself acquainted with them more since they’re kind of confusing. The other core part of this post is related to the proof of the thick subcategory theorem (TST) for the category <span class="math inline">\(\FH_{(p)}\)</span>, which now denotes something different but I’ll elaborate more later. The proof of the TST will pop out of a reformulation of the nilpotence theorem.</p>
+<section id="spectra" class="level1">
+<h1>Spectra</h1>
+<p>As Ravenel notes in the book, the world of spectra is the natural setting for most everything that is discussed. This is simply because the constructions used in the book – homotopy groups, homology, cohomology – are well-behaved with respect to the suspension map. In fact, things get easier especially in the world of homotopy if we allow ourselves to work in the stable range. Take homotopy classes of map <span class="math inline">\(X\rightarrow Y\)</span> as an example. Working unstably, this set doesn’t have much additional structure that we can work with. When <span class="math inline">\(X\)</span> is an <span class="math inline">\(n\)</span>-sphere with <span class="math inline">\(n\geq 2\)</span>, this set becomes an abelian group, and we have some ways to compute them, but most of these groups are unknown. If we instead take stable maps between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, this set immediately becomes an abelian group (assuming some things about connectivity). Still, we don’t know a lot of these groups, even when <span class="math inline">\(X\)</span> is a sphere, but they are much easier to work with given this algebraic structure. The stable homotopy category has this additional structure baked in, and the suspension map is inverted, so that we can suspend and desuspend as we wish and things will still make sense.</p>
+<div id="def-spectrum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1</strong></span> <strong>(Spectrum)</strong></p>
+<p>A <strong>spectrum</strong> <span class="math inline">\(X\)</span> is a sequence of spaces <span class="math inline">\(\{X_n\}\)</span> equipped with structure maps <span class="math inline">\(\sigma_X:\Sigma X_n \rightarrow X_{n+1}\)</span>. From any space we may construct its <strong>suspension spectrum</strong> <span class="math inline">\(\Sigma^{\infty} X\)</span>, with <span class="math inline">\((\Sigma^{\infty} X)_n=\Sigma^n X\)</span>, whose structure maps are just the identity maps. A <strong>CW-spectrum</strong> is a spectrum that is the suspension spectrum of a CW complex. A CW-spectrum is called <strong>finite</strong> if the associated CW complex is finite.</p>
+</div>
+<p>The structure maps <span class="math inline">\(\sigma_X:\Sigma X_n \rightarrow X_{n+1}\)</span> of a spectrum <span class="math inline">\(X\)</span> are adjoint to maps <span class="math inline">\(X_n\rightarrow \Omega X_{n+1}\)</span> given that the suspension and loop space functors are adjoint functors. If the latter maps are homotopy equivalences (i.e.&nbsp;dual to the notion of a suspension spectrum), then <span class="math inline">\(X\)</span> is called an <strong><span class="math inline">\(\Omega\)</span>-spectrum</strong>. This also implies that <span class="math inline">\(X_n\simeq \Omega^i X_{n+i}\)</span>, and <span class="math inline">\(X\)</span> is called an <strong>infinite loop space</strong>. These spaces play an important role in homotopy theory. For example the Eilenberg-Maclane spectrum <span class="math inline">\(HA\)</span> where <span class="math inline">\(A\)</span> is abelian group is an infinite loop space.</p>
+<p>For a spectrum <span class="math inline">\(X\)</span>, we define its homotopy groups by $<em>i(X)=</em>{n+i}(X_n)<code>. By the Freudenthal's suspension theorem, when $n&gt;i+1$, these are equal, so the limit converges. Another way to interpret this is that for spectra coming from spaces, the homotopy groups of the spectrum are the stable homotopy groups of the associated spaces. For a homology theory $E_*$, we define the $E$-homology of $X$ by $E_i(X)=\varinjlim \overline{E}_{n+i}(X_n)</code>. Note that reduced and unreduced homology is used here, which just means we don’t have to distinguish between them with spectra. This makes sense since the suspension map is an isomorphism on reduced homology but not on unreduced homology, so we’re just making sure things behave as they should, similar to how we force ourselves to be working in the stable range with homotopy groups.</p>
+<p>We say a spectrum <span class="math inline">\(X\)</span> is <strong>connective</strong> if its homotopy groups are bounded below, i.e.&nbsp;if there exists a <span class="math inline">\(k\)</span> such that <span class="math inline">\(\pi_i(X)=0\)</span> for <span class="math inline">\(i&lt;k\)</span>. The spectrum <span class="math inline">\(X\)</span> has finite type if <span class="math inline">\(\pi_i(X)\)</span> is finitely generated as an abelian group for all <span class="math inline">\(i\)</span>. Another nice thing about working with spectra is that cofibers and fibers agree, up to a dimension shift. If we consider the cofiber sequence</p>
+<p><span class="math display">\[
+X\xrightarrow{f} Y\rightarrow C_f
+\]</span></p>
+<p>if we take the homotopy fiber of <span class="math inline">\(f\)</span>, denoted by <span class="math inline">\(F_f\)</span>, then there is a natural map <span class="math inline">\(g:\Sigma F_f \rightarrow C_f\)</span>, and it can be shown that this is a weak equivalence. So for spectra, any cofiber sequence is also a fiber sequence, and either/both may be extended infinitely to the left and right.</p>
+<section id="maps-of-spectra" class="level2">
+<h2 class="anchored" data-anchor-id="maps-of-spectra">Maps of spectra</h2>
+<p>Now I need to clear up by what is meant by a “map of spectra”, because we need to be precise here. One could naively take a map of spectra <span class="math inline">\(f:E\rightarrow F\)</span> to just be a sequence of maps <span class="math inline">\(f_n:E_n\rightarrow F_n\)</span> such that the appropriate diagrams commute. These maps are the morphisms in the category <span class="math inline">\(\mathbf{Sp}\)</span>, but turn out to too restrictive if we want to do computations with general spectra, which is a big part of this book. For finite spectra it’s fine, but I’ll state the general defintion as well. I’ll note that the defintion that follows will actually define <em>homotopy classes of maps</em> between spectra, i.e.&nbsp;the morphisms in the homotopy category <span class="math inline">\(\mathbf{HoSp}\)</span>. This is the category that Ravenel will implicitly be working over, thus whenever I say <span class="math inline">\(f\)</span> is a map of spectra, I will always mean <span class="math inline">\(f\)</span> is a homotopy class of maps, unless explicitly stated otherwise.</p>
+<p>If the target of a map of spectra $f:E<span class="math inline">\(F\)</span> is an <span class="math inline">\(\Omega\)</span>-spectrum, then if <span class="math inline">\(f_n\simeq \Omega f_{n+1}\)</span> for all <span class="math inline">\(n\)</span> is the correct definition, but doesn’t work in general. It seems that unless the target is an <span class="math inline">\(\Omega\)</span>-spectrum, a single <span class="math inline">\(F_n\)</span> won’t necessarily contain all of the “stable information” of the entire spectrum. More precisely, when <span class="math inline">\(F_n\)</span> is an <span class="math inline">\(\Omega\)</span>-spectrum, all of the information in the spectrum is contained in the zero-th space <span class="math inline">\(F_0\)</span>, simply because we know that <span class="math inline">\(F_n\simeq \Omega^n F_0\)</span>. This isn’t the case for a general spectrum, and applying the loop space functor is not an equivalence of objects, resulting in differences between the individual spaces <span class="math inline">\(F_n\)</span>. (This isn’t very rigorous, but it’s my understanding of it and I felt it was important to have some sort of explanation as to why the other definition isn’t sufficient.) To remedy this deficiency, we replace the spectrum <span class="math inline">\(F\)</span> with a homotopy equivalent <span class="math inline">\(\Omega\)</span>-spectrum <span class="math inline">\(\widetilde{F}\)</span> as follows: let <span class="math inline">\(\widetilde{F}_n\)</span> be defined by</p>
+<p><span class="math display">\[
+\widetilde{F_n}= \varinjlim \Omega^k F_{n+k}\left(  = \varinjlim (\Omega F_n \xrightarrow{\Omega} \Omega^2 F_n \xrightarrow{\Omega} \Omega^3 F_n \rightarrow \cdots) \right)
+\]</span></p>
+<p>then <span class="math inline">\(\widetilde{F}_n\simeq \Omega \widetilde{F}_{n+1}\)</span> since we’re taking the colimit, so that <span class="math inline">\(\widetilde{F}\)</span> is an <span class="math inline">\(\Omega\)</span>-spectrum. Now, we need to show that <span class="math inline">\(\pi_n(F)\cong \pi_n(\widetilde{F})\)</span> for all <span class="math inline">\(n\)</span>. Ultimately, this pops right out of the definitons and using the fact that filtered colimits commute with the homotopy groups functor (spheres are compact).</p>
+<p>We thus have the following definition:</p>
+<div id="def-map.spectra" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2</strong></span> <strong>(Map of spectra (in <span class="math inline">\(\mathbf{HoSp}\)</span>))</strong></p>
+<p>A <strong>map of spectra</strong> <span class="math inline">\(f:E\rightarrow F\)</span> is a collection of maps of the form <span class="math display">\[
+E_n\xrightarrow{f_n} \widetilde{F_n}= \varinjlim \Omega^kF_{n+k}
+\]</span></p>
+<p>such that <span class="math inline">\(f_n\simeq \Omega f_{n+1}\)</span>.</p>
+</div>
+<p>If <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are suspension spectra, then the collection of maps <span class="math inline">\(\{f_n\}\)</span> can be obtained by <span class="math inline">\(f_n\)</span> for a fixed <span class="math inline">\(n\)</span> using the adjunction of the suspension and loop space functors. With this defintion, for a spectrum <span class="math inline">\(E\)</span>, we define the <span class="math inline">\(E\)</span>-cohomology of a spectrum <span class="math inline">\(X\)</span> to be</p>
+<p><span class="math display">\[
+E^k(X)=[X,\Sigma^k E]=[\Sigma^{-k} X, E]=[X,E]_{-k}
+\]</span></p>
+</section>
+<section id="smash-products" class="level2">
+<h2 class="anchored" data-anchor-id="smash-products">Smash products</h2>
+<p>There is a natural way to take products of spectra called the smash product. For spaces <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, the smash product <span class="math inline">\(X \wedge Y\)</span> is defined to be the quotient space <span class="math inline">\(X\times Y/(X\times \{y_0\} \cup \{x_0\} \times Y)\)</span>. For spectra, the definition is actually quite complicated, so I won’t go into too much detail here. For the purposes of the book, we can take the smash product of two spectra <span class="math inline">\(E\wedge F\)</span> to be given by</p>
+<p><span class="math display">\[
+(E\wedge F)_{2n}=E_n \wedge F_n \qquad \qquad (E\wedge F)_{2n+1}=\Sigma E_n\wedge F_n
+\]</span></p>
+<p>with structure maps</p>
+<p><span class="math display">\[
+\Sigma E_n \wedge \Sigma F_n =\Sigma (E\wedge F)_{2n+1} \xrightarrow{\sigma_E \wedge \sigma_F} (E\wedge F)_{2n+2}= E_{n+1} \wedge F_{n+1}
+\]</span> <span class="math display">\[
+\Sigma E_n \wedge F_n = S^1\wedge E_n\wedge F_n= \Sigma(E_n\wedge F_n)=\Sigma (E\wedge F)_{2n} \rightarrow (E\wedge F)_{2n+1}= \Sigma E_n\wedge F_n
+\]</span></p>
+<p>the last composition comes from the appropriate identity map and that the smash product is associative, which can be shown. It can also be shown to be commutative.</p>
+<section id="brave-new-algebra" class="level3">
+<h3 class="anchored" data-anchor-id="brave-new-algebra">Brave new algebra</h3>
+<p>The smash product is analogous to the tensor product in the category of abelian groups <span class="math inline">\(\mathbf{Ab}\)</span>. This category has a symmetric monoidal structure given by the triple <span class="math inline">\((\mathbf{Ab},\otimes,\ZZ)\)</span>, which just means the category forms a monoid with respect to the tensor product and the multiplicative unit is the integers <span class="math inline">\(\ZZ\)</span>. For spectra, both <span class="math inline">\(\mathbf{HoSp}\)</span> and <span class="math inline">\(\mathbf{Sp}\)</span> are equipped with symmetric monoidal structure given by <span class="math inline">\((\mathbf{Sp},\wedge, S^0)\)</span>, so that the monoid operation is the smash product and the unit is the sphere spectrum <span class="math inline">\(S^0\)</span>. I have to note that there are some intricacies to the symmetric monoidal structure of <span class="math inline">\(\Sp\)</span> that I won’t go into here. The right notion of the smash product itself is hard to formulate for plain spectra, and work must be done to make it behave as we wish (i.e.&nbsp;for it to be associative and commutative like <span class="math inline">\(\otimes\)</span>). There is a way to make everything nice, but it’s beyond me and the scope of what I’ll be writing.</p>
+<p>Just as we can use the symmetric monoidal structure of <span class="math inline">\(\Ab\)</span> to contruct commutative algebraic objects such as rings and modules and do interesting things with them, we can construct analogous objects in <span class="math inline">\(\HoSp\)</span>. Precisely, if we have a spectrum <span class="math inline">\(E\)</span> together with a multiplication map <span class="math inline">\(E \wedge E \rightarrow E\)</span> and unit map <span class="math inline">\(\eta:S^0\rightarrow E\)</span> such that a few diagrams are commutative (up to homotopy). A module spectrum <span class="math inline">\(M\)</span> over <span class="math inline">\(E\)</span> is one equipped with a map <span class="math inline">\(E \wedge M \rightarrow M\)</span>, where some other diagrams commute (also up to homotopy). We can actually extend this construction to <span class="math inline">\(\mathbf{Sp}\)</span>, with some more work, and this actually makes things very interesting. This is because maps between spectra in this category have a much richer structure: while <span class="math inline">\(\mathbf{HoSp}\)</span> is enriched over <span class="math inline">\(\mathbf{Ab}\)</span>, <span class="math inline">\(\mathbf{Sp}\)</span> is instead enriched over <span class="math inline">\(\mathbf{Top}\)</span>––the category of topological spaces, which has a much richer structure. This allows us to talk about homotopies between maps of spectra, and homotopies between homotopies, and so on. The complex structure of the mapping spaces makes the theory of spectra very interesting and deeply intertwined with algebra. Indeed, this discussion sets the stage for doing more complex algebra (and even algebraic geometry) with spectra. This area of research was dubbed “brave new algebra”, which is pretty apt name if you ask me. If you’re interested in this sort of perspective I urge you to check out this lecture given by Tomer Schlank <a href="https://youtu.be/YY-scFduSos?si=9_q_R3tMg2EifV9R" target="_blank">here</a>. For me it was really eye-opening overview of the “brave new algebra” philosophy and kickstarted my interest in stable homotopy theory.</p>
+<p>Let’s return to the smash product. For a spectrum <span class="math inline">\(X\)</span> and a map of spectra <span class="math inline">\(f:X\rightarrow Y\)</span>, we define <span class="math inline">\(X^{(k)}=\bigwedge^k X\)</span> to be the <span class="math inline">\(k\)</span>-fold smash product and <span class="math inline">\(f^{(k)}:X^{(k)}\rightarrow Y^{(k)}\)</span> is the evident map.</p>
+<div id="def-smash.nil" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3</strong></span> A map <span class="math inline">\(f:X\rightarrow Y\)</span> is <strong>smash nilpotent</strong> if <span class="math inline">\(f^{(k)}\)</span> is nullhomotopic for some <span class="math inline">\(k\)</span>.</p>
+</div>
+<p>For a homology theory <span class="math inline">\(E_*\)</span>, another equivalent definition of the <span class="math inline">\(E\)</span>-homology of a spectrum <span class="math inline">\(X\)</span> is <span class="math inline">\(E_*(X)=\pi_*(E\wedge X)\)</span>. Using this, we can rewrite the nilpotence theorem as follows:</p>
+<div id="thm-nilpotence.smash" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1</strong></span> <strong>(Nilpotence theorem (smash product form))</strong></p>
+<p>Let <span class="math inline">\(f:F\rightarrow X\)</span> be a map of spectra where <span class="math inline">\(F\)</span> is finite. Then <span class="math inline">\(f\)</span> is smash nilpotent if the map <span class="math inline">\(MU\wedge f:MU\wedge F \rightarrow MU\wedge X\)</span> is nullhomotopic.</p>
+</div>
+<p>This is clearly rewriting the nilpotence theorem in a more natural way for spectra: <span class="math inline">\(MU\)</span> detects nilpotent maps (i.e.&nbsp;homotopically trivial maps) in <span class="math inline">\(\mathbf{HoSp}\)</span> just as it did with spaces.</p>
+<p>An important corollary is the following:</p>
+<div id="thm-nil.cor" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2</strong></span> Let <span class="math inline">\(W\)</span>,<span class="math inline">\(X\)</span>, and <span class="math inline">\(Y\)</span> all be <span class="math inline">\(p\)</span>-local finite spectra and let <span class="math inline">\(f:X\rightarrow Y\)</span> be a map. Then the map <span class="math inline">\(W\wedge f^{(k)}\)</span> is nullhomotopic for <span class="math inline">\(k\)</span> sufficiently large if the induced map <span class="math inline">\(K(n)_*(W\wedge f)\)</span> is the trivial homomorphism for all <span class="math inline">\(n\geq 0\)</span>.</p>
+</div>
+<p>It is from this corollary that we will prove the TST. This post is getting a little long, so I’ll break it into two. This concludes the first part.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

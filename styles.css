@@ -13,7 +13,7 @@
 
 body {
   color: var(--text-strong);
-  background: linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
+  background: #ffffff;
 }
 
 .navbar {

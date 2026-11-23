@@ -92,6 +92,9 @@ window.MathJax = Object.assign(window.MathJax, {
       CG: ["\\mathbf{C}\Gamma"],
       FH: ["\\mathbf{FH}"],
       Sq: ["\\text{Sq}"],
+      Ab: ["\\mathbf{Ab}"],
+      HoSp: ["\\mathbf{HoSp}"],
+      Sp: ["\\mathbf{Sp}"],
 
       arr: ["\\xrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
@@ -111,7 +114,8 @@ window.MathJax = Object.assign(window.MathJax, {
       id: "\\operatorname{id}",
       Gal: "\\operatorname{Gal}",
       Char: "\\operatorname{char}",
-      Ext: "\\operatorname{Ext}"
+      Ext: "\\operatorname{Ext}",
+      Tor: "\\operatorname{Tor}"
     }
   }
 });
@@ -246,7 +250,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../gap-year/orange-book/ob4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 4: Morava things</span></a>
+ <span class="menu-text">Chapter 4: Results due to Jack Morava</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob5-pt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gap-year/orange-book/ob5-pt2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</span></a>
   </div>
 </li>
       </ul>
@@ -486,12 +502,11 @@ V_p=\ZZp[v_1,v_2,...]
 <p><span class="math display">\[
 X\xrightarrow{f} Y\rightarrow C_f
 \]</span> then one object is in the thick subcategory <span class="math inline">\(\mathbf{F}\)</span> if and only if the other two are. Additionally it’s required that if <span class="math inline">\(X\vee Y\in \mathbf{F}\)</span> then so are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
-<p>Thick subcategories are thus a natural thing to be interested in. What I find surprising is that the thick subcategories of <span class="math inline">\(\mathbf{C \Gamma}_{(p)}\)</span> and <span class="math inline">\(\FH_{(p)}\)</span> are governed by <span class="math inline">\(v_n\)</span>-behavior. This is the content of the thick subcategory theorem, which I’ll state now.</p>
+<p>The motivation for this notion topologically is rooted in how we construct new spaces from old ones. CW complexes are formed by gluing disks to other disks by maps of spheres, and this can be described through a cofiber sequence. Additionally, we’d hope to be able to isolate summands of the wedge sum, since if two spaces are only attached at a point, we practically treat them as disjoint anyway. Thick subcategories are thus those that are closed with respect to these simple but ubiquitous constructions. The next theorem states that the categories closed under these constructions are stratified by chromatic pheneomena, i.e.&nbsp;type (or chromatic height).</p>
 <div id="thm-fullsubcatalg" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4</strong></span> If <span class="math inline">\(\mathbf{C}\)</span> is a thick subcategory of <span class="math inline">\(\mathbf{C \Gamma}_{(p)}\)</span>, then <span class="math inline">\(\mathbf{C}\)</span> is either trivial, all of <span class="math inline">\(\mathbf{C \Gamma}_{(p)}\)</span>, or consists of all <span class="math inline">\(p\)</span>-local modules <span class="math inline">\(M\)</span> in <span class="math inline">\(\mathbf{C \Gamma}_{(p)}\)</span> such that <span class="math inline">\(v_{n-1}^{-1}M=0\)</span>. We will denote the latter category by <span class="math inline">\(\mathbf{C}_{p,n}\)</span>.</p>
-</div>
-<div id="thm-fullsubcattop" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5</strong></span> If <span class="math inline">\(\mathbf{F}\)</span> is a thick subcategory of <span class="math inline">\(\FH_{(p)}\)</span>, then <span class="math inline">\(\mathbf{F}\)</span> is either trivial, all of <span class="math inline">\(\FH_{(p)}\)</span>, or consists of all <span class="math inline">\(p\)</span>-local finite CW complexes <span class="math inline">\(X\)</span> with <span class="math inline">\(v_{n-1}^{-1}\overline{MU}_*(X)=0\)</span>. We will denote the latter category by <span class="math inline">\(\mathbf{F}_{p,n}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 4</strong></span> <strong>(Thick Subcategory Theorems)</strong></p>
+<p>If <span class="math inline">\(\mathbf{C}\)</span> is a thick subcategory of <span class="math inline">\(\mathbf{C \Gamma}_{(p)}\)</span>, then <span class="math inline">\(\mathbf{C}\)</span> is either trivial, all of <span class="math inline">\(\mathbf{C \Gamma}_{(p)}\)</span>, or consists of all <span class="math inline">\(p\)</span>-local modules <span class="math inline">\(M\)</span> in <span class="math inline">\(\mathbf{C \Gamma}_{(p)}\)</span> such that <span class="math inline">\(v_{n-1}^{-1}M=0\)</span>. We will denote the latter category by <span class="math inline">\(\mathbf{C}_{p,n}\)</span>.</p>
+<p>If <span class="math inline">\(\mathbf{F}\)</span> is a thick subcategory of <span class="math inline">\(\FH_{(p)}\)</span>, then <span class="math inline">\(\mathbf{F}\)</span> is either trivial, all of <span class="math inline">\(\FH_{(p)}\)</span>, or consists of all <span class="math inline">\(p\)</span>-local finite CW complexes <span class="math inline">\(X\)</span> with <span class="math inline">\(v_{n-1}^{-1}\overline{MU}_*(X)=0\)</span>. We will denote the latter category by <span class="math inline">\(\mathbf{F}_{p,n}\)</span>.</p>
 </div>
 <p>As before, we can replace the condition <span class="math inline">\(v_{n-1}^{-1}\overline{MU}_*(X)=0\)</span> with <span class="math inline">\(\overline{K(n-1)}_*(X)=0\)</span>. These theorems give us nested sequences of thick subcategories</p>
 <p><span class="math display">\[

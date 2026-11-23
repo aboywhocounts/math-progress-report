@@ -122,6 +122,9 @@ window.MathJax = Object.assign(window.MathJax, {
       CG: ["\\mathbf{C}\Gamma"],
       FH: ["\\mathbf{FH}"],
       Sq: ["\\text{Sq}"],
+      Ab: ["\\mathbf{Ab}"],
+      HoSp: ["\\mathbf{HoSp}"],
+      Sp: ["\\mathbf{Sp}"],
 
       arr: ["\\xrightarrow{#1}", 1],
       larr: ["\\xleftarrow{#1}", 1],
@@ -141,7 +144,8 @@ window.MathJax = Object.assign(window.MathJax, {
       id: "\\operatorname{id}",
       Gal: "\\operatorname{Gal}",
       Char: "\\operatorname{char}",
-      Ext: "\\operatorname{Ext}"
+      Ext: "\\operatorname{Ext}",
+      Tor: "\\operatorname{Tor}"
     }
   }
 });
@@ -276,7 +280,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../gap-year/orange-book/ob4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 4: Morava things</span></a>
+ <span class="menu-text">Chapter 4: Results due to Jack Morava</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gap-year/orange-book/ob5-pt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gap-year/orange-book/ob5-pt2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</span></a>
   </div>
 </li>
       </ul>
@@ -328,7 +344,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -372,10 +388,44 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1794459600000" data-listing-file-modified-sort="1794510039997" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2069">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1794891600000" data-listing-file-modified-sort="1795103415397" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1945">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../gap-year/orange-book/ob4.html" class="no-external">Chapter 4: Morava things</a>
+<a href="../gap-year/orange-book/ob5-pt1.html" class="no-external">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</a>
+</h3>
+<div class="delink listing-description"><a href="../gap-year/orange-book/ob5-pt1.html" class="no-external">
+In this post we’re finally abandoning spaces and transitioning to focusing on the objects of stable homotopy theory: spectra. I’ll define them and say some things about…<span class="math inline"></span>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../gap-year/orange-book/ob5-pt1.html" class="no-external">
+<div class="listing-date">
+Nov 17, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1794891600000" data-listing-file-modified-sort="1795459671529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2216">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../gap-year/orange-book/ob5-pt2.html" class="no-external">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</a>
+</h3>
+<div class="delink listing-description"><a href="../gap-year/orange-book/ob5-pt2.html" class="no-external">
+There is one last ingredient we need to prove the corollary in part 1 and thus the TST. It is called the <strong>Spanier-Whitehead dual</strong> and is analogous to the linear dual of a…
+</a></div>
+</div>
+<div class="metadata">
+<a href="../gap-year/orange-book/ob5-pt2.html" class="no-external">
+<div class="listing-date">
+Nov 17, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1794459600000" data-listing-file-modified-sort="1794925641944" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2074">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../gap-year/orange-book/ob4.html" class="no-external">Chapter 4: Results due to Jack Morava</a>
 </h3>
 <div class="delink listing-description"><a href="../gap-year/orange-book/ob4.html" class="no-external">
 In this post I’ll be discussing ideas due to Jack Morava. Eventually, we’ll need to do computations in <span class="math inline">\(MU\)</span>-theory, and the group <span class="math inline">\(\Gamma\)</span> is important due to the…<span class="math inline"></span><span class="math inline"></span><span class="math inline"></span>
@@ -389,7 +439,7 @@ Nov 12, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1793332800000" data-listing-file-modified-sort="1794510151922" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3131">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1793332800000" data-listing-file-modified-sort="1795355983614" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3197">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob3.html" class="no-external">Chapter 3: MU and formal group laws</a>
@@ -406,7 +456,7 @@ Oct 30, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1792814400000" data-listing-file-modified-sort="1793042472869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1974">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1792814400000" data-listing-file-modified-sort="1793042472869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1974">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob3 take 1.html" class="no-external">Chapter 3: MU and formal group laws</a>
@@ -423,7 +473,7 @@ Oct 24, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1792728000000" data-listing-file-modified-sort="1794510491670" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2519">
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1792728000000" data-listing-file-modified-sort="1794511551622" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2521">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob2.html" class="no-external">Chapter 2: Homotopy groups and the chromatic filtration</a>
@@ -440,7 +490,7 @@ Oct 23, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1792123200000" data-listing-file-modified-sort="1794510817926" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1571">
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1792123200000" data-listing-file-modified-sort="1794512937349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1567">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/orange-book/ob1.html" class="no-external">Chapter 1: Basic definitions and two big theorems</a>
@@ -457,7 +507,7 @@ Oct 16, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1791604800000" data-listing-file-modified-sort="1793027236888" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="122">
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1791604800000" data-listing-file-modified-sort="1793027236888" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="122">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../gap-year/intro.html" class="no-external">Introduction</a>
@@ -474,7 +524,7 @@ Oct 10, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1770872400000" data-listing-file-modified-sort="1792165552787" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
+<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1770872400000" data-listing-file-modified-sort="1792165552787" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../htpy-theory/mosher-tangora-prblm2.html" class="no-external">A Note on Torsion Elements in the Stable Homotopy Groups of Spheres</a>
@@ -491,7 +541,7 @@ Feb 12, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1770699600000" data-listing-file-modified-sort="1794404331758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="435">
+<div class="quarto-post image-right" data-index="10" data-listing-date-sort="1770699600000" data-listing-file-modified-sort="1794404331758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="435">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../htpy-theory/mosher-tangora-prblm1.html" class="no-external">Some Stable Homotopy Groups of <span class="math inline">\(\mathbb{RP}^2\)</span></a>
@@ -508,7 +558,7 @@ Feb 10, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1768885200000" data-listing-file-modified-sort="1792165521767" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
+<div class="quarto-post image-right" data-index="11" data-listing-date-sort="1768885200000" data-listing-file-modified-sort="1792165521767" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../rep-theory/rep-theory/the-basics.html" class="no-external">Basic definitions and concepts</a>
