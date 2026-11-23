@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-11-17">
 
-<title>Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2) – A Young Man’s Mathematical Journey</title>
+<title>Chapter 5 (Part 2): Spectra and the Thick Subcategory Theorem – A Young Man’s Mathematical Journey</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -200,7 +200,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5-pt2.html">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5-pt2.html">Chapter 5 (Part 2): Spectra and the Thick Subcategory Theorem</a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -259,13 +259,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../gap-year/orange-book/ob5-pt1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 1)</span></a>
+ <span class="menu-text">Chapter 5 (Part 1): Spectra and the Thick Subcategory Theorem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../gap-year/orange-book/ob5-pt2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</span></a>
+ <span class="menu-text">Chapter 5 (Part 2): Spectra and the Thick Subcategory Theorem</span></a>
   </div>
 </li>
       </ul>
@@ -315,7 +315,11 @@ window.Quarto = {
    
   <ul>
   <li><a href="#the-spanier-whitehead-dual" id="toc-the-spanier-whitehead-dual" class="nav-link active" data-scroll-target="#the-spanier-whitehead-dual">The Spanier-Whitehead Dual</a></li>
-  <li><a href="#a-couple-of-proofs" id="toc-a-couple-of-proofs" class="nav-link" data-scroll-target="#a-couple-of-proofs">A couple of proofs</a></li>
+  <li><a href="#a-couple-of-proofs" id="toc-a-couple-of-proofs" class="nav-link" data-scroll-target="#a-couple-of-proofs">A couple of proofs</a>
+  <ul class="collapse">
+  <li><a href="#proof-of-the-corollary" id="toc-proof-of-the-corollary" class="nav-link" data-scroll-target="#proof-of-the-corollary">Proof of the corollary</a></li>
+  <li><a href="#proof-of-tst" id="toc-proof-of-tst" class="nav-link" data-scroll-target="#proof-of-tst">Proof of TST</a></li>
+  </ul></li>
   <li><a href="#ending-thoughts" id="toc-ending-thoughts" class="nav-link" data-scroll-target="#ending-thoughts">Ending thoughts</a></li>
   </ul>
 </nav>
@@ -323,9 +327,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5-pt2.html">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gap-year/intro.html">Gap Year Reading</a></li><li class="breadcrumb-item"><a href="../../gap-year/orange-book/ob5-pt2.html">Chapter 5 (Part 2): Spectra and the Thick Subcategory Theorem</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Chapter 5: Spectra and the Thick Subcategory Theorem (Part 2)</h1>
+<h1 class="title">Chapter 5 (Part 2): Spectra and the Thick Subcategory Theorem</h1>
 </div>
 
 
@@ -414,6 +418,8 @@ C_{f^{(k)}}\rightarrow C_{f^{(k-1)}} \rightarrow \Sigma W^{(k-1)} \wedge C_f
 <h1>A couple of proofs</h1>
 <p>We now move on to the proof of the corollary of the nilpotence theorem and then to proof of the TST. Before I get into it, the proof of the corollary relies on methods that aren’t introduced fully until chapter 7, so later in the proof I’ll make a disclaimer where exactly these come in. I’ll still try to give my interpretation of the general gist of what those results do and why we need them of course.</p>
 <p>To recall just exactly what we’re trying to prove here: suppose <span class="math inline">\(W,X\)</span>, and <span class="math inline">\(Y\)</span> are <span class="math inline">\(p\)</span>-local finite spectra and <span class="math inline">\(f:X\rightarrow Y\)</span> is a map. We need to show that if <span class="math inline">\(K(n)_*(W\wedge f)\)</span> is trivial for all <span class="math inline">\(n\)</span>, then <span class="math inline">\(W\wedge f^{(k)}\)</span> is nullhomotopic for some <span class="math inline">\(k\)</span> sufficiently large.</p>
+<section id="proof-of-the-corollary" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-the-corollary">Proof of the corollary</h2>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(R=DW\wedge W\)</span> and <span class="math inline">\(e:S^0\rightarrow R\)</span> is adjoint to the identity map on <span class="math inline">\(W\)</span>. We have that <span class="math inline">\(R\)</span> is a ring spectrum with multiplication given by</p>
 <p><span class="math display">\[
@@ -434,11 +440,14 @@ S^0\xrightarrow{g^{(i)}} F^{(i)}=R^{(i)}\wedge DX^{(i)} \wedge Y^{(i)}\xrightarr
 T=\varinjlim(S^0\xrightarrow{g} T_1\xrightarrow{T_1\wedge \hat{f}} T_2\xrightarrow{T_2\wedge\hat{f}} \cdots)
 \]</span></p>
 <p>(it’s not super obvious that this is effectively localizing the map <span class="math inline">\(g\)</span>, but Ravenel has written it this way for brevity and if you expand and use the defintion of <span class="math inline">\(\hat{f}\)</span> it’s easy to see). Using the “localiziation” perspective, <span class="math inline">\(MU\wedge T\)</span> being contractible necessarily means that <span class="math inline">\(MU\wedge g\)</span> (and thus <span class="math inline">\(MU\wedge g^{(i)}\)</span>) is nullhomotopic.</p>
-<p>By hypothesis, we have that <span class="math inline">\(K(n)_*(W\wedge f)=0\)</span> for all <span class="math inline">\(n\)</span>. As <span class="math inline">\(g\)</span> is the adjoint of this map and we know that Morava K-theory plays nicely with duality, we also have <span class="math inline">\(K(n)_*(g)=0\)</span> for all <span class="math inline">\(n\)</span>. By definition of <span class="math inline">\(T\)</span>, this means that <span class="math inline">\(K(n)_*(T)=\pi_*(K(n)\wedge T)=0\)</span> for all <span class="math inline">\(n\)</span>. But this means <span class="math inline">\(K(n)\wedge T\)</span> is contractible. TL;DR: we have to show <span class="math inline">\(MU\wedge T\)</span> is contractible assuming that <span class="math inline">\(K(n)\wedge T\)</span> is contractible for all <span class="math inline">\(n\)</span>.</p>
+<p>By hypothesis, we have that <span class="math inline">\(K(n)_*(W\wedge f)=0\)</span> for all <span class="math inline">\(n\)</span>. As <span class="math inline">\(g\)</span> is the adjoint of this map and we know that Morava K-theory plays nicely with duality, we also have <span class="math inline">\(K(n)_*(g)=0\)</span> for all <span class="math inline">\(n\)</span>. By definition of <span class="math inline">\(T\)</span>, this means that <span class="math inline">\(K(n)_*(T)=\pi_*(K(n)\wedge T)=0\)</span> for all <span class="math inline">\(n\)</span>. But this means <span class="math inline">\(K(n)\wedge T\)</span> is contractible. <strong>TL;DR</strong>: we have to show <span class="math inline">\(MU\wedge T\)</span> is contractible assuming that <span class="math inline">\(K(n)\wedge T\)</span> is contractible for all <span class="math inline">\(n\)</span>.</p>
 <p>This is where we use stuff from chapter 7. Since we’re working <span class="math inline">\(p\)</span>-locally, we can focus on <span class="math inline">\(BP\wedge T\)</span>, as <span class="math inline">\(MU_{(p)}\)</span> is an infinite wedge of suspensions of <span class="math inline">\(BP\)</span>. The key notion from chapter 7 that is relevant here is Bousfield equivalence classes. Two spectra <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are Bousfield equivalent if for any spectrum <span class="math inline">\(X\)</span>, <span class="math inline">\(E\wedge X\)</span> is contractible if and only if <span class="math inline">\(F\wedge X\)</span> as well. This can be written as <span class="math inline">\(\langle E \rangle =\langle F \rangle\)</span>. Using this notation, the most recent claim can be rewritten as <span class="math inline">\(\langle MU_{(p)} \rangle=\langle BP \rangle\)</span>. A key theorem of chapter 7 says that the class <span class="math inline">\(\langle BP \rangle\)</span> decomposes into smaller pieces built by the classes <span class="math inline">\(\langle K(n) \rangle\)</span> and <span class="math inline">\(\langle P(n) \rangle\)</span> where <span class="math inline">\(P(n)\)</span> is another important spectrum. We already have that <span class="math inline">\(K(n)\wedge T\simeq 0\)</span> for all <span class="math inline">\(n\)</span> so we just need to take care of <span class="math inline">\(P(n)\)</span> by showing <span class="math inline">\(P(m)\wedge T\)</span> is contractible for large enough <span class="math inline">\(m\)</span>.</p>
 <p>The spectra <span class="math inline">\(X,Y,\)</span> and <span class="math inline">\(W\)</span> are all finite, so by the properties of <span class="math inline">\(K(n)\)</span>, we can break up <span class="math inline">\(K(m)_*(W\wedge f)\)</span> into <span class="math inline">\(K(m)_*\otimes H_*(W\wedge f)\)</span>. This is really shorthand for <span class="math inline">\(id_{K(m)_*}\otimes H_*(W\wedge f)\)</span>, consistent with Ravenel’s notation throughout the book. It’s also important to note that this was stated earlier in terms of spaces/spectra, but it’s true for maps as well, not exactly sure where this comes from though. It turns out we can do the same thing with <span class="math inline">\(P(m)\)</span> so that <span class="math inline">\(P(m)_*(W\wedge f)=P(m)_*\otimes H_*(W\wedge f)\)</span> (also, both these tensor products occur over <span class="math inline">\(\FF_p\)</span>). The coefficient ring <span class="math inline">\(K(n)_*\)</span> is a graded field, as well as a non-zero vector space over <span class="math inline">\(\FF_p\)</span>, and since <span class="math inline">\(K(m)_*(W\wedge f)=K(m)_*\otimes H_*(W\wedge f)=0\)</span> it must be that <span class="math inline">\(H_*(W\wedge f)\)</span> is the zero map. This implies that <span class="math inline">\(P(m)_*(W\wedge f)=0\)</span>, and since this is the foundation for the telescope <span class="math inline">\(T\)</span>, it follows that <span class="math inline">\(P(m)\wedge T\)</span> is contractible, and we are done.</p>
 </div>
 <p>This proof was pretty technical in my opinion and it took me a second to figure out. I had to look up things and consult other sources so things might not be 100% accurate but I think I got the main argument/idea down. I’ll now go through the proof of the TST, which I’ll restate.</p>
+</section>
+<section id="proof-of-tst" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-tst">Proof of TST</h2>
 <p>Let <span class="math inline">\(\FH_{(p)}\)</span> be the category of <span class="math inline">\(p\)</span>-local finite spectra. Recall that a full subcategory <span class="math inline">\(\mathbf{C}\)</span> is <strong>thick</strong> if for any cofiber sequence <span class="math inline">\(X\xrightarrow{f} Y\rightarrow C_f\)</span> in <span class="math inline">\(\mathbf{C}\)</span>, if two of the three spectra are in <span class="math inline">\(\mathbf{C}\)</span>, then so is the third. Additionally, if <span class="math inline">\(X\vee Y\)</span> is in <span class="math inline">\(\mathbf{C}\)</span>, then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are both in <span class="math inline">\(\mathbf{C}\)</span></p>
 <div id="thm-TST.spectra" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2</strong></span> <strong>(Thick Subcategory Theorem)</strong></p>
@@ -457,6 +466,7 @@ K(i)_*(W)\xrightarrow{K(i)_*(f)} K(i)_*(S^0)=K(i)_*\xrightarrow{K(i)_*(e)} K(i)_
 \]</span></p>
 <p>but <span class="math inline">\(\ker(K(i)_*(e))\)</span> will be a proper graded <span class="math inline">\(K(i)_*\)</span>-submodule of the coefficient ring, but this is exactly a proper homogeneous ideal, which must be trivial so <span class="math inline">\(K(i)_*(e)\)</span> is injective and <span class="math inline">\(K(i)_*(f)\)</span> is zero. From our assumptions, this is true when <span class="math inline">\(i\geq n\)</span>. We also assumed that <span class="math inline">\(Y\in \mathbf{F}_{p,n}\)</span> so that <span class="math inline">\(K(i)_*(Y)=0\)</span> for <span class="math inline">\(i&lt;n\)</span>. Putting these together and using the Künneth isomorphism for Morava K-theory, we see that <span class="math inline">\(K(i)_*(Y\wedge f)\)</span> is trivial for all <span class="math inline">\(i\)</span>. By the corollary to the nilpotence theorem, this means that <span class="math inline">\(Y\wedge f^{(k)}\)</span> is nullhomotopic for sufficiently large <span class="math inline">\(k\)</span>. Now the smash product plays nice with cofiber sequences in <span class="math inline">\(\HoSp\)</span>, so <span class="math inline">\(Y\wedge C_{f^{(k)}}\)</span> is the cofiber of <span class="math inline">\(Y\wedge f^{(k)}\)</span>. Since this map is nullhomotopic, this cofiber degenerates to <span class="math inline">\(Y\vee \left(\Sigma Y \wedge W^{(k)}\right)\)</span>. We’ve already shown that <span class="math inline">\(Y\wedge C_{f^{(k)}}=Y\vee \left(\Sigma Y \wedge W^{(k)}\right)\in \mathbf{C}\)</span>, and by thickness it follows that <span class="math inline">\(Y\in \mathbf{C}\)</span>.</p>
 </div>
+</section>
 </section>
 <section id="ending-thoughts" class="level1">
 <h1>Ending thoughts</h1>
