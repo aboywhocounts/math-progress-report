@@ -203,7 +203,7 @@ For a $p$-local module $M\in \mathbf{C \Gamma}$, if $v_{n-1}^{-1}M$ is nontrivia
 Say $M$ has type $m<n$ so that each Landweber subquotient is the suspension of $L/I_{p,k}$ for $k\geq m$. This must be true since $v_{n-1}^{-1}M$ is nontrivial. It follows from the contrapositive of 1. that $v_m^{-1}M$, $v_n^{-1}M$, and $v_m^{-1}v_n^{-1}M$ are all nontrivial as well, since $M$ has type $m$. Now, if $f$ is a $v_n$-map, then $f$ must induce an ismorphism on $v_n^{-1}M$ and since elements that aren't annihilated by a power of $v_n$ also correspond to elements that aren't annihilated by a power of $v_m$, $f$ induces an isomorphism on $v_m^{-1}v_n^{-1}M$. However, by definition $f$ must be trivial on $v_m^{-1}M$ and thus also on $v_n^{-1}v_m^{-1}M$, but this would force $$v_n^{-1}v_m^{-1}M=$v_m^{-1}v_n^{-1}M$$ to be trivial, which contradicts our assumption. Thus, the $v_n$-map $f$ cannot exist.
 :::
 
-## Thick ssaubcategories
+## Thick subcategories
 
 So from the last section it's clear how similar the theory of $L$-modules with $\Gamma$ action is to the $MU$-theory of spaces. As stated before this correspondence is carried by the functor $MU_*:\FH\rightarrow \mathbf{C \Gamma}$. The final part of this chapter dives into the thick subcategory theorem. Intuitively, a thick subcategory $\mathbf{C}$ of a category $\mathbf{D}$, is a full subcategory whose objects are all a finite number of simple constructions (shifts, extensions, direct sums, etc.) away from each other. In the context of $\mathbf{C \Gamma}$, this means that if we are given a short exact sequence of modules
 
@@ -218,13 +218,13 @@ X\xrightarrow{f} Y\rightarrow C_f
 $$
 then one object is in the thick subcategory $\mathbf{F}$ if and only if the other two are. Additionally it's required that if $X\vee Y\in \mathbf{F}$ then so are $X$ and $Y$.
 
-Thick subcategories are thus a natural thing to be interested in. What I find surprising is that the thick subcategories of $\mathbf{C \Gamma}_{(p)}$ and $\FH_{(p)}$ are governed by $v_n$-behavior. This is the content of the thick subcategory theorem, which I'll state now. 
+The motivation for this notion topologically is rooted in how we construct new spaces from old ones. CW complexes are formed by gluing disks to other disks by maps of spheres, and this can be described through a cofiber sequence. Additionally, we'd hope to be able to isolate summands of the wedge sum, since if two spaces are only attached at a point, we practically treat them as disjoint anyway. Thick subcategories are thus those that are closed with respect to these simple but ubiquitous constructions. The next theorem states that the categories closed under these constructions are stratified by chromatic pheneomena, i.e. type (or chromatic height).
 
 :::{#thm-fullsubcatalg}
-If $\mathbf{C}$ is a thick subcategory of $\mathbf{C \Gamma}_{(p)}$, then $\mathbf{C}$ is either trivial, all of $\mathbf{C \Gamma}_{(p)}$, or consists of all $p$-local modules $M$ in $\mathbf{C \Gamma}_{(p)}$ such that $v_{n-1}^{-1}M=0$. We will denote the latter category by $\mathbf{C}_{p,n}$.
-:::
+**(Thick Subcategory Theorems)**
 
-:::{#thm-fullsubcattop}
+If $\mathbf{C}$ is a thick subcategory of $\mathbf{C \Gamma}_{(p)}$, then $\mathbf{C}$ is either trivial, all of $\mathbf{C \Gamma}_{(p)}$, or consists of all $p$-local modules $M$ in $\mathbf{C \Gamma}_{(p)}$ such that $v_{n-1}^{-1}M=0$. We will denote the latter category by $\mathbf{C}_{p,n}$.
+
 If $\mathbf{F}$ is a thick subcategory of $\FH_{(p)}$, then $\mathbf{F}$ is either trivial, all of $\FH_{(p)}$, or consists of all $p$-local finite CW complexes $X$ with $v_{n-1}^{-1}\overline{MU}_*(X)=0$. We will denote the latter category by $\mathbf{F}_{p,n}$.
 :::
 
