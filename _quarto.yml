@@ -29,7 +29,8 @@ website:
           - gap-year/orange-book/ob2.qmd
           - gap-year/orange-book/ob3.qmd
           - gap-year/orange-book/ob4.qmd
-          - gap-year/orange-book/ob5.qmd
+          - gap-year/orange-book/ob5-pt1.qmd
+          - gap-year/orange-book/ob5-pt2.qmd
       - section: "Topology"
         collapsed: true
         contents:
